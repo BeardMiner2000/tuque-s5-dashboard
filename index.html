@@ -39,7 +39,7 @@
     </div>
 
     <div class="col-span-12 md:col-span-6 race p-6 rounded-2xl">
-      <div class="text-emerald-400 font-bold mb-4">EQUITY RACE (BTC)</div>
+      <div class="text-emerald-400 font-bold mb-4">EQUITY RACE (USD)</div>
       <canvas id="raceChart" height="200"></canvas>
     </div>
 
@@ -50,91 +50,146 @@
   </div>
 
   <div class="mt-8 panel p-6 rounded-xl">
-    <div class="text-slate-400 mb-4">PAIRS ACTIVITY • ALL 523 PAIRS</div>
-    <canvas id="heatmap" height="90"></canvas>
+    <div class="text-slate-400 mb-4">TRADING CONFIG • 9 VERIFIED PAIRS</div>
+    <div id="config" class="text-xs text-slate-500 space-y-2"></div>
   </div>
 
   <script>
     let raceChart;
     let bots = [];
+    let botsData = {};
 
-    async function loadRealData() {
+    async function loadSeasonData() {
       try {
-        const health = await (await fetch('http://localhost:8089/health')).json();
-        const orders = await (await fetch('http://localhost:8089/orders?limit=20')).json().catch(() => ({orders: []}));
-
-        document.getElementById('tradeCount').textContent = health.available_symbols || orders.length || 142;
-
-        // Update standings with real % change logic
-        bots = [
-          {id:'loser_reversal_hunter', name:'LOSER REVERSAL', color:'#10b981', equity:1500, change:0.0},
-          {id:'chaos_prophet', name:'CHAOS PROPHET', color:'#eab308', equity:1500, change:0.0},
-          {id:'pump_surfer', name:'PUMP SURFER', color:'#3b82f6', equity:1500, change:0.0},
-          {id:'obsidian_flux', name:'OBSIDIAN FLUX', color:'#ec4899', equity:1500, change:0.0}
-        ];
-
+        const response = await fetch('data.json');
+        const data = await response.json();
+        botsData = data;
+        
+        bots = data.bots.map((bot, idx) => ({
+          id: bot.id,
+          name: bot.name,
+          emoji: bot.emoji,
+          color: bot.color,
+          equity: bot.current_equity_usd,
+          pnl: bot.current_pnl_usd,
+          roi: bot.roi_pct,
+          orders: bot.orders_count,
+          fills: bot.fills_count,
+          positions: bot.active_positions
+        }));
+        
+        // Show config
+        const configDiv = document.getElementById('config');
+        configDiv.innerHTML = `
+          <div><strong>Execution:</strong> ${data.trading_config.execution_mode}</div>
+          <div><strong>Symbols:</strong> ${data.trading_config.symbols.join(', ')}</div>
+          <div><strong>Fees:</strong> Maker ${data.trading_config.maker_fee} | Taker ${data.trading_config.taker_fee}</div>
+          <div><strong>Last Updated:</strong> ${new Date(data.meta.last_updated).toLocaleString()}</div>
+        `;
+        
         updateStandings();
-        updatePitBoard(orders.orders || []);
+        updatePitBoard();
       } catch(e) {
-        console.log("Using demo data - API not fully ready");
+        console.error("Error loading season data:", e);
+        // Fallback to demo data
+        bots = [
+          {id:'loser_reversal_hunter', name:'LOSER REVERSAL', emoji:'🚀', color:'#10b981', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'chaos_prophet', name:'CHAOS PROPHET', emoji:'🌪️', color:'#eab308', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'pump_surfer', name:'PUMP SURFER', emoji:'🏄', color:'#3b82f6', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'obsidian_flux', name:'OBSIDIAN FLUX', emoji:'⚫', color:'#ec4899', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0}
+        ];
         updateStandings();
       }
     }
 
     function updateStandings() {
       const div = document.getElementById('standings');
-      div.innerHTML = bots.map((bot,i) => `
+      div.innerHTML = bots
+        .sort((a, b) => b.roi - a.roi)
+        .map((bot, i) => `
         <div onclick="showBotDetail('${bot.id}')" class="clickable flex justify-between items-center p-4 bg-zinc-950 hover:bg-zinc-900 rounded-xl border border-zinc-700">
           <div class="flex items-center gap-4">
             <span class="text-4xl font-bold text-pink-500">${i+1}</span>
-            <span>${bot.name}</span>
+            <div>
+              <div>${bot.emoji} ${bot.name}</div>
+              <div class="text-xs text-slate-500">${bot.orders} orders</div>
+            </div>
           </div>
           <div class="text-right">
-            <div class="font-mono text-emerald-400">$${bot.equity.toFixed(0)}</div>
-            <div class="${bot.change >= 0 ? 'positive' : 'negative'} text-xs">${bot.change >= 0 ? '+' : ''}${bot.change.toFixed(1)}%</div>
+            <div class="font-mono text-emerald-400">$${bot.equity.toFixed(2)}</div>
+            <div class="${bot.roi >= 0 ? 'positive' : 'negative'} text-xs">${bot.roi >= 0 ? '+' : ''}${bot.roi.toFixed(2)}%</div>
           </div>
         </div>
       `).join('');
     }
 
-    function updatePitBoard(orders) {
+    function updatePitBoard() {
       const div = document.getElementById('pitboard');
-      if (orders.length === 0) {
+      const topBots = bots.sort((a, b) => b.orders - a.orders).slice(0, 4);
+      
+      if (bots[0].orders === 0) {
         div.innerHTML = `
-          <div class="py-1 text-slate-400">OBSIDIAN_FLUX BUY BTC-USD 0.042</div>
-          <div class="py-1 text-slate-400">PHANTOM_LATTICE SELL SOL-USD 38</div>
+          <div class="py-1 text-slate-400 border-b border-yellow-700 pb-2">WAITING FOR ENTRY SIGNALS</div>
+          <div class="py-1 text-slate-300">🚀 LOSER_REVERSAL_HUNTER ready</div>
+          <div class="py-1 text-slate-300">🌪️ CHAOS_PROPHET ready</div>
+          <div class="py-1 text-slate-300">🏄 PUMP_SURFER ready</div>
+          <div class="py-1 text-slate-300">⚫ OBSIDIAN_FLUX ready</div>
         `;
         return;
       }
-      div.innerHTML = orders.slice(0,8).map(o => `<div class="py-1">${o.bot_id} ${o.side.toUpperCase()} ${o.symbol} ${o.quantity}</div>`).join('');
+      
+      div.innerHTML = topBots.map(b => `
+        <div class="py-2 border-b border-yellow-900">
+          <div class="font-bold text-yellow-300">${b.emoji} ${b.name}</div>
+          <div class="text-slate-400 text-xs">Orders: ${b.orders} | Fills: ${b.fills}</div>
+        </div>
+      `).join('');
     }
 
     function showBotDetail(id) {
       const bot = bots.find(b => b.id === id);
       if (!bot) return;
-      alert(`${bot.name}\\nEquity: ${bot.equity.toFixed(5)} BTC\\nChange: ${bot.change.toFixed(1)}%\\n\\nThis is real data from sandbox. Full trade history would be here.`);
+      alert(`${bot.emoji} ${bot.name}\\nEquity: $${bot.equity.toFixed(2)} USD\\nP&L: $${bot.pnl.toFixed(2)} (${bot.roi.toFixed(2)}%)\\nOrders: ${bot.orders} | Fills: ${bot.fills}\\nActive Positions: ${bot.positions}`);
     }
 
     // Init
-    updateStandings();
+    loadSeasonData();
     raceChart = new Chart(document.getElementById('raceChart'), {
       type: 'line',
-      data: { labels: Array(50).fill(''), datasets: bots.map(b => ({label: b.name, data: Array(50).fill(b.equity), borderColor: b.color, borderWidth: 3, tension: 0.4})) },
-      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#222' }}, x: { display: false } } }
+      data: { 
+        labels: Array(50).fill(''), 
+        datasets: bots.map(b => ({
+          label: b.name, 
+          data: Array(50).fill(b.equity), 
+          borderColor: b.color, 
+          borderWidth: 3, 
+          tension: 0.4,
+          fill: false
+        })) 
+      },
+      options: { 
+        responsive: true, 
+        plugins: { legend: { display: false } }, 
+        scales: { 
+          y: { grid: { color: '#222' }}, 
+          x: { display: false } 
+        } 
+      }
     });
 
+    // Refresh every 30 seconds
     setInterval(() => {
-      loadRealData();
-      if (raceChart) {
-        raceChart.data.datasets.forEach(ds => {
+      loadSeasonData();
+      if (raceChart && bots.length > 0) {
+        raceChart.data.datasets.forEach((ds, idx) => {
           ds.data.shift();
-          ds.data.push(ds.data[ds.data.length-1] * (0.999 + Math.random()*0.004));
+          const bot = bots[idx];
+          // Simulate slight drift
+          ds.data.push(bot.equity * (0.999 + Math.random()*0.002));
         });
         raceChart.update('none');
       }
-    }, 10000);
-
-    loadRealData();
+    }, 30000);
   </script>
 </body>
 </html>
