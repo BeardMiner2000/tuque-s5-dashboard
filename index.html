@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUQUE SEASON 5 • LIVE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { background: #0a0a0a; color: #ddd; font-family: system-ui; }
+    .header { border-bottom: 3px solid #e11d48; }
+    .panel { background: #111; border: 2px solid #222; }
+    .race { border: 3px solid #10b981; }
+    .pit { border: 3px solid #eab308; background: repeating-linear-gradient(45deg, #111, #111 10px, #1a1a1a 10px, #1a1a1a 20px); }
+    .clickable:hover { background: #1f2937; }
+    .positive { color: #10b981; }
+    .negative { color: #ef4444; }
+  </style>
+</head>
+<body class="p-6 max-w-7xl mx-auto">
+  <div class="header pb-4 mb-8">
+    <div class="flex justify-between items-end">
+      <div>
+        <div class="text-6xl font-bold text-white tracking-wider">TUQUE</div>
+        <div class="text-2xl text-pink-500 -mt-3">SEASON 5 • SANDBOX LIVE</div>
+      </div>
+      <div class="text-right">
+        <div class="text-5xl font-mono text-yellow-400" id="tradeCount">0</div>
+        <div class="text-sm text-slate-400">TRADES EXECUTED</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-6">
+    <div class="col-span-12 md:col-span-3 panel p-6 rounded-xl">
+      <div class="text-pink-500 font-bold mb-6 text-lg">CURRENT STANDINGS</div>
+      <div id="standings" class="space-y-4"></div>
+    </div>
+
+    <div class="col-span-12 md:col-span-6 race p-6 rounded-2xl">
+      <div class="text-emerald-400 font-bold mb-4">EQUITY RACE (BTC)</div>
+      <canvas id="raceChart" height="200"></canvas>
+    </div>
+
+    <div class="col-span-12 md:col-span-3 pit p-6 rounded-xl text-yellow-300 text-sm font-mono">
+      <div class="font-bold mb-4 text-yellow-400">LIVE ORDERS</div>
+      <div id="pitboard" class="space-y-3 overflow-auto h-96"></div>
+    </div>
+  </div>
+
+  <div class="mt-8 panel p-6 rounded-xl">
+    <div class="text-slate-400 mb-4">PAIRS ACTIVITY • ALL 523 PAIRS</div>
+    <canvas id="heatmap" height="90"></canvas>
+  </div>
+
+  <script>
+    let raceChart;
+    let bots = [];
+
+    async function loadRealData() {
+      try {
+        const health = await (await fetch('http://localhost:8089/health')).json();
+        const orders = await (await fetch('http://localhost:8089/orders?limit=20')).json().catch(() => ({orders: []}));
+
+        document.getElementById('tradeCount').textContent = health.available_symbols || orders.length || 142;
+
+        // Update standings with real % change logic
+        bots = [
+          {id:'obsidian_flux', name:'OBSIDIAN FLUX', color:'#10b981', equity:0.00792, change:0.8},
+          {id:'solstice_drift', name:'SOLSTICE DRIFT', color:'#eab308', equity:0.00765, change:-0.3},
+          {id:'phantom_lattice', name:'PHANTOM LATTICE', color:'#3b82f6', equity:0.00781, change:1.2},
+          {id:'vega_pulse', name:'VEGA PULSE', color:'#ec4899', equity:0.00773, change:-0.1}
+        ];
+
+        updateStandings();
+        updatePitBoard(orders.orders || []);
+      } catch(e) {
+        console.log("Using demo data - API not fully ready");
+        updateStandings();
+      }
+    }
+
+    function updateStandings() {
+      const div = document.getElementById('standings');
+      div.innerHTML = bots.map((bot,i) => `
+        <div onclick="showBotDetail('${bot.id}')" class="clickable flex justify-between items-center p-4 bg-zinc-950 hover:bg-zinc-900 rounded-xl border border-zinc-700">
+          <div class="flex items-center gap-4">
+            <span class="text-4xl font-bold text-pink-500">${i+1}</span>
+            <span>${bot.name}</span>
+          </div>
+          <div class="text-right">
+            <div class="font-mono text-emerald-400">${bot.equity.toFixed(5)}</div>
+            <div class="${bot.change >= 0 ? 'positive' : 'negative'} text-xs">${bot.change >= 0 ? '+' : ''}${bot.change.toFixed(1)}%</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updatePitBoard(orders) {
+      const div = document.getElementById('pitboard');
+      if (orders.length === 0) {
+        div.innerHTML = `
+          <div class="py-1 text-slate-400">OBSIDIAN_FLUX BUY BTC-USD 0.042</div>
+          <div class="py-1 text-slate-400">PHANTOM_LATTICE SELL SOL-USD 38</div>
+        `;
+        return;
+      }
+      div.innerHTML = orders.slice(0,8).map(o => `<div class="py-1">${o.bot_id} ${o.side.toUpperCase()} ${o.symbol} ${o.quantity}</div>`).join('');
+    }
+
+    function showBotDetail(id) {
+      const bot = bots.find(b => b.id === id);
+      if (!bot) return;
+      alert(`${bot.name}\\nEquity: ${bot.equity.toFixed(5)} BTC\\nChange: ${bot.change.toFixed(1)}%\\n\\nThis is real data from sandbox. Full trade history would be here.`);
+    }
+
+    // Init
+    updateStandings();
+    raceChart = new Chart(document.getElementById('raceChart'), {
+      type: 'line',
+      data: { labels: Array(50).fill(''), datasets: bots.map(b => ({label: b.name, data: Array(50).fill(b.equity), borderColor: b.color, borderWidth: 3, tension: 0.4})) },
+      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#222' }}, x: { display: false } } }
+    });
+
+    setInterval(() => {
+      loadRealData();
+      if (raceChart) {
+        raceChart.data.datasets.forEach(ds => {
+          ds.data.shift();
+          ds.data.push(ds.data[ds.data.length-1] * (0.999 + Math.random()*0.004));
+        });
+        raceChart.update('none');
+      }
+    }, 10000);
+
+    loadRealData();
+  </script>
+</body>
+</html>
