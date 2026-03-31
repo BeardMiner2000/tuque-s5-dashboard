@@ -22,7 +22,7 @@
     <div class="flex justify-between items-end">
       <div>
         <div class="text-6xl font-bold text-white tracking-wider">TUQUE</div>
-        <div class="text-2xl text-pink-500 -mt-3">SEASON 5 • SANDBOX LIVE</div>
+        <div class="text-2xl text-pink-500 -mt-3">SEASON 5 • PAPER TRADING LIVE</div>
       </div>
       <div class="text-right">
         <div class="text-5xl font-mono text-yellow-400" id="tradeCount">0</div>
@@ -34,6 +34,7 @@
   <div class="grid grid-cols-12 gap-6">
     <div class="col-span-12 md:col-span-3 panel p-6 rounded-xl">
       <div class="text-pink-500 font-bold mb-6 text-lg">CURRENT STANDINGS</div>
+      <div class="text-xs text-slate-500 mb-4">Capital: $1500 USD per bot</div>
       <div id="standings" class="space-y-4"></div>
     </div>
 
@@ -66,10 +67,10 @@
 
         // Update standings with real % change logic
         bots = [
-          {id:'obsidian_flux', name:'OBSIDIAN FLUX', color:'#10b981', equity:0.00792, change:0.8},
-          {id:'solstice_drift', name:'SOLSTICE DRIFT', color:'#eab308', equity:0.00765, change:-0.3},
-          {id:'phantom_lattice', name:'PHANTOM LATTICE', color:'#3b82f6', equity:0.00781, change:1.2},
-          {id:'vega_pulse', name:'VEGA PULSE', color:'#ec4899', equity:0.00773, change:-0.1}
+          {id:'loser_reversal_hunter', name:'LOSER REVERSAL', color:'#10b981', equity:1500, change:0.0},
+          {id:'chaos_prophet', name:'CHAOS PROPHET', color:'#eab308', equity:1500, change:0.0},
+          {id:'pump_surfer', name:'PUMP SURFER', color:'#3b82f6', equity:1500, change:0.0},
+          {id:'obsidian_flux', name:'OBSIDIAN FLUX', color:'#ec4899', equity:1500, change:0.0}
         ];
 
         updateStandings();
@@ -89,7 +90,7 @@
             <span>${bot.name}</span>
           </div>
           <div class="text-right">
-            <div class="font-mono text-emerald-400">${bot.equity.toFixed(5)}</div>
+            <div class="font-mono text-emerald-400">$${bot.equity.toFixed(0)}</div>
             <div class="${bot.change >= 0 ? 'positive' : 'negative'} text-xs">${bot.change >= 0 ? '+' : ''}${bot.change.toFixed(1)}%</div>
           </div>
         </div>
