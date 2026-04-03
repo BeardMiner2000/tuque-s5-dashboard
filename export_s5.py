@@ -162,19 +162,20 @@ def fetch_recent_orders(conn):
         cursor.execute(
             """
             SELECT
-                ts,
-                bot_id,
-                symbol,
-                side,
-                status,
-                COALESCE(executed_price, request_price) AS price,
-                COALESCE(executed_quantity, requested_quantity) AS quantity,
-                simulated_fee,
-                rationale,
-                metadata
-            FROM bot_orders
-            WHERE season_id = %s AND bot_id = ANY(%s)
-            ORDER BY ts DESC, id DESC
+                o.ts,
+                o.bot_id,
+                o.symbol,
+                o.side,
+                o.status,
+                COALESCE(o.executed_price, o.request_price) AS price,
+                COALESCE(o.executed_quantity, o.requested_quantity) AS quantity,
+                COALESCE(f.fee_amount, o.simulated_fee, 0) AS fee_amount,
+                o.rationale,
+                o.metadata
+            FROM bot_orders o
+            LEFT JOIN bot_fills f ON f.order_id = o.id
+            WHERE o.season_id = %s AND o.bot_id = ANY(%s)
+            ORDER BY o.ts DESC, o.id DESC
             LIMIT 20
             """,
             (SEASON_ID, BOT_IDS),
@@ -187,20 +188,21 @@ def fetch_order_history(conn):
         cursor.execute(
             """
             SELECT
-                ts,
-                bot_id,
-                symbol,
-                side,
-                status,
-                COALESCE(executed_price, request_price) AS price,
-                COALESCE(executed_quantity, requested_quantity) AS quantity,
-                simulated_fee,
-                rationale,
-                metadata
-            FROM bot_orders
-            WHERE season_id = %s AND bot_id = ANY(%s)
-              AND ts >= NOW() - INTERVAL '7 days'
-            ORDER BY ts DESC, id DESC
+                o.ts,
+                o.bot_id,
+                o.symbol,
+                o.side,
+                o.status,
+                COALESCE(o.executed_price, o.request_price) AS price,
+                COALESCE(o.executed_quantity, o.requested_quantity) AS quantity,
+                COALESCE(f.fee_amount, o.simulated_fee, 0) AS fee_amount,
+                o.rationale,
+                o.metadata
+            FROM bot_orders o
+            LEFT JOIN bot_fills f ON f.order_id = o.id
+            WHERE o.season_id = %s AND o.bot_id = ANY(%s)
+              AND o.ts >= NOW() - INTERVAL '7 days'
+            ORDER BY o.ts DESC, o.id DESC
             LIMIT 1000
             """,
             (SEASON_ID, BOT_IDS),
@@ -348,7 +350,7 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
             "status": row["status"],
             "price": round(float(row["price"] or 0), 8),
             "quantity": round(float(row["quantity"] or 0), 8),
-            "fee": round(float(row.get("simulated_fee") or 0), 8),
+            "fee": round(float(row.get("fee_amount") or 0), 8),
             "strategy": strategy,
             "note": note,
             "category": category,
