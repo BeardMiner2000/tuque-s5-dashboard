@@ -158,11 +158,71 @@ def fetch_recent_orders(conn):
         return cursor.fetchall()
 
 
-def build_payload(rows, recent_orders, coinbase_products):
+def fetch_order_history(conn):
+    with conn.cursor() as cursor:
+        cursor.execute(
+            """
+            SELECT
+                ts,
+                bot_id,
+                symbol,
+                side,
+                status,
+                COALESCE(executed_price, request_price) AS price,
+                COALESCE(executed_quantity, requested_quantity) AS quantity
+            FROM bot_orders
+            WHERE season_id = %s AND bot_id = ANY(%s)
+              AND ts >= NOW() - INTERVAL '7 days'
+            ORDER BY ts DESC, id DESC
+            LIMIT 1000
+            """,
+            (SEASON_ID, BOT_IDS),
+        )
+        return cursor.fetchall()
+
+
+def fetch_equity_history(conn):
+    with conn.cursor() as cursor:
+        cursor.execute(
+            """
+            WITH sampled AS (
+                SELECT
+                    bot_id,
+                    date_trunc('minute', ts) AS bucket_ts,
+                    AVG(equity_btc) AS equity_btc
+                FROM bot_metrics
+                WHERE season_id = %s
+                  AND bot_id = ANY(%s)
+                  AND ts >= NOW() - INTERVAL '7 days'
+                GROUP BY bot_id, date_trunc('minute', ts)
+            ),
+            latest_btc AS (
+                SELECT mark_price
+                FROM market_marks
+                WHERE season_id = %s AND symbol = 'BTCUSDT'
+                ORDER BY ts DESC
+                LIMIT 1
+            )
+            SELECT
+                s.bot_id,
+                s.bucket_ts,
+                s.equity_btc,
+                b.mark_price AS btc_usd
+            FROM sampled s
+            CROSS JOIN latest_btc b
+            ORDER BY s.bucket_ts ASC, s.bot_id ASC
+            """,
+            (SEASON_ID, BOT_IDS, SEASON_ID),
+        )
+        return cursor.fetchall()
+
+
+def build_payload(rows, recent_orders, order_history, equity_history_rows, coinbase_products):
     rows_by_bot = {row["bot_id"]: row for row in rows}
     bots_payload = []
     total_orders = 0
     total_fills = 0
+    traded_symbols = set()
     for bot in BOTS:
         row = rows_by_bot.get(bot["id"])
         equity_usd = CAPITAL_PER_BOT_USD
@@ -220,6 +280,38 @@ def build_payload(rows, recent_orders, coinbase_products):
         for row in recent_orders
     ]
 
+    order_history_payload = []
+    orders_by_bot = {bot_id: [] for bot_id in BOT_IDS}
+    for row in order_history:
+        symbol = row["symbol"]
+        if symbol:
+            traded_symbols.add(symbol)
+        order_row = {
+            "ts": row["ts"].astimezone(timezone.utc).isoformat() if row["ts"] else None,
+            "bot_id": row["bot_id"],
+            "symbol": symbol,
+            "side": row["side"],
+            "status": row["status"],
+            "price": round(float(row["price"] or 0), 8),
+            "quantity": round(float(row["quantity"] or 0), 8),
+        }
+        order_history_payload.append(order_row)
+        if row["bot_id"] in orders_by_bot:
+            orders_by_bot[row["bot_id"]].append(order_row)
+
+    equity_points = []
+    for row in equity_history_rows:
+        btc_usd = Decimal(str(row["btc_usd"] or 0))
+        equity_btc = Decimal(str(row["equity_btc"] or 0))
+        equity_usd = float(equity_btc * btc_usd) if btc_usd > 0 else 0.0
+        equity_points.append(
+            {
+                "ts": row["bucket_ts"].astimezone(timezone.utc).isoformat() if row["bucket_ts"] else None,
+                "bot_id": row["bot_id"],
+                "equity_usd": round(equity_usd, 2),
+            }
+        )
+
     return {
         "summary": {
             "season_id": SEASON_ID,
@@ -227,9 +319,13 @@ def build_payload(rows, recent_orders, coinbase_products):
             "total_orders": total_orders,
             "total_fills": total_fills,
             "active_bots": len(BOTS),
+            "verified_pairs": len(traded_symbols),
         },
         "bots": bots_payload,
         "recent_orders": recent_orders_payload,
+        "order_history": order_history_payload,
+        "orders_by_bot": orders_by_bot,
+        "equity_history": equity_points,
         "trading_config": {
             "execution_mode": "paper_trading_coinbase_data",
             "maker_fee_bps": float(MAKER_FEE_BPS),
@@ -250,8 +346,10 @@ def main():
     with get_connection() as conn:
         rows = fetch_dashboard_rows(conn)
         recent_orders = fetch_recent_orders(conn)
+        order_history = fetch_order_history(conn)
+        equity_history_rows = fetch_equity_history(conn)
 
-    payload = build_payload(rows, recent_orders, coinbase_products)
+    payload = build_payload(rows, recent_orders, order_history, equity_history_rows, coinbase_products)
     output_path = Path(__file__).with_name("data.json")
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     print(f"Wrote {output_path}")

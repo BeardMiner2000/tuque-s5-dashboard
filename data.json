@@ -2,9 +2,10 @@
   "summary": {
     "season_id": "season-005",
     "capital_per_bot_usd": 1500.0,
-    "total_orders": 9,
-    "total_fills": 9,
-    "active_bots": 4
+    "total_orders": 12,
+    "total_fills": 12,
+    "active_bots": 4,
+    "verified_pairs": 3
   },
   "bots": [
     {
@@ -12,42 +13,42 @@
       "name": "Loser Reversal Hunter",
       "emoji": "\ud83d\udd04",
       "color": "#10b981",
-      "current_equity_usd": 1481.88,
-      "current_pnl_usd": -18.12,
-      "roi_pct": 0.01,
+      "current_equity_usd": 1478.93,
+      "current_pnl_usd": -21.07,
+      "roi_pct": 0.06,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
     },
     {
       "id": "chaos_prophet",
       "name": "Chaos Prophet",
       "emoji": "\ud83d\udd2e",
       "color": "#eab308",
-      "current_equity_usd": 1481.88,
-      "current_pnl_usd": -18.12,
-      "roi_pct": 0.01,
+      "current_equity_usd": 1478.93,
+      "current_pnl_usd": -21.07,
+      "roi_pct": 0.06,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
     },
     {
       "id": "pump_surfer",
       "name": "Pump Surfer",
       "emoji": "\ud83c\udfc4",
       "color": "#3b82f6",
-      "current_equity_usd": 1481.88,
-      "current_pnl_usd": -18.12,
-      "roi_pct": 0.01,
-      "orders_count": 2,
-      "fills_count": 2,
+      "current_equity_usd": 1481.74,
+      "current_pnl_usd": -18.26,
+      "roi_pct": 0.25,
+      "orders_count": 5,
+      "fills_count": 5,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
     },
     {
       "id": "obsidian_flux",
@@ -56,15 +57,42 @@
       "color": "#ec4899",
       "current_equity_usd": 1481.49,
       "current_pnl_usd": -18.51,
-      "roi_pct": -0.02,
+      "roi_pct": 0.23,
       "orders_count": 3,
       "fills_count": 3,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
     }
   ],
   "recent_orders": [
+    {
+      "ts": "2026-04-03T02:29:14.196463+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.00180225
+    },
+    {
+      "ts": "2026-04-03T02:29:01.341014+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SOLINUUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 0.00027988,
+      "quantity": 188751.61295345
+    },
+    {
+      "ts": "2026-04-03T02:28:58.864590+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SIMUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 6.236e-05,
+      "quantity": 1129562.6415223
+    },
     {
       "ts": "2026-04-03T02:25:01.879531+00:00",
       "bot_id": "obsidian_flux",
@@ -147,6 +175,516 @@
       "quantity": 0.002225
     }
   ],
+  "order_history": [
+    {
+      "ts": "2026-04-03T02:29:14.196463+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.00180225
+    },
+    {
+      "ts": "2026-04-03T02:29:01.341014+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SOLINUUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 0.00027988,
+      "quantity": 188751.61295345
+    },
+    {
+      "ts": "2026-04-03T02:28:58.864590+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SIMUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 6.236e-05,
+      "quantity": 1129562.6415223
+    },
+    {
+      "ts": "2026-04-03T02:25:01.879531+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0180225
+    },
+    {
+      "ts": "2026-04-03T02:24:42.144346+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:29.661135+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:25.956659+00:00",
+      "bot_id": "chaos_prophet",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:22.539289+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:11.345226+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:24:05.682153+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:24:01.265662+00:00",
+      "bot_id": "chaos_prophet",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:23:56.414817+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    }
+  ],
+  "orders_by_bot": {
+    "loser_reversal_hunter": [
+      {
+        "ts": "2026-04-03T02:24:22.539289+00:00",
+        "bot_id": "loser_reversal_hunter",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.0020025
+      },
+      {
+        "ts": "2026-04-03T02:23:56.414817+00:00",
+        "bot_id": "loser_reversal_hunter",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.002225
+      }
+    ],
+    "chaos_prophet": [
+      {
+        "ts": "2026-04-03T02:24:25.956659+00:00",
+        "bot_id": "chaos_prophet",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.0020025
+      },
+      {
+        "ts": "2026-04-03T02:24:01.265662+00:00",
+        "bot_id": "chaos_prophet",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.002225
+      }
+    ],
+    "pump_surfer": [
+      {
+        "ts": "2026-04-03T02:29:14.196463+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.00180225
+      },
+      {
+        "ts": "2026-04-03T02:29:01.341014+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "SOLINUUSDT",
+        "side": "BUY",
+        "status": "filled",
+        "price": 0.00027988,
+        "quantity": 188751.61295345
+      },
+      {
+        "ts": "2026-04-03T02:28:58.864590+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "SIMUSDT",
+        "side": "BUY",
+        "status": "filled",
+        "price": 6.236e-05,
+        "quantity": 1129562.6415223
+      },
+      {
+        "ts": "2026-04-03T02:24:29.661135+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.0020025
+      },
+      {
+        "ts": "2026-04-03T02:24:05.682153+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.002225
+      }
+    ],
+    "obsidian_flux": [
+      {
+        "ts": "2026-04-03T02:25:01.879531+00:00",
+        "bot_id": "obsidian_flux",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.0180225
+      },
+      {
+        "ts": "2026-04-03T02:24:42.144346+00:00",
+        "bot_id": "obsidian_flux",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.0020025
+      },
+      {
+        "ts": "2026-04-03T02:24:11.345226+00:00",
+        "bot_id": "obsidian_flux",
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "status": "filled",
+        "price": 67432.56743257,
+        "quantity": 0.002225
+      }
+    ]
+  },
+  "equity_history": [
+    {
+      "ts": "2026-04-03T02:23:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:23:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.06
+    },
+    {
+      "ts": "2026-04-03T02:23:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:23:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1477.99
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1477.99
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.02
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1477.99
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1477.16
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.17
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.17
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1477.51
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.17
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.22
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.22
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1477.77
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.22
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.1
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1477.12
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.09
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.13
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.13
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1477.32
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1477.96
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.32
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.32
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.27
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.2
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.4
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.4
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.7
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.32
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.76
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.76
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1480.61
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.83
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.99
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.99
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.84
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.17
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.04
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.04
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1482.09
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.24
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.14
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.14
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1482.6
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.38
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.09
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.09
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1482.33
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1481.97
+    }
+  ],
   "trading_config": {
     "execution_mode": "paper_trading_coinbase_data",
     "maker_fee_bps": 1.875,
@@ -173,7 +711,7 @@
     "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
   },
   "meta": {
-    "last_updated": "2026-04-03T02:27:40.325080+00:00",
+    "last_updated": "2026-04-03T02:36:50.724508+00:00",
     "data_source": "timescaledb + coinbase public products"
   }
 }

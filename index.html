@@ -15,18 +15,28 @@
     .clickable:hover { background: #1f2937; }
     .positive { color: #10b981; }
     .negative { color: #ef4444; }
+    .range-btn.active { background: #e11d48; color: white; border-color: #fb7185; }
+    .modal-backdrop { background: rgba(0, 0, 0, 0.7); }
   </style>
 </head>
 <body class="p-6 max-w-7xl mx-auto">
   <div class="header pb-4 mb-8">
-    <div class="flex justify-between items-end">
+    <div class="flex flex-col gap-4 md:flex-row md:justify-between md:items-end">
       <div>
         <div class="text-6xl font-bold text-white tracking-wider">TUQUE</div>
         <div class="text-2xl text-pink-500 -mt-3">SEASON 5 • PAPER TRADING LIVE</div>
       </div>
-      <div class="text-right">
-        <div class="text-5xl font-mono text-yellow-400" id="tradeCount">0</div>
-        <div class="text-sm text-slate-400">TRADES EXECUTED</div>
+      <div class="flex items-center gap-3">
+        <div id="rangeControls" class="flex gap-2 text-xs font-semibold">
+          <button class="range-btn active px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300" data-range="2h">2H</button>
+          <button class="range-btn px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300" data-range="24h">24H</button>
+          <button class="range-btn px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300" data-range="7d">7D</button>
+          <button class="range-btn px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300" data-range="all">ALL</button>
+        </div>
+        <div class="text-right">
+          <div class="text-5xl font-mono text-yellow-400" id="tradeCount">0</div>
+          <div class="text-sm text-slate-400">TRADES EXECUTED</div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,39 +44,97 @@
   <div class="grid grid-cols-12 gap-6">
     <div class="col-span-12 md:col-span-3 panel p-6 rounded-xl">
       <div class="text-pink-500 font-bold mb-6 text-lg">CURRENT STANDINGS</div>
-      <div class="text-xs text-slate-500 mb-4">Capital: $1500 USD per bot</div>
+      <div class="text-xs text-slate-500 mb-4">Click a bot to inspect actual fills and recent trades.</div>
       <div id="standings" class="space-y-4"></div>
     </div>
 
     <div class="col-span-12 md:col-span-6 race p-6 rounded-2xl">
-      <div class="text-emerald-400 font-bold mb-4">EQUITY RACE (USD)</div>
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-emerald-400 font-bold">EQUITY RACE (USD)</div>
+        <div class="text-xs text-slate-400" id="rangeLabel">Showing last 2 hours</div>
+      </div>
       <canvas id="raceChart" height="200"></canvas>
     </div>
 
     <div class="col-span-12 md:col-span-3 pit p-6 rounded-xl text-yellow-300 text-sm font-mono">
-      <div class="font-bold mb-4 text-yellow-400">LIVE ORDERS</div>
+      <div class="font-bold mb-1 text-yellow-400">LIVE ORDERS</div>
+      <div class="text-[11px] text-yellow-200 mb-4" id="pitboardLabel">Most recent trades in selected range</div>
       <div id="pitboard" class="space-y-3 overflow-auto h-96"></div>
     </div>
   </div>
 
   <div class="mt-8 panel p-6 rounded-xl">
-    <div class="text-slate-400 mb-4">TRADING CONFIG • 9 VERIFIED PAIRS</div>
+    <div class="text-slate-400 mb-4" id="configTitle">TRADING CONFIG</div>
     <div id="config" class="text-xs text-slate-500 space-y-2"></div>
   </div>
 
+  <div id="botModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
+    <div class="panel w-full max-w-4xl rounded-2xl p-6 max-h-[90vh] overflow-auto">
+      <div class="flex items-start justify-between gap-4 mb-6">
+        <div>
+          <div class="text-2xl font-bold text-white" id="modalBotName">Bot</div>
+          <div class="text-sm text-slate-400" id="modalBotMeta">Recent fills and stats</div>
+        </div>
+        <button id="closeModal" class="px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300">Close</button>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6" id="modalStats"></div>
+      <div>
+        <div class="text-sm font-bold text-pink-500 mb-3">TRADE HISTORY</div>
+        <div id="modalTradeList" class="space-y-3"></div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    const RANGE_MS = {
+      '2h': 2 * 60 * 60 * 1000,
+      '24h': 24 * 60 * 60 * 1000,
+      '7d': 7 * 24 * 60 * 60 * 1000,
+      'all': null
+    };
+
     let raceChart;
     let bots = [];
     let botsData = {};
-    let equityHistory = [];
+    let selectedRange = '2h';
+
+    function parseTs(value) {
+      return value ? new Date(value).getTime() : null;
+    }
+
+    function filterByRange(rows, rangeKey) {
+      if (rangeKey === 'all') return rows.slice();
+      const cutoff = Date.now() - RANGE_MS[rangeKey];
+      return rows.filter((row) => {
+        const ts = parseTs(row.ts);
+        return ts && ts >= cutoff;
+      });
+    }
+
+    function formatSigned(value, digits = 2) {
+      return `${value >= 0 ? '+' : ''}${Number(value).toFixed(digits)}`;
+    }
+
+    function getFilteredOrders() {
+      return filterByRange(botsData.order_history || botsData.recent_orders || [], selectedRange);
+    }
+
+    function getFilteredEquityHistory() {
+      return filterByRange(botsData.equity_history || [], selectedRange);
+    }
+
+    function getBotTradeHistory(botId) {
+      const rows = (botsData.orders_by_bot && botsData.orders_by_bot[botId]) || [];
+      return filterByRange(rows, selectedRange);
+    }
 
     async function loadSeasonData() {
       try {
-        const response = await fetch('data.json');
+        const response = await fetch(`data.json?t=${Date.now()}`);
         const data = await response.json();
         botsData = data;
-        
-        bots = data.bots.map((bot, idx) => ({
+
+        bots = data.bots.map((bot) => ({
           id: bot.id,
           name: bot.name,
           emoji: bot.emoji,
@@ -79,119 +147,203 @@
           positions: bot.active_positions,
           topSymbol: bot.top_symbol || '—'
         }));
-        document.getElementById('tradeCount').textContent = data.summary.total_orders;
-        equityHistory.push(bots.map(bot => bot.equity));
-        if (equityHistory.length > 50) equityHistory.shift();
-        
-        // Show config
+
+        const filteredOrders = getFilteredOrders();
+        document.getElementById('tradeCount').textContent = filteredOrders.length || data.summary.total_orders;
+        document.getElementById('configTitle').textContent = `TRADING CONFIG • ${data.summary.verified_pairs || 0} VERIFIED PAIRS`;
+
         const configDiv = document.getElementById('config');
         configDiv.innerHTML = `
           <div><strong>Execution:</strong> ${data.trading_config.execution_mode}</div>
           <div><strong>Coinbase Products:</strong> ${data.trading_config.coinbase_product_count}</div>
+          <div><strong>Verified Pairs Traded:</strong> ${data.summary.verified_pairs || 0}</div>
           <div><strong>Fees:</strong> Maker ${data.trading_config.maker_fee_bps} bps | Taker ${data.trading_config.taker_fee_bps} bps</div>
           <div><strong>Product Sample:</strong> ${data.trading_config.coinbase_products_sample.join(', ')}</div>
           <div><strong>Last Updated:</strong> ${new Date(data.meta.last_updated).toLocaleString()}</div>
         `;
-        
+
+        updateRangeText();
         updateStandings();
-        updatePitBoard(data.recent_orders || []);
+        updatePitBoard(filteredOrders);
         updateRaceChart();
-      } catch(e) {
+      } catch (e) {
         console.error("Error loading season data:", e);
-        // Fallback to demo data
-        bots = [
-          {id:'loser_reversal_hunter', name:'Loser Reversal Hunter', emoji:'🔄', color:'#10b981', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'chaos_prophet', name:'Chaos Prophet', emoji:'🔮', color:'#eab308', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'pump_surfer', name:'Pump Surfer', emoji:'🏄', color:'#3b82f6', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'obsidian_flux', name:'Obsidian Flux', emoji:'⚫', color:'#ec4899', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0}
-        ];
-        updateStandings();
       }
+    }
+
+    function updateRangeText() {
+      const labels = {
+        '2h': 'Showing last 2 hours',
+        '24h': 'Showing last 24 hours',
+        '7d': 'Showing last 7 days',
+        'all': 'Showing all exported history'
+      };
+      document.getElementById('rangeLabel').textContent = labels[selectedRange];
+      document.getElementById('pitboardLabel').textContent = `Most recent trades in ${labels[selectedRange].replace('Showing ', '').toLowerCase()}`;
+      document.querySelectorAll('.range-btn').forEach((button) => {
+        button.classList.toggle('active', button.dataset.range === selectedRange);
+      });
     }
 
     function updateStandings() {
       const div = document.getElementById('standings');
       div.innerHTML = bots
+        .slice()
         .sort((a, b) => b.roi - a.roi)
         .map((bot, i) => `
-        <div onclick="showBotDetail('${bot.id}')" class="clickable flex justify-between items-center p-4 bg-zinc-950 hover:bg-zinc-900 rounded-xl border border-zinc-700">
-          <div class="flex items-center gap-4">
-            <span class="text-4xl font-bold text-pink-500">${i+1}</span>
-            <div>
-              <div>${bot.emoji} ${bot.name}</div>
-              <div class="text-xs text-slate-500">${bot.orders} orders</div>
+          <button onclick="showBotDetail('${bot.id}')" class="clickable w-full text-left flex justify-between items-center p-4 bg-zinc-950 hover:bg-zinc-900 rounded-xl border border-zinc-700">
+            <div class="flex items-center gap-4">
+              <span class="text-4xl font-bold text-pink-500">${i + 1}</span>
+              <div>
+                <div>${bot.emoji} ${bot.name}</div>
+                <div class="text-xs text-slate-500">${bot.orders} orders • ${bot.fills} fills</div>
+              </div>
             </div>
-          </div>
             <div class="text-right">
               <div class="font-mono text-emerald-400">$${bot.equity.toFixed(2)}</div>
-            <div class="${bot.roi >= 0 ? 'positive' : 'negative'} text-xs">${bot.roi >= 0 ? '+' : ''}${bot.roi.toFixed(2)}%</div>
-            <div class="text-xs text-slate-500">${bot.topSymbol}</div>
-          </div>
-        </div>
-      `).join('');
+              <div class="${bot.roi >= 0 ? 'positive' : 'negative'} text-xs">${formatSigned(bot.roi)}%</div>
+              <div class="text-xs text-slate-500">${bot.topSymbol}</div>
+            </div>
+          </button>
+        `).join('');
     }
 
     function updatePitBoard(recentOrders) {
       const div = document.getElementById('pitboard');
       if (!recentOrders.length) {
-        div.innerHTML = `
-          <div class="py-1 text-slate-400 border-b border-yellow-700 pb-2">WAITING FOR FIRST FILLS</div>
-          <div class="py-1 text-slate-300">🔄 LOSER_REVERSAL_HUNTER</div>
-          <div class="py-1 text-slate-300">🔮 CHAOS_PROPHET</div>
-          <div class="py-1 text-slate-300">🏄 PUMP_SURFER</div>
-          <div class="py-1 text-slate-300">⚫ OBSIDIAN_FLUX</div>
-        `;
+        div.innerHTML = `<div class="py-2 text-slate-400 border-b border-yellow-700 pb-2">No trades in the selected range.</div>`;
         return;
       }
-      
-      div.innerHTML = recentOrders.slice(0, 10).map(order => `
-        <div class="py-2 border-b border-yellow-900">
-          <div class="font-bold text-yellow-300">${order.bot_id}</div>
-          <div class="text-slate-400 text-xs">${order.side} ${order.symbol}</div>
-          <div class="text-slate-500 text-xs">$${Number(order.price || 0).toFixed(6)} • ${new Date(order.ts).toLocaleTimeString()}</div>
-        </div>
-      `).join('');
+
+      div.innerHTML = recentOrders
+        .slice()
+        .sort((a, b) => parseTs(b.ts) - parseTs(a.ts))
+        .slice(0, 20)
+        .map((order) => `
+          <div class="py-2 border-b border-yellow-900">
+            <div class="font-bold text-yellow-300">${order.bot_id}</div>
+            <div class="text-slate-400 text-xs">${order.side} ${order.symbol} • ${order.status}</div>
+            <div class="text-slate-500 text-xs">$${Number(order.price || 0).toFixed(6)} • Qty ${Number(order.quantity || 0).toFixed(6)}</div>
+            <div class="text-slate-500 text-xs">${new Date(order.ts).toLocaleString()}</div>
+          </div>
+        `).join('');
     }
 
     function updateRaceChart() {
       if (!raceChart || bots.length === 0) return;
-      raceChart.data.datasets = bots.map((bot, idx) => ({
+      const points = getFilteredEquityHistory();
+      const timestamps = [...new Set(points.map((point) => point.ts))].sort();
+      const labels = timestamps.map((ts) => new Date(ts).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }));
+      const grouped = {};
+      bots.forEach((bot) => {
+        grouped[bot.id] = new Map();
+      });
+
+      points.forEach((point) => {
+        if (grouped[point.bot_id]) {
+          grouped[point.bot_id].set(point.ts, point.equity_usd);
+        }
+      });
+
+      raceChart.data.labels = labels;
+      raceChart.data.datasets = bots.map((bot) => ({
         label: bot.name,
-        data: equityHistory.map(snapshot => snapshot[idx] ?? bot.equity),
+        data: timestamps.map((ts) => grouped[bot.id].get(ts) ?? null),
         borderColor: bot.color,
+        backgroundColor: bot.color,
         borderWidth: 3,
-        tension: 0.35,
+        tension: 0.25,
+        pointRadius: 0,
         fill: false
       }));
-      raceChart.data.labels = Array(equityHistory.length).fill('');
       raceChart.update('none');
     }
 
     function showBotDetail(id) {
-      const bot = bots.find(b => b.id === id);
+      const bot = bots.find((entry) => entry.id === id);
       if (!bot) return;
-      alert(`${bot.emoji} ${bot.name}\\nEquity: $${bot.equity.toFixed(2)} USD\\nP&L: $${bot.pnl.toFixed(2)} (${bot.roi.toFixed(2)}%)\\nOrders: ${bot.orders} | Fills: ${bot.fills}\\nActive Positions: ${bot.positions}`);
+
+      const trades = getBotTradeHistory(id)
+        .slice()
+        .sort((a, b) => parseTs(b.ts) - parseTs(a.ts));
+
+      document.getElementById('modalBotName').textContent = `${bot.emoji} ${bot.name}`;
+      document.getElementById('modalBotMeta').textContent = `${trades.length} trades in ${selectedRange.toUpperCase()} range`;
+      document.getElementById('modalStats').innerHTML = [
+        ['Equity', `$${bot.equity.toFixed(2)}`],
+        ['P&L', `$${bot.pnl.toFixed(2)}`],
+        ['ROI', `${formatSigned(bot.roi)}%`],
+        ['Orders', `${bot.orders}`],
+        ['Top Symbol', bot.topSymbol]
+      ].map(([label, value]) => `
+        <div class="rounded-xl border border-zinc-700 bg-zinc-950 p-3">
+          <div class="text-[11px] uppercase tracking-wide text-slate-500">${label}</div>
+          <div class="text-sm font-semibold text-white mt-1">${value}</div>
+        </div>
+      `).join('');
+
+      const tradeList = document.getElementById('modalTradeList');
+      if (!trades.length) {
+        tradeList.innerHTML = `<div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4 text-slate-400">No trades for this bot in the selected range.</div>`;
+      } else {
+        tradeList.innerHTML = trades.map((trade) => `
+          <div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="font-semibold text-white">${trade.side} ${trade.symbol}</div>
+                <div class="text-xs text-slate-400">${trade.status} • Qty ${Number(trade.quantity || 0).toFixed(6)}</div>
+              </div>
+              <div class="text-right">
+                <div class="font-mono text-emerald-400">$${Number(trade.price || 0).toFixed(6)}</div>
+                <div class="text-xs text-slate-500">${new Date(trade.ts).toLocaleString()}</div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      const modal = document.getElementById('botModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
-    // Init
-    loadSeasonData();
-    raceChart = new Chart(document.getElementById('raceChart'), {
-      type: 'line',
-      data: { 
-        labels: Array(50).fill(''), 
-        datasets: [],
-      },
-      options: { 
-        responsive: true, 
-        plugins: { legend: { display: false } }, 
-        scales: { 
-          y: { grid: { color: '#222' }}, 
-          x: { display: false } 
-        } 
+    function hideBotDetail() {
+      const modal = document.getElementById('botModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', hideBotDetail);
+    document.getElementById('botModal').addEventListener('click', (event) => {
+      if (event.target.id === 'botModal') hideBotDetail();
+    });
+    document.getElementById('rangeControls').addEventListener('click', (event) => {
+      const button = event.target.closest('[data-range]');
+      if (!button) return;
+      selectedRange = button.dataset.range;
+      updateRangeText();
+      if (botsData.summary) {
+        const filteredOrders = getFilteredOrders();
+        document.getElementById('tradeCount').textContent = filteredOrders.length || botsData.summary.total_orders;
+        updatePitBoard(filteredOrders);
+        updateRaceChart();
       }
     });
 
-    // Refresh every 30 seconds
+    loadSeasonData();
+    raceChart = new Chart(document.getElementById('raceChart'), {
+      type: 'line',
+      data: { labels: [], datasets: [] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { grid: { color: '#222' } },
+          x: { grid: { color: '#151515' }, ticks: { color: '#888' } }
+        }
+      }
+    });
+
     setInterval(() => {
       loadSeasonData();
     }, 30000);
