@@ -2,8 +2,8 @@
   "summary": {
     "season_id": "season-005",
     "capital_per_bot_usd": 1500.0,
-    "total_orders": 12,
-    "total_fills": 12,
+    "total_orders": 14,
+    "total_fills": 14,
     "active_bots": 4,
     "verified_pairs": 3
   },
@@ -13,59 +13,109 @@
       "name": "Loser Reversal Hunter",
       "emoji": "\ud83d\udd04",
       "color": "#10b981",
-      "current_equity_usd": 1479.63,
-      "current_pnl_usd": -20.37,
+      "current_equity_usd": 1480.02,
+      "current_pnl_usd": -19.98,
       "roi_pct": 0.04,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
+      "last_metric_at": "2026-04-03T03:08:34.377140+00:00"
     },
     {
       "id": "chaos_prophet",
       "name": "Chaos Prophet",
       "emoji": "\ud83d\udd2e",
       "color": "#eab308",
-      "current_equity_usd": 1479.63,
-      "current_pnl_usd": -20.37,
+      "current_equity_usd": 1480.02,
+      "current_pnl_usd": -19.98,
       "roi_pct": 0.04,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
+      "last_metric_at": "2026-04-03T03:08:34.377140+00:00"
     },
     {
       "id": "pump_surfer",
       "name": "Pump Surfer",
       "emoji": "\ud83c\udfc4",
       "color": "#3b82f6",
-      "current_equity_usd": 1482.37,
-      "current_pnl_usd": -17.63,
-      "roi_pct": 0.23,
-      "orders_count": 5,
-      "fills_count": 5,
+      "current_equity_usd": 1480.74,
+      "current_pnl_usd": -19.26,
+      "roi_pct": 0.09,
+      "orders_count": 7,
+      "fills_count": 7,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
+      "last_metric_at": "2026-04-03T03:08:34.377140+00:00"
     },
     {
       "id": "obsidian_flux",
       "name": "Obsidian Flux",
       "emoji": "\u26ab",
       "color": "#ec4899",
-      "current_equity_usd": 1481.5,
-      "current_pnl_usd": -18.5,
-      "roi_pct": 0.17,
+      "current_equity_usd": 1481.49,
+      "current_pnl_usd": -18.51,
+      "roi_pct": 0.14,
       "orders_count": 3,
       "fills_count": 3,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
+      "last_metric_at": "2026-04-03T03:08:34.377140+00:00"
     }
   ],
   "recent_orders": [
+    {
+      "ts": "2026-04-03T02:53:39.606230+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SOLINUUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 0.00028188,
+      "quantity": 139448.2722617,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana INU",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 25260.2,
+        "price_change_24h": 18.06
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "price_override": 0.0002818,
+        "reference_price": 0.0002818
+      }
+    },
+    {
+      "ts": "2026-04-03T02:53:38.712563+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SIMUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 6.472e-05,
+      "quantity": 2514266.96493721,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana Sim",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 2914.62,
+        "price_change_24h": 55.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "price_override": 6.47e-05,
+        "reference_price": 6.47e-05
+      }
+    },
     {
       "ts": "2026-04-03T02:29:14.196463+00:00",
       "bot_id": "pump_surfer",
@@ -349,6 +399,56 @@
     }
   ],
   "order_history": [
+    {
+      "ts": "2026-04-03T02:53:39.606230+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SOLINUUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 0.00028188,
+      "quantity": 139448.2722617,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana INU",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 25260.2,
+        "price_change_24h": 18.06
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "price_override": 0.0002818,
+        "reference_price": 0.0002818
+      }
+    },
+    {
+      "ts": "2026-04-03T02:53:38.712563+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "SIMUSDT",
+      "side": "BUY",
+      "status": "filled",
+      "price": 6.472e-05,
+      "quantity": 2514266.96493721,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana Sim",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 2914.62,
+        "price_change_24h": 55.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "price_override": 6.47e-05,
+        "reference_price": 6.47e-05
+      }
+    },
     {
       "ts": "2026-04-03T02:29:14.196463+00:00",
       "bot_id": "pump_surfer",
@@ -730,6 +830,56 @@
     ],
     "pump_surfer": [
       {
+        "ts": "2026-04-03T02:53:39.606230+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "SOLINUUSDT",
+        "side": "BUY",
+        "status": "filled",
+        "price": 0.00028188,
+        "quantity": 139448.2722617,
+        "fee": 0.0,
+        "strategy": "pump_surfer_dex_v1",
+        "note": null,
+        "category": "strategy_trade",
+        "rationale": {
+          "name": "Solana INU",
+          "strategy": "pump_surfer_dex_v1",
+          "volume_24h": 25260.2,
+          "price_change_24h": 18.06
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "price_override": 0.0002818,
+          "reference_price": 0.0002818
+        }
+      },
+      {
+        "ts": "2026-04-03T02:53:38.712563+00:00",
+        "bot_id": "pump_surfer",
+        "symbol": "SIMUSDT",
+        "side": "BUY",
+        "status": "filled",
+        "price": 6.472e-05,
+        "quantity": 2514266.96493721,
+        "fee": 0.0,
+        "strategy": "pump_surfer_dex_v1",
+        "note": null,
+        "category": "strategy_trade",
+        "rationale": {
+          "name": "Solana Sim",
+          "strategy": "pump_surfer_dex_v1",
+          "volume_24h": 2914.62,
+          "price_change_24h": 55.0
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "price_override": 6.47e-05,
+          "reference_price": 6.47e-05
+        }
+      },
+      {
         "ts": "2026-04-03T02:29:14.196463+00:00",
         "bot_id": "pump_surfer",
         "symbol": "BTCUSDT",
@@ -926,362 +1076,922 @@
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.96
+      "equity_usd": 1479.44
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.92
+      "equity_usd": 1479.4
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1478.96
+      "equity_usd": 1479.44
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.96
+      "equity_usd": 1479.44
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "chaos_prophet",
+      "equity_usd": 1479.33
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.33
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1479.36
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.33
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.45
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.45
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.5
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.45
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.51
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.51
+    },
+    {
+      "ts": "2026-04-03T02:26:00+00:00",
+      "bot_id": "obsidian_flux",
       "equity_usd": 1478.85
     },
     {
-      "ts": "2026-04-03T02:24:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.85
-    },
-    {
-      "ts": "2026-04-03T02:24:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.88
-    },
-    {
-      "ts": "2026-04-03T02:24:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.85
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.97
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.97
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.02
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.97
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.03
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.03
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.37
-    },
-    {
       "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1479.03
+      "equity_usd": 1479.51
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.08
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.08
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.63
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1479.08
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.96
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.96
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1477.98
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.96
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.0
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.0
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.18
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.83
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.18
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.18
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1479.13
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1479.06
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.26
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.26
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "obsidian_flux",
       "equity_usd": 1479.56
     },
     {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.56
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1479.11
+    },
+    {
+      "ts": "2026-04-03T02:27:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.56
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.44
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.44
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.46
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.44
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.48
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.48
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.66
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.3
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.66
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.66
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1479.61
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.54
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.74
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.74
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1480.04
+    },
+    {
       "ts": "2026-04-03T02:31:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1479.18
+      "equity_usd": 1479.66
     },
     {
       "ts": "2026-04-03T02:32:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.62
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.62
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1481.47
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1479.7
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.86
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.86
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1482.7
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1480.03
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.91
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.91
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1482.96
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "pump_surfer",
       "equity_usd": 1480.1
     },
     {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.1
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.95
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1480.18
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.34
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.34
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.18
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1480.51
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.39
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.39
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.44
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1480.58
+    },
+    {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1480.0
+      "equity_usd": 1480.48
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1480.0
+      "equity_usd": 1480.48
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.47
+      "equity_usd": 1483.95
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "pump_surfer",
+      "equity_usd": 1480.72
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.4
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.4
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.51
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.27
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "chaos_prophet",
       "equity_usd": 1480.24
     },
     {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.92
-    },
-    {
-      "ts": "2026-04-03T02:36:00+00:00",
+      "ts": "2026-04-03T02:37:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.92
+      "equity_usd": 1480.24
     },
     {
-      "ts": "2026-04-03T02:36:00+00:00",
+      "ts": "2026-04-03T02:37:00+00:00",
       "bot_id": "obsidian_flux",
+      "equity_usd": 1482.65
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "pump_surfer",
       "equity_usd": 1483.03
     },
     {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.79
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1479.76
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.76
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1482.17
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.55
-    },
-    {
       "ts": "2026-04-03T02:38:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.61
+      "equity_usd": 1480.09
     },
     {
       "ts": "2026-04-03T02:38:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.61
+      "equity_usd": 1480.09
     },
     {
       "ts": "2026-04-03T02:38:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.41
+      "equity_usd": 1481.89
     },
     {
       "ts": "2026-04-03T02:38:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.35
+      "equity_usd": 1482.83
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.68
+      "equity_usd": 1480.16
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.68
+      "equity_usd": 1480.16
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.77
+      "equity_usd": 1482.25
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.44
+      "equity_usd": 1482.92
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.63
+      "equity_usd": 1480.12
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.63
+      "equity_usd": 1480.12
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.5
+      "equity_usd": 1482.02
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.37
+      "equity_usd": 1482.86
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.34
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.34
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.19
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.18
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.6
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.6
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.55
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.55
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.76
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.76
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1485.43
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.79
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.66
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.66
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.9
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.65
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.91
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.91
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1486.18
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.0
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.66
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.66
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.86
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.64
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.64
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.64
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.76
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.61
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.68
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.68
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.97
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.04
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.69
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.69
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1485.04
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.06
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.68
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.68
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1485.0
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.05
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.72
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.72
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1485.2
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.11
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.61
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.61
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.62
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.95
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.57
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.57
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.41
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.84
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.51
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.51
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1484.09
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.64
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.46
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.46
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.82
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.57
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.32
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.32
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1483.11
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.38
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.52
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.94
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.07
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.07
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.79
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.02
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.08
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.08
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.81
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.02
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.04
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.04
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.65
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.98
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.08
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.08
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.83
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.03
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.05
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.05
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.68
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.8
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.95
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.95
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.13
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.12
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.89
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.89
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1480.84
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.04
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.93
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.93
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.06
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1484.03
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.53
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1483.02
+    },
+    {
+      "ts": "2026-04-03T03:07:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.03
+    },
+    {
+      "ts": "2026-04-03T03:07:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.03
+    },
+    {
+      "ts": "2026-04-03T03:07:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.58
+    },
+    {
+      "ts": "2026-04-03T03:07:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.9
+    },
+    {
+      "ts": "2026-04-03T03:08:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T03:08:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1480.02
+    },
+    {
+      "ts": "2026-04-03T03:08:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.49
+    },
+    {
+      "ts": "2026-04-03T03:08:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1480.74
     }
   ],
   "trading_config": {
@@ -1310,7 +2020,7 @@
     "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
   },
   "meta": {
-    "last_updated": "2026-04-03T02:40:30.809652+00:00",
+    "last_updated": "2026-04-03T03:08:48.708753+00:00",
     "data_source": "timescaledb + coinbase public products"
   }
 }
