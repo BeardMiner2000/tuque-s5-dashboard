@@ -11,6 +11,7 @@ from psycopg2.extras import RealDictCursor
 
 SEASON_ID = os.getenv("S5_SEASON_ID", "season-005")
 COINBASE_PRODUCTS_URL = os.getenv("COINBASE_PRODUCTS_URL", "https://api.exchange.coinbase.com/products")
+DASHBOARD_SOURCE_URL = os.getenv("DASHBOARD_SOURCE_URL", "").strip()
 MAKER_FEE_BPS = Decimal(os.getenv("MAKER_FEE_BPS", "1.875"))
 TAKER_FEE_BPS = Decimal(os.getenv("TAKER_FEE_BPS", "4.875"))
 SATOSHIS_PER_BTC = Decimal("100000000")
@@ -70,6 +71,15 @@ def fetch_coinbase_products():
         symbols.append(product_id)
 
     return sorted(symbols)
+
+
+def fetch_json(url):
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "tuque-s5-dashboard/1.0", "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=20) as response:
+        return json.loads(response.read().decode("utf-8"))
 
 
 def fetch_dashboard_rows(conn):
@@ -423,16 +433,50 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
     }
 
 
+def build_remote_payload(source_payload, coinbase_products):
+    payload = normalize_json(source_payload)
+    payload.setdefault("summary", {})
+    payload.setdefault("portfolio", {})
+    payload.setdefault("bots", [])
+    payload.setdefault("recent_orders", [])
+    payload.setdefault("order_history", [])
+    payload.setdefault("orders_by_bot", {})
+    payload.setdefault("equity_history", [])
+    payload.setdefault("market_history", [])
+    payload.setdefault("trading_config", {})
+    payload.setdefault("meta", {})
+
+    payload["summary"]["season_id"] = payload["summary"].get("season_id") or SEASON_ID
+    payload["summary"]["active_bots"] = payload["summary"].get("active_bots") or len(BOTS)
+    payload["summary"]["verified_pairs"] = int(payload["summary"].get("verified_pairs") or 0)
+
+    trading_config = payload["trading_config"]
+    trading_config["execution_mode"] = trading_config.get("execution_mode") or "paper_trading_coinbase_data"
+    trading_config["maker_fee_bps"] = float(MAKER_FEE_BPS)
+    trading_config["taker_fee_bps"] = float(TAKER_FEE_BPS)
+    trading_config["coinbase_product_count"] = len(coinbase_products)
+    trading_config["coinbase_products_sample"] = coinbase_products[:16]
+    trading_config["quote_currency_source"] = "Coinbase USD products mapped into internal USDT symbols"
+
+    payload["meta"]["last_updated"] = datetime.now(timezone.utc).isoformat()
+    payload["meta"]["data_source"] = f"remote source + coinbase public products ({DASHBOARD_SOURCE_URL})"
+    return payload
+
+
 def main():
     coinbase_products = fetch_coinbase_products()
-    with get_connection() as conn:
-        rows = fetch_dashboard_rows(conn)
-        recent_orders = fetch_recent_orders(conn)
-        order_history = fetch_order_history(conn)
-        equity_history_rows = fetch_equity_history(conn)
-        market_history_rows = fetch_market_history(conn)
+    if DASHBOARD_SOURCE_URL:
+        remote_payload = fetch_json(DASHBOARD_SOURCE_URL)
+        payload = build_remote_payload(remote_payload, coinbase_products)
+    else:
+        with get_connection() as conn:
+            rows = fetch_dashboard_rows(conn)
+            recent_orders = fetch_recent_orders(conn)
+            order_history = fetch_order_history(conn)
+            equity_history_rows = fetch_equity_history(conn)
+            market_history_rows = fetch_market_history(conn)
 
-    payload = build_payload(rows, recent_orders, order_history, equity_history_rows, market_history_rows, coinbase_products)
+        payload = build_payload(rows, recent_orders, order_history, equity_history_rows, market_history_rows, coinbase_products)
     output_path = Path(__file__).with_name("data.json")
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     print(f"Wrote {output_path}")
