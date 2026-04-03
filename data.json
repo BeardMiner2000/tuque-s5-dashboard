@@ -1,11 +1,21 @@
 {
   "summary": {
     "season_id": "season-005",
-    "capital_per_bot_usd": 1500.0,
     "total_orders": 14,
     "total_fills": 14,
     "active_bots": 4,
     "verified_pairs": 3
+  },
+  "portfolio": {
+    "start_btc": 0.089,
+    "start_sats": 8900000,
+    "current_btc": 0.08902019,
+    "current_sats": 8902019,
+    "pnl_btc": 2.019e-05,
+    "pnl_sats": 2019,
+    "roi_pct": 0.0227,
+    "btc_usd": 66684.62,
+    "current_usd": 5936.28
   },
   "bots": [
     {
@@ -13,56 +23,80 @@
       "name": "Loser Reversal Hunter",
       "emoji": "\ud83d\udd04",
       "color": "#10b981",
-      "current_equity_usd": 1481.52,
-      "current_pnl_usd": -18.48,
-      "roi_pct": 0.01,
+      "starting_btc": 0.02225,
+      "starting_sats": 2225000,
+      "current_equity_btc": 0.02224638,
+      "current_equity_sats": 2224638,
+      "current_pnl_btc": -3.62e-06,
+      "current_pnl_sats": -362,
+      "current_equity_usd": 1483.49,
+      "current_pnl_usd": -0.24,
+      "roi_pct": -0.02,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T03:11:34.803161+00:00"
+      "last_metric_at": "2026-04-03T03:29:03.234865+00:00"
     },
     {
       "id": "chaos_prophet",
       "name": "Chaos Prophet",
       "emoji": "\ud83d\udd2e",
       "color": "#eab308",
-      "current_equity_usd": 1481.52,
-      "current_pnl_usd": -18.48,
-      "roi_pct": 0.01,
+      "starting_btc": 0.02225,
+      "starting_sats": 2225000,
+      "current_equity_btc": 0.02224638,
+      "current_equity_sats": 2224638,
+      "current_pnl_btc": -3.62e-06,
+      "current_pnl_sats": -362,
+      "current_equity_usd": 1483.49,
+      "current_pnl_usd": -0.24,
+      "roi_pct": -0.02,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T03:11:34.803161+00:00"
+      "last_metric_at": "2026-04-03T03:29:03.234865+00:00"
     },
     {
       "id": "pump_surfer",
       "name": "Pump Surfer",
       "emoji": "\ud83c\udfc4",
       "color": "#3b82f6",
-      "current_equity_usd": 1482.1,
-      "current_pnl_usd": -17.9,
-      "roi_pct": 0.05,
+      "starting_btc": 0.02225,
+      "starting_sats": 2225000,
+      "current_equity_btc": 0.02231099,
+      "current_equity_sats": 2231099,
+      "current_pnl_btc": 6.099e-05,
+      "current_pnl_sats": 6099,
+      "current_equity_usd": 1487.8,
+      "current_pnl_usd": 4.07,
+      "roi_pct": 0.27,
       "orders_count": 7,
       "fills_count": 7,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T03:11:34.803161+00:00"
+      "last_metric_at": "2026-04-03T03:29:03.234865+00:00"
     },
     {
       "id": "obsidian_flux",
       "name": "Obsidian Flux",
       "emoji": "\u26ab",
       "color": "#ec4899",
+      "starting_btc": 0.02225,
+      "starting_sats": 2225000,
+      "current_equity_btc": 0.02221644,
+      "current_equity_sats": 2221644,
+      "current_pnl_btc": -3.356e-05,
+      "current_pnl_sats": -3356,
       "current_equity_usd": 1481.49,
-      "current_pnl_usd": -18.51,
-      "roi_pct": 0.01,
+      "current_pnl_usd": -2.24,
+      "roi_pct": -0.15,
       "orders_count": 3,
       "fills_count": 3,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T03:11:34.803161+00:00"
+      "last_metric_at": "2026-04-03T03:29:03.234865+00:00"
     }
   ],
   "recent_orders": [
@@ -1076,982 +1110,1878 @@
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.3
+      "equity_btc": 0.02225,
+      "equity_sats": 2225000,
+      "equity_usd": 1483.73
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.27
+      "equity_btc": 0.022249416666666667,
+      "equity_sats": 2224942,
+      "equity_usd": 1483.69
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.3
+      "equity_btc": 0.02225,
+      "equity_sats": 2225000,
+      "equity_usd": 1483.73
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1481.3
+      "equity_btc": 0.02225,
+      "equity_sats": 2225000,
+      "equity_usd": 1483.73
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.19
+      "equity_btc": 0.02224832142857143,
+      "equity_sats": 2224832,
+      "equity_usd": 1483.62
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.19
+      "equity_btc": 0.022248333333333332,
+      "equity_sats": 2224833,
+      "equity_usd": 1483.62
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.22
-    },
-    {
-      "ts": "2026-04-03T02:24:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.19
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.31
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.31
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.36
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.31
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.38
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.38
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.71
-    },
-    {
-      "ts": "2026-04-03T02:26:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.38
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.42
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.42
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.97
-    },
-    {
-      "ts": "2026-04-03T02:27:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.42
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.3
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.3
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.32
-    },
-    {
-      "ts": "2026-04-03T02:28:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.3
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.34
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.34
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.52
-    },
-    {
-      "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.17
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.52
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.52
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1481.48
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.41
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.6
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.6
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1481.91
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1481.52
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.97
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.97
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.82
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.04
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.2
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.2
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.05
-    },
-    {
-      "ts": "2026-04-03T02:33:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.37
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.25
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.25
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.31
-    },
-    {
-      "ts": "2026-04-03T02:34:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.44
-    },
-    {
-      "ts": "2026-04-03T02:35:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.35
-    },
-    {
-      "ts": "2026-04-03T02:35:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.35
-    },
-    {
-      "ts": "2026-04-03T02:35:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.82
-    },
-    {
-      "ts": "2026-04-03T02:35:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1482.58
-    },
-    {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.26
-    },
-    {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.26
-    },
-    {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.37
-    },
-    {
-      "ts": "2026-04-03T02:36:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.13
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.1
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.1
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1484.52
-    },
-    {
-      "ts": "2026-04-03T02:37:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.9
-    },
-    {
-      "ts": "2026-04-03T02:38:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.95
-    },
-    {
-      "ts": "2026-04-03T02:38:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.95
-    },
-    {
-      "ts": "2026-04-03T02:38:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.76
-    },
-    {
-      "ts": "2026-04-03T02:38:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.69
-    },
-    {
-      "ts": "2026-04-03T02:39:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.02
-    },
-    {
-      "ts": "2026-04-03T02:39:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.02
-    },
-    {
-      "ts": "2026-04-03T02:39:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1484.12
-    },
-    {
-      "ts": "2026-04-03T02:39:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.79
-    },
-    {
-      "ts": "2026-04-03T02:40:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.98
-    },
-    {
-      "ts": "2026-04-03T02:40:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.98
-    },
-    {
-      "ts": "2026-04-03T02:40:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.89
-    },
-    {
-      "ts": "2026-04-03T02:40:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.73
-    },
-    {
-      "ts": "2026-04-03T02:41:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.2
-    },
-    {
-      "ts": "2026-04-03T02:41:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.2
-    },
-    {
-      "ts": "2026-04-03T02:41:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.06
-    },
-    {
-      "ts": "2026-04-03T02:41:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.05
-    },
-    {
-      "ts": "2026-04-03T02:42:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.46
-    },
-    {
-      "ts": "2026-04-03T02:42:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.46
-    },
-    {
-      "ts": "2026-04-03T02:42:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.42
-    },
-    {
-      "ts": "2026-04-03T02:42:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.42
-    },
-    {
-      "ts": "2026-04-03T02:43:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.63
-    },
-    {
-      "ts": "2026-04-03T02:43:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.63
-    },
-    {
-      "ts": "2026-04-03T02:43:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1487.3
-    },
-    {
-      "ts": "2026-04-03T02:43:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.66
-    },
-    {
-      "ts": "2026-04-03T02:44:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.53
-    },
-    {
-      "ts": "2026-04-03T02:44:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.53
-    },
-    {
-      "ts": "2026-04-03T02:44:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.77
-    },
-    {
-      "ts": "2026-04-03T02:44:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.52
-    },
-    {
-      "ts": "2026-04-03T02:45:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.77
-    },
-    {
-      "ts": "2026-04-03T02:45:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.77
-    },
-    {
-      "ts": "2026-04-03T02:45:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1488.06
-    },
-    {
-      "ts": "2026-04-03T02:45:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.87
-    },
-    {
-      "ts": "2026-04-03T02:46:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.52
-    },
-    {
-      "ts": "2026-04-03T02:46:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.52
-    },
-    {
-      "ts": "2026-04-03T02:46:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.73
-    },
-    {
-      "ts": "2026-04-03T02:46:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.5
-    },
-    {
-      "ts": "2026-04-03T02:47:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.5
-    },
-    {
-      "ts": "2026-04-03T02:47:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.5
-    },
-    {
-      "ts": "2026-04-03T02:47:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.63
-    },
-    {
-      "ts": "2026-04-03T02:47:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.48
-    },
-    {
-      "ts": "2026-04-03T02:48:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.54
-    },
-    {
-      "ts": "2026-04-03T02:48:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.54
-    },
-    {
-      "ts": "2026-04-03T02:48:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.84
-    },
-    {
-      "ts": "2026-04-03T02:48:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.91
-    },
-    {
-      "ts": "2026-04-03T02:49:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.55
-    },
-    {
-      "ts": "2026-04-03T02:49:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.55
-    },
-    {
-      "ts": "2026-04-03T02:49:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.91
-    },
-    {
-      "ts": "2026-04-03T02:49:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.93
-    },
-    {
-      "ts": "2026-04-03T02:50:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.55
-    },
-    {
-      "ts": "2026-04-03T02:50:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.55
-    },
-    {
-      "ts": "2026-04-03T02:50:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.87
-    },
-    {
-      "ts": "2026-04-03T02:50:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.92
-    },
-    {
-      "ts": "2026-04-03T02:51:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.58
-    },
-    {
-      "ts": "2026-04-03T02:51:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.58
-    },
-    {
-      "ts": "2026-04-03T02:51:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1487.07
-    },
-    {
-      "ts": "2026-04-03T02:51:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.98
-    },
-    {
-      "ts": "2026-04-03T02:52:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.47
-    },
-    {
-      "ts": "2026-04-03T02:52:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.47
-    },
-    {
-      "ts": "2026-04-03T02:52:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.49
-    },
-    {
-      "ts": "2026-04-03T02:52:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.82
-    },
-    {
-      "ts": "2026-04-03T02:53:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.43
-    },
-    {
-      "ts": "2026-04-03T02:53:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.43
-    },
-    {
-      "ts": "2026-04-03T02:53:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1486.28
-    },
-    {
-      "ts": "2026-04-03T02:53:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.71
-    },
-    {
-      "ts": "2026-04-03T02:54:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.37
-    },
-    {
-      "ts": "2026-04-03T02:54:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.37
-    },
-    {
-      "ts": "2026-04-03T02:54:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.96
-    },
-    {
-      "ts": "2026-04-03T02:54:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.51
-    },
-    {
-      "ts": "2026-04-03T02:55:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.32
-    },
-    {
-      "ts": "2026-04-03T02:55:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.32
-    },
-    {
-      "ts": "2026-04-03T02:55:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1485.69
-    },
-    {
-      "ts": "2026-04-03T02:55:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.44
-    },
-    {
-      "ts": "2026-04-03T02:56:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1482.19
-    },
-    {
-      "ts": "2026-04-03T02:56:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1482.19
-    },
-    {
-      "ts": "2026-04-03T02:56:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1484.97
-    },
-    {
-      "ts": "2026-04-03T02:56:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.24
-    },
-    {
-      "ts": "2026-04-03T02:57:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.88
-    },
-    {
-      "ts": "2026-04-03T02:57:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.88
-    },
-    {
-      "ts": "2026-04-03T02:57:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.38
-    },
-    {
-      "ts": "2026-04-03T02:57:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.81
-    },
-    {
-      "ts": "2026-04-03T02:58:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.93
-    },
-    {
-      "ts": "2026-04-03T02:58:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.93
-    },
-    {
-      "ts": "2026-04-03T02:58:00+00:00",
-      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022248797142857143,
+      "equity_sats": 2224880,
       "equity_usd": 1483.65
     },
     {
-      "ts": "2026-04-03T02:58:00+00:00",
+      "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1484.88
+      "equity_btc": 0.02224832142857143,
+      "equity_sats": 2224832,
+      "equity_usd": 1483.62
     },
     {
-      "ts": "2026-04-03T02:59:00+00:00",
+      "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.94
+      "equity_btc": 0.02225008,
+      "equity_sats": 2225008,
+      "equity_usd": 1483.74
     },
     {
-      "ts": "2026-04-03T02:59:00+00:00",
+      "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.94
+      "equity_btc": 0.02225008,
+      "equity_sats": 2225008,
+      "equity_usd": 1483.74
     },
     {
-      "ts": "2026-04-03T02:59:00+00:00",
+      "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.68
+      "equity_btc": 0.02223589,
+      "equity_sats": 2223589,
+      "equity_usd": 1482.79
     },
     {
-      "ts": "2026-04-03T02:59:00+00:00",
+      "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1484.89
+      "equity_btc": 0.02225008,
+      "equity_sats": 2225008,
+      "equity_usd": 1483.74
     },
     {
-      "ts": "2026-04-03T03:00:00+00:00",
+      "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.91
+      "equity_btc": 0.022251065,
+      "equity_sats": 2225106,
+      "equity_usd": 1483.8
     },
     {
-      "ts": "2026-04-03T03:00:00+00:00",
+      "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.91
+      "equity_btc": 0.022251065,
+      "equity_sats": 2225106,
+      "equity_usd": 1483.8
     },
     {
-      "ts": "2026-04-03T03:00:00+00:00",
+      "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.51
+      "equity_btc": 0.02224107,
+      "equity_sats": 2224107,
+      "equity_usd": 1483.14
     },
     {
-      "ts": "2026-04-03T03:00:00+00:00",
+      "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1484.84
+      "equity_btc": 0.022251065,
+      "equity_sats": 2225106,
+      "equity_usd": 1483.8
     },
     {
-      "ts": "2026-04-03T03:01:00+00:00",
+      "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.94
+      "equity_btc": 0.02225181,
+      "equity_sats": 2225181,
+      "equity_usd": 1483.85
     },
     {
-      "ts": "2026-04-03T03:01:00+00:00",
+      "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.94
+      "equity_btc": 0.02225181,
+      "equity_sats": 2225181,
+      "equity_usd": 1483.85
     },
     {
-      "ts": "2026-04-03T03:01:00+00:00",
+      "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.7
-    },
-    {
-      "ts": "2026-04-03T03:01:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1484.9
-    },
-    {
-      "ts": "2026-04-03T03:02:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.91
-    },
-    {
-      "ts": "2026-04-03T03:02:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.91
-    },
-    {
-      "ts": "2026-04-03T03:02:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.55
-    },
-    {
-      "ts": "2026-04-03T03:02:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.67
-    },
-    {
-      "ts": "2026-04-03T03:03:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.81
-    },
-    {
-      "ts": "2026-04-03T03:03:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.81
-    },
-    {
-      "ts": "2026-04-03T03:03:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1483.0
-    },
-    {
-      "ts": "2026-04-03T03:03:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.99
-    },
-    {
-      "ts": "2026-04-03T03:04:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.75
-    },
-    {
-      "ts": "2026-04-03T03:04:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.75
-    },
-    {
-      "ts": "2026-04-03T03:04:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1482.7
-    },
-    {
-      "ts": "2026-04-03T03:04:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.9
-    },
-    {
-      "ts": "2026-04-03T03:05:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.8
-    },
-    {
-      "ts": "2026-04-03T03:05:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.8
-    },
-    {
-      "ts": "2026-04-03T03:05:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1482.92
-    },
-    {
-      "ts": "2026-04-03T03:05:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1485.9
-    },
-    {
-      "ts": "2026-04-03T03:06:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1481.89
-    },
-    {
-      "ts": "2026-04-03T03:06:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.89
-    },
-    {
-      "ts": "2026-04-03T03:06:00+00:00",
-      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022244985555555555,
+      "equity_sats": 2224499,
       "equity_usd": 1483.4
     },
     {
-      "ts": "2026-04-03T03:06:00+00:00",
+      "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "pump_surfer",
+      "equity_btc": 0.02225181,
+      "equity_sats": 2225181,
+      "equity_usd": 1483.85
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224995857142857,
+      "equity_sats": 2224996,
+      "equity_usd": 1483.73
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224995857142857,
+      "equity_sats": 2224996,
+      "equity_usd": 1483.73
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022235267142857142,
+      "equity_sats": 2223527,
+      "equity_usd": 1482.75
+    },
+    {
+      "ts": "2026-04-03T02:28:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022249925,
+      "equity_sats": 2224992,
+      "equity_usd": 1483.73
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225053,
+      "equity_sats": 2225053,
+      "equity_usd": 1483.77
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225053,
+      "equity_sats": 2225053,
+      "equity_usd": 1483.77
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02223826,
+      "equity_sats": 2223826,
+      "equity_usd": 1482.95
+    },
+    {
+      "ts": "2026-04-03T02:29:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022247934,
+      "equity_sats": 2224793,
+      "equity_usd": 1483.6
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225325,
+      "equity_sats": 2225325,
+      "equity_usd": 1483.95
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225325,
+      "equity_sats": 2225325,
+      "equity_usd": 1483.95
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02225258,
+      "equity_sats": 2225258,
+      "equity_usd": 1483.9
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.0222515325,
+      "equity_sats": 2225153,
+      "equity_usd": 1483.84
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225448,
+      "equity_sats": 2225448,
+      "equity_usd": 1484.03
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225448,
+      "equity_sats": 2225448,
+      "equity_usd": 1484.03
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02225903,
+      "equity_sats": 2225903,
+      "equity_usd": 1484.34
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02225328,
+      "equity_sats": 2225328,
+      "equity_usd": 1483.95
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022259935,
+      "equity_sats": 2225994,
+      "equity_usd": 1484.4
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022259935,
+      "equity_sats": 2225994,
+      "equity_usd": 1484.4
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222877275,
+      "equity_sats": 2228773,
+      "equity_usd": 1486.25
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022261055,
+      "equity_sats": 2226106,
+      "equity_usd": 1484.47
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226346,
+      "equity_sats": 2226346,
+      "equity_usd": 1484.63
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226346,
+      "equity_sats": 2226346,
+      "equity_usd": 1484.63
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02230626,
+      "equity_sats": 2230626,
+      "equity_usd": 1487.48
+    },
+    {
+      "ts": "2026-04-03T02:33:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02226608,
+      "equity_sats": 2226608,
+      "equity_usd": 1484.81
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226419,
+      "equity_sats": 2226419,
+      "equity_usd": 1484.68
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226419,
+      "equity_sats": 2226419,
+      "equity_usd": 1484.68
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022310113333333333,
+      "equity_sats": 2231011,
+      "equity_usd": 1487.74
+    },
+    {
+      "ts": "2026-04-03T02:34:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022267126666666668,
+      "equity_sats": 2226713,
+      "equity_usd": 1484.87
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226565,
+      "equity_sats": 2226565,
+      "equity_usd": 1484.78
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226565,
+      "equity_sats": 2226565,
+      "equity_usd": 1484.78
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02231782,
+      "equity_sats": 2231782,
+      "equity_usd": 1488.26
+    },
+    {
+      "ts": "2026-04-03T02:35:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02226922,
+      "equity_sats": 2226922,
+      "equity_usd": 1485.01
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022264382,
+      "equity_sats": 2226438,
+      "equity_usd": 1484.69
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022264382,
+      "equity_sats": 2226438,
+      "equity_usd": 1484.69
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022311136,
+      "equity_sats": 2231114,
+      "equity_usd": 1487.81
+    },
+    {
+      "ts": "2026-04-03T02:36:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022307532,
+      "equity_sats": 2230753,
+      "equity_usd": 1487.57
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022261938,
+      "equity_sats": 2226194,
+      "equity_usd": 1484.53
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022261938,
+      "equity_sats": 2226194,
+      "equity_usd": 1484.53
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022298258,
+      "equity_sats": 2229826,
+      "equity_usd": 1486.95
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022304012,
+      "equity_sats": 2230401,
+      "equity_usd": 1487.33
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225977,
+      "equity_sats": 2225977,
+      "equity_usd": 1484.38
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225977,
+      "equity_sats": 2225977,
+      "equity_usd": 1484.38
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02228685,
+      "equity_sats": 2228685,
+      "equity_usd": 1486.19
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.0223009,
+      "equity_sats": 2230090,
+      "equity_usd": 1487.13
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.0222607875,
+      "equity_sats": 2226079,
+      "equity_usd": 1484.45
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.0222607875,
+      "equity_sats": 2226079,
+      "equity_usd": 1484.45
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222922225,
+      "equity_sats": 2229222,
+      "equity_usd": 1486.55
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022302365,
+      "equity_sats": 2230236,
+      "equity_usd": 1487.22
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226013222222222,
+      "equity_sats": 2226013,
+      "equity_usd": 1484.41
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226013222222222,
+      "equity_sats": 2226013,
+      "equity_usd": 1484.41
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022288796666666666,
+      "equity_sats": 2228880,
+      "equity_usd": 1486.32
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02230143,
+      "equity_sats": 2230143,
+      "equity_usd": 1487.16
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022263475,
+      "equity_sats": 2226348,
+      "equity_usd": 1484.63
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022263475,
+      "equity_sats": 2226348,
+      "equity_usd": 1484.63
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02230639,
+      "equity_sats": 2230639,
+      "equity_usd": 1487.49
+    },
+    {
+      "ts": "2026-04-03T02:41:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02230623,
+      "equity_sats": 2230623,
+      "equity_usd": 1487.48
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022267356,
+      "equity_sats": 2226736,
       "equity_usd": 1484.89
     },
     {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022267356,
+      "equity_sats": 2226736,
+      "equity_usd": 1484.89
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022326792,
+      "equity_sats": 2232679,
+      "equity_usd": 1488.85
+    },
+    {
+      "ts": "2026-04-03T02:42:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022311799,
+      "equity_sats": 2231180,
+      "equity_usd": 1487.85
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226988,
+      "equity_sats": 2226988,
+      "equity_usd": 1485.06
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226988,
+      "equity_sats": 2226988,
+      "equity_usd": 1485.06
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022340043333333334,
+      "equity_sats": 2234004,
+      "equity_usd": 1489.74
+    },
+    {
+      "ts": "2026-04-03T02:43:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231542,
+      "equity_sats": 2231542,
+      "equity_usd": 1488.1
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226838,
+      "equity_sats": 2226838,
+      "equity_usd": 1484.96
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226838,
+      "equity_sats": 2226838,
+      "equity_usd": 1484.96
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02233216,
+      "equity_sats": 2233216,
+      "equity_usd": 1489.21
+    },
+    {
+      "ts": "2026-04-03T02:44:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231327,
+      "equity_sats": 2231327,
+      "equity_usd": 1487.95
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02227204,
+      "equity_sats": 2227204,
+      "equity_usd": 1485.2
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02227204,
+      "equity_sats": 2227204,
+      "equity_usd": 1485.2
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0223514,
+      "equity_sats": 2235140,
+      "equity_usd": 1490.49
+    },
+    {
+      "ts": "2026-04-03T02:45:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231851,
+      "equity_sats": 2231851,
+      "equity_usd": 1488.3
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022268255,
+      "equity_sats": 2226826,
+      "equity_usd": 1484.95
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022268255,
+      "equity_sats": 2226826,
+      "equity_usd": 1484.95
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022331505,
+      "equity_sats": 2233150,
+      "equity_usd": 1489.17
+    },
+    {
+      "ts": "2026-04-03T02:46:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022313085,
+      "equity_sats": 2231308,
+      "equity_usd": 1487.94
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022267954,
+      "equity_sats": 2226795,
+      "equity_usd": 1484.93
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022267954,
+      "equity_sats": 2226795,
+      "equity_usd": 1484.93
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022329924,
+      "equity_sats": 2232992,
+      "equity_usd": 1489.06
+    },
+    {
+      "ts": "2026-04-03T02:47:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022312652,
+      "equity_sats": 2231265,
+      "equity_usd": 1487.91
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226857,
+      "equity_sats": 2226857,
+      "equity_usd": 1484.97
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226857,
+      "equity_sats": 2226857,
+      "equity_usd": 1484.97
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02233318,
+      "equity_sats": 2233318,
+      "equity_usd": 1489.28
+    },
+    {
+      "ts": "2026-04-03T02:48:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231923,
+      "equity_sats": 2231923,
+      "equity_usd": 1488.35
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226876,
+      "equity_sats": 2226876,
+      "equity_usd": 1484.98
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226876,
+      "equity_sats": 2226876,
+      "equity_usd": 1484.98
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022334165,
+      "equity_sats": 2233416,
+      "equity_usd": 1489.35
+    },
+    {
+      "ts": "2026-04-03T02:49:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.0223195,
+      "equity_sats": 2231950,
+      "equity_usd": 1488.37
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226866,
+      "equity_sats": 2226866,
+      "equity_usd": 1484.98
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226866,
+      "equity_sats": 2226866,
+      "equity_usd": 1484.98
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0223336525,
+      "equity_sats": 2233365,
+      "equity_usd": 1489.31
+    },
+    {
+      "ts": "2026-04-03T02:50:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.0223193625,
+      "equity_sats": 2231936,
+      "equity_usd": 1488.36
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226923,
+      "equity_sats": 2226923,
+      "equity_usd": 1485.02
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226923,
+      "equity_sats": 2226923,
+      "equity_usd": 1485.02
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02233663,
+      "equity_sats": 2233663,
+      "equity_usd": 1489.51
+    },
+    {
+      "ts": "2026-04-03T02:51:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02232018,
+      "equity_sats": 2232018,
+      "equity_usd": 1488.41
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226758,
+      "equity_sats": 2226758,
+      "equity_usd": 1484.91
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226758,
+      "equity_sats": 2226758,
+      "equity_usd": 1484.91
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02232795,
+      "equity_sats": 2232795,
+      "equity_usd": 1488.93
+    },
+    {
+      "ts": "2026-04-03T02:52:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022317803333333334,
+      "equity_sats": 2231780,
+      "equity_usd": 1488.25
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226696,
+      "equity_sats": 2226696,
+      "equity_usd": 1484.86
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226696,
+      "equity_sats": 2226696,
+      "equity_usd": 1484.86
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022324696666666668,
+      "equity_sats": 2232470,
+      "equity_usd": 1488.71
+    },
+    {
+      "ts": "2026-04-03T02:53:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022316154545454544,
+      "equity_sats": 2231615,
+      "equity_usd": 1488.14
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226605,
+      "equity_sats": 2226605,
+      "equity_usd": 1484.8
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226605,
+      "equity_sats": 2226605,
+      "equity_usd": 1484.8
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02231989,
+      "equity_sats": 2231989,
+      "equity_usd": 1488.39
+    },
+    {
+      "ts": "2026-04-03T02:54:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231321,
+      "equity_sats": 2231321,
+      "equity_usd": 1487.95
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022265272,
+      "equity_sats": 2226527,
+      "equity_usd": 1484.75
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022265272,
+      "equity_sats": 2226527,
+      "equity_usd": 1484.75
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022315806,
+      "equity_sats": 2231581,
+      "equity_usd": 1488.12
+    },
+    {
+      "ts": "2026-04-03T02:55:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231209,
+      "equity_sats": 2231209,
+      "equity_usd": 1487.87
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02226324,
+      "equity_sats": 2226324,
+      "equity_usd": 1484.62
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02226324,
+      "equity_sats": 2226324,
+      "equity_usd": 1484.62
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02230511,
+      "equity_sats": 2230511,
+      "equity_usd": 1487.41
+    },
+    {
+      "ts": "2026-04-03T02:56:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02230917,
+      "equity_sats": 2230917,
+      "equity_usd": 1487.68
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225869,
+      "equity_sats": 2225869,
+      "equity_usd": 1484.31
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225869,
+      "equity_sats": 2225869,
+      "equity_usd": 1484.31
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022281185,
+      "equity_sats": 2228118,
+      "equity_usd": 1485.81
+    },
+    {
+      "ts": "2026-04-03T02:57:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02230264,
+      "equity_sats": 2230264,
+      "equity_usd": 1487.24
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022259466,
+      "equity_sats": 2225947,
+      "equity_usd": 1484.36
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022259466,
+      "equity_sats": 2225947,
+      "equity_usd": 1484.36
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022285258,
+      "equity_sats": 2228526,
+      "equity_usd": 1486.08
+    },
+    {
+      "ts": "2026-04-03T02:58:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022303756,
+      "equity_sats": 2230376,
+      "equity_usd": 1487.32
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022259534,
+      "equity_sats": 2225953,
+      "equity_usd": 1484.37
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022259534,
+      "equity_sats": 2225953,
+      "equity_usd": 1484.37
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02228563,
+      "equity_sats": 2228563,
+      "equity_usd": 1486.11
+    },
+    {
+      "ts": "2026-04-03T02:59:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022303856,
+      "equity_sats": 2230386,
+      "equity_usd": 1487.32
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225906,
+      "equity_sats": 2225906,
+      "equity_usd": 1484.34
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225906,
+      "equity_sats": 2225906,
+      "equity_usd": 1484.34
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022283138,
+      "equity_sats": 2228314,
+      "equity_usd": 1485.94
+    },
+    {
+      "ts": "2026-04-03T03:00:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022303174,
+      "equity_sats": 2230317,
+      "equity_usd": 1487.28
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.0222596,
+      "equity_sats": 2225960,
+      "equity_usd": 1484.37
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.0222596,
+      "equity_sats": 2225960,
+      "equity_usd": 1484.37
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022285962,
+      "equity_sats": 2228596,
+      "equity_usd": 1486.13
+    },
+    {
+      "ts": "2026-04-03T03:01:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022303944,
+      "equity_sats": 2230394,
+      "equity_usd": 1487.33
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022259163636363637,
+      "equity_sats": 2225916,
+      "equity_usd": 1484.34
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022259163636363637,
+      "equity_sats": 2225916,
+      "equity_usd": 1484.34
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02228366727272727,
+      "equity_sats": 2228367,
+      "equity_usd": 1485.98
+    },
+    {
+      "ts": "2026-04-03T03:02:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022315564545454546,
+      "equity_sats": 2231556,
+      "equity_usd": 1488.11
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.0222576,
+      "equity_sats": 2225760,
+      "equity_usd": 1484.24
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.0222576,
+      "equity_sats": 2225760,
+      "equity_usd": 1484.24
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02227544,
+      "equity_sats": 2227544,
+      "equity_usd": 1485.43
+    },
+    {
+      "ts": "2026-04-03T03:03:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02232031,
+      "equity_sats": 2232031,
+      "equity_usd": 1488.42
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022256758,
+      "equity_sats": 2225676,
+      "equity_usd": 1484.18
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022256758,
+      "equity_sats": 2225676,
+      "equity_usd": 1484.18
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02227102,
+      "equity_sats": 2227102,
+      "equity_usd": 1485.13
+    },
+    {
+      "ts": "2026-04-03T03:04:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022319102,
+      "equity_sats": 2231910,
+      "equity_usd": 1488.34
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022257377272727273,
+      "equity_sats": 2225738,
+      "equity_usd": 1484.22
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022257377272727273,
+      "equity_sats": 2225738,
+      "equity_usd": 1484.22
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02227427,
+      "equity_sats": 2227427,
+      "equity_usd": 1485.35
+    },
+    {
+      "ts": "2026-04-03T03:05:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231905,
+      "equity_sats": 2231905,
+      "equity_usd": 1488.34
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022258743333333334,
+      "equity_sats": 2225874,
+      "equity_usd": 1484.32
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022258743333333334,
+      "equity_sats": 2225874,
+      "equity_usd": 1484.32
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02228146777777778,
+      "equity_sats": 2228147,
+      "equity_usd": 1485.83
+    },
+    {
+      "ts": "2026-04-03T03:06:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022303814444444445,
+      "equity_sats": 2230381,
+      "equity_usd": 1487.32
+    },
+    {
       "ts": "2026-04-03T03:07:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.89
+      "equity_btc": 0.02225886,
+      "equity_sats": 2225886,
+      "equity_usd": 1484.32
     },
     {
       "ts": "2026-04-03T03:07:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.89
+      "equity_btc": 0.02225886,
+      "equity_sats": 2225886,
+      "equity_usd": 1484.32
     },
     {
       "ts": "2026-04-03T03:07:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.44
+      "equity_btc": 0.02228209,
+      "equity_sats": 2228209,
+      "equity_usd": 1485.87
     },
     {
       "ts": "2026-04-03T03:07:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1481.76
+      "equity_btc": 0.0222568775,
+      "equity_sats": 2225688,
+      "equity_usd": 1484.19
     },
     {
       "ts": "2026-04-03T03:08:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.88
+      "equity_btc": 0.02225863,
+      "equity_sats": 2225863,
+      "equity_usd": 1484.31
     },
     {
       "ts": "2026-04-03T03:08:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.88
+      "equity_btc": 0.02225863,
+      "equity_sats": 2225863,
+      "equity_usd": 1484.31
     },
     {
       "ts": "2026-04-03T03:08:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1483.36
+      "equity_btc": 0.02228088,
+      "equity_sats": 2228088,
+      "equity_usd": 1485.79
     },
     {
       "ts": "2026-04-03T03:08:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.6
+      "equity_btc": 0.0222695,
+      "equity_sats": 2226950,
+      "equity_usd": 1485.03
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.79
+      "equity_btc": 0.022257273333333334,
+      "equity_sats": 2225727,
+      "equity_usd": 1484.22
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.79
+      "equity_btc": 0.022257273333333334,
+      "equity_sats": 2225727,
+      "equity_usd": 1484.22
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1482.88
+      "equity_btc": 0.02227374,
+      "equity_sats": 2227374,
+      "equity_usd": 1485.32
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.47
+      "equity_btc": 0.022267566666666665,
+      "equity_sats": 2226757,
+      "equity_usd": 1484.9
     },
     {
       "ts": "2026-04-03T03:10:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.58
+      "equity_btc": 0.02225416,
+      "equity_sats": 2225416,
+      "equity_usd": 1484.01
     },
     {
       "ts": "2026-04-03T03:10:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.58
+      "equity_btc": 0.02225416,
+      "equity_sats": 2225416,
+      "equity_usd": 1484.01
     },
     {
       "ts": "2026-04-03T03:10:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.8
+      "equity_btc": 0.02225738,
+      "equity_sats": 2225738,
+      "equity_usd": 1484.23
     },
     {
       "ts": "2026-04-03T03:10:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.18
+      "equity_btc": 0.02226312,
+      "equity_sats": 2226312,
+      "equity_usd": 1484.61
     },
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1481.52
+      "equity_btc": 0.0222533,
+      "equity_sats": 2225330,
+      "equity_usd": 1483.95
     },
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1481.52
+      "equity_btc": 0.0222533,
+      "equity_sats": 2225330,
+      "equity_usd": 1483.95
     },
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "bot_id": "obsidian_flux",
+      "equity_btc": 0.02225286,
+      "equity_sats": 2225286,
+      "equity_usd": 1483.92
+    },
+    {
+      "ts": "2026-04-03T03:11:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.0222619,
+      "equity_sats": 2226190,
+      "equity_usd": 1484.53
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022252804,
+      "equity_sats": 2225280,
+      "equity_usd": 1483.92
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022252804,
+      "equity_sats": 2225280,
+      "equity_usd": 1483.92
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022250232,
+      "equity_sats": 2225023,
+      "equity_usd": 1483.75
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022261184,
+      "equity_sats": 2226118,
+      "equity_usd": 1484.48
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225263,
+      "equity_sats": 2225263,
+      "equity_usd": 1483.91
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225263,
+      "equity_sats": 2225263,
+      "equity_usd": 1483.91
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222493,
+      "equity_sats": 2224930,
+      "equity_usd": 1483.69
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02226093,
+      "equity_sats": 2226093,
+      "equity_usd": 1484.46
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022253915,
+      "equity_sats": 2225392,
+      "equity_usd": 1483.99
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022253915,
+      "equity_sats": 2225392,
+      "equity_usd": 1483.99
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222560725,
+      "equity_sats": 2225607,
+      "equity_usd": 1484.14
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022292315,
+      "equity_sats": 2229232,
+      "equity_usd": 1486.55
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022254392,
+      "equity_sats": 2225439,
+      "equity_usd": 1484.03
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022254392,
+      "equity_sats": 2225439,
+      "equity_usd": 1484.03
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02225859,
+      "equity_sats": 2225859,
+      "equity_usd": 1484.31
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022322548,
+      "equity_sats": 2232255,
+      "equity_usd": 1488.57
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02225372,
+      "equity_sats": 2225372,
+      "equity_usd": 1483.98
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02225372,
+      "equity_sats": 2225372,
+      "equity_usd": 1483.98
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02225507,
+      "equity_sats": 2225507,
+      "equity_usd": 1484.07
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02232158,
+      "equity_sats": 2232158,
+      "equity_usd": 1488.51
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022251095555555555,
+      "equity_sats": 2225110,
+      "equity_usd": 1483.81
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022251095555555555,
+      "equity_sats": 2225110,
+      "equity_usd": 1483.81
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022241272222222223,
+      "equity_sats": 2224127,
+      "equity_usd": 1483.15
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022317797777777777,
+      "equity_sats": 2231780,
+      "equity_usd": 1488.25
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022250076666666667,
+      "equity_sats": 2225008,
+      "equity_usd": 1483.74
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022250076666666667,
+      "equity_sats": 2225008,
+      "equity_usd": 1483.74
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222359,
+      "equity_sats": 2223590,
+      "equity_usd": 1482.79
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231633,
+      "equity_sats": 2231633,
+      "equity_usd": 1488.16
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224955,
+      "equity_sats": 2224955,
+      "equity_usd": 1483.7
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224955,
+      "equity_sats": 2224955,
+      "equity_usd": 1483.7
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02223312,
+      "equity_sats": 2223312,
+      "equity_usd": 1482.61
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231557,
+      "equity_sats": 2231557,
+      "equity_usd": 1488.11
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224955,
+      "equity_sats": 2224955,
+      "equity_usd": 1483.7
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224955,
+      "equity_sats": 2224955,
+      "equity_usd": 1483.7
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02223312,
+      "equity_sats": 2223312,
+      "equity_usd": 1482.61
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231557,
+      "equity_sats": 2231557,
+      "equity_usd": 1488.11
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224871,
+      "equity_sats": 2224871,
+      "equity_usd": 1483.65
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224871,
+      "equity_sats": 2224871,
+      "equity_usd": 1483.65
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02222871,
+      "equity_sats": 2222871,
+      "equity_usd": 1482.31
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022314355,
+      "equity_sats": 2231436,
+      "equity_usd": 1488.02
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224889,
+      "equity_sats": 2224889,
+      "equity_usd": 1483.66
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224889,
+      "equity_sats": 2224889,
+      "equity_usd": 1483.66
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02222964,
+      "equity_sats": 2222964,
+      "equity_usd": 1482.38
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231461,
+      "equity_sats": 2231461,
+      "equity_usd": 1488.04
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224942,
+      "equity_sats": 2224942,
+      "equity_usd": 1483.69
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224942,
+      "equity_sats": 2224942,
+      "equity_usd": 1483.69
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02223245,
+      "equity_sats": 2223245,
+      "equity_usd": 1482.56
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231538,
+      "equity_sats": 2231538,
+      "equity_usd": 1488.09
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.022247366666666667,
+      "equity_sats": 2224737,
+      "equity_usd": 1483.56
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022247366666666667,
+      "equity_sats": 2224737,
+      "equity_usd": 1483.56
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.022221626666666668,
+      "equity_sats": 2222163,
+      "equity_usd": 1481.84
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.022312416666666668,
+      "equity_sats": 2231242,
+      "equity_usd": 1487.9
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224572,
+      "equity_sats": 2224572,
+      "equity_usd": 1483.45
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224572,
+      "equity_sats": 2224572,
+      "equity_usd": 1483.45
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02221298,
+      "equity_sats": 2221298,
+      "equity_usd": 1481.26
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231005,
+      "equity_sats": 2231005,
+      "equity_usd": 1487.74
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224572,
+      "equity_sats": 2224572,
+      "equity_usd": 1483.45
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224572,
+      "equity_sats": 2224572,
+      "equity_usd": 1483.45
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02221298,
+      "equity_sats": 2221298,
+      "equity_usd": 1481.26
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231005,
+      "equity_sats": 2231005,
+      "equity_usd": 1487.74
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224717,
+      "equity_sats": 2224717,
+      "equity_usd": 1483.54
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224717,
+      "equity_sats": 2224717,
+      "equity_usd": 1483.54
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222206,
+      "equity_sats": 2222060,
+      "equity_usd": 1481.77
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231213,
+      "equity_sats": 2231213,
+      "equity_usd": 1487.88
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224717,
+      "equity_sats": 2224717,
+      "equity_usd": 1483.54
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224717,
+      "equity_sats": 2224717,
+      "equity_usd": 1483.54
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.0222206,
+      "equity_sats": 2222060,
+      "equity_usd": 1481.77
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02231213,
+      "equity_sats": 2231213,
+      "equity_usd": 1487.88
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224638,
+      "equity_sats": 2224638,
+      "equity_usd": 1483.49
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.02224638,
+      "equity_sats": 2224638,
+      "equity_usd": 1483.49
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02221644,
+      "equity_sats": 2221644,
       "equity_usd": 1481.49
     },
     {
-      "ts": "2026-04-03T03:11:00+00:00",
+      "ts": "2026-04-03T03:29:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1482.1
+      "equity_btc": 0.02231099,
+      "equity_sats": 2231099,
+      "equity_usd": 1487.8
     }
   ],
   "market_history": [
@@ -3028,12 +3958,372 @@
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.83613613
+      "price": 2053.91052382
     },
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.22305724
+      "price": 79.22585582
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66583.34379001
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09025386
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2054.11505195
+    },
+    {
+      "ts": "2026-04-03T03:12:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.22871435
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66586.12613845
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09029962
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2054.0870995
+    },
+    {
+      "ts": "2026-04-03T03:13:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.24401316
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66565.88017963
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09027607
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2053.01517648
+    },
+    {
+      "ts": "2026-04-03T03:14:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.22953093
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66558.35180791
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09025718
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2052.5941152
+    },
+    {
+      "ts": "2026-04-03T03:15:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.22852435
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66568.86917069
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09021993
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2052.50371647
+    },
+    {
+      "ts": "2026-04-03T03:16:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.19985903
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66615.3313755
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.0902288
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2053.69245814
+    },
+    {
+      "ts": "2026-04-03T03:17:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.20475382
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66627.07823042
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09025755
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2054.71251111
+    },
+    {
+      "ts": "2026-04-03T03:18:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.24168521
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66634.57788434
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09029232
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2054.87558142
+    },
+    {
+      "ts": "2026-04-03T03:19:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.27012256
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66634.57788434
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09029961
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.32073911
+    },
+    {
+      "ts": "2026-04-03T03:20:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.28151667
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66647.81032508
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09031196
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.58616749
+    },
+    {
+      "ts": "2026-04-03T03:21:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.28638777
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66645.01558138
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09032342
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.44751459
+    },
+    {
+      "ts": "2026-04-03T03:22:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.29386505
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66636.59239838
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09030853
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.06560338
+    },
+    {
+      "ts": "2026-04-03T03:23:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.28567755
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66671.64794991
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09032341
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.18545026
+    },
+    {
+      "ts": "2026-04-03T03:24:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.27968339
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66694.99793791
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09033137
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2056.11040534
+    },
+    {
+      "ts": "2026-04-03T03:25:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.2730005
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66694.99793791
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09034509
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2056.55050924
+    },
+    {
+      "ts": "2026-04-03T03:26:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.28521864
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66672.14524174
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.0903987
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.6696124
+    },
+    {
+      "ts": "2026-04-03T03:27:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.32368159
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66672.14524174
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.0903987
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.6696124
+    },
+    {
+      "ts": "2026-04-03T03:28:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.33329733
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66684.62405927
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.09040245
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2055.41677793
+    },
+    {
+      "ts": "2026-04-03T03:29:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 79.34283392
     }
   ],
   "trading_config": {
@@ -3062,7 +4352,7 @@
     "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
   },
   "meta": {
-    "last_updated": "2026-04-03T03:11:42.260071+00:00",
+    "last_updated": "2026-04-03T03:29:13.931859+00:00",
     "data_source": "timescaledb + coinbase public products"
   }
 }

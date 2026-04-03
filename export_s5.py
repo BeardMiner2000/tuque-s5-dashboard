@@ -9,11 +9,11 @@ from pathlib import Path
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
-CAPITAL_PER_BOT_USD = Decimal(os.getenv("S5_CAPITAL_PER_BOT_USD", "1500"))
 SEASON_ID = os.getenv("S5_SEASON_ID", "season-005")
 COINBASE_PRODUCTS_URL = os.getenv("COINBASE_PRODUCTS_URL", "https://api.exchange.coinbase.com/products")
 MAKER_FEE_BPS = Decimal(os.getenv("MAKER_FEE_BPS", "1.875"))
 TAKER_FEE_BPS = Decimal(os.getenv("TAKER_FEE_BPS", "4.875"))
+SATOSHIS_PER_BTC = Decimal("100000000")
 
 BOTS = [
     {"id": "loser_reversal_hunter", "name": "Loser Reversal Hunter", "emoji": "🔄", "color": "#10b981"},
@@ -264,9 +264,12 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
     total_orders = 0
     total_fills = 0
     traded_symbols = set()
+    latest_btc_usd = Decimal("0")
+    total_current_btc = Decimal("0")
+    total_start_btc = Decimal("0")
     for bot in BOTS:
         row = rows_by_bot.get(bot["id"])
-        equity_usd = CAPITAL_PER_BOT_USD
+        equity_usd = Decimal("0")
         pnl_usd = Decimal("0")
         roi_pct = Decimal("0")
         orders_count = 0
@@ -274,13 +277,16 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
         open_orders = 0
         top_symbol = None
         last_metric_at = None
+        equity_btc = Decimal("0")
+        starting_btc = Decimal("0")
         if row:
             btc_usd = Decimal(str(row["btc_usd"] or 0))
             equity_btc = Decimal(str(row["equity_btc"] or 0))
             starting_btc = Decimal(str(row["starting_equity_btc"] or 0))
+            latest_btc_usd = max(latest_btc_usd, btc_usd)
             if btc_usd > 0:
                 equity_usd = equity_btc * btc_usd
-                pnl_usd = equity_usd - CAPITAL_PER_BOT_USD
+                pnl_usd = (equity_btc - starting_btc) * btc_usd
             if starting_btc > 0:
                 roi_pct = ((equity_btc / starting_btc) - Decimal("1")) * Decimal("100")
             orders_count = int(row["orders_count"] or 0)
@@ -288,6 +294,8 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
             open_orders = int(row["open_orders"] or 0)
             top_symbol = row["top_symbol"]
             last_metric_at = row["ts"].astimezone(timezone.utc).isoformat() if row["ts"] else None
+        total_current_btc += equity_btc
+        total_start_btc += starting_btc
 
         total_orders += orders_count
         total_fills += fills_count
@@ -297,6 +305,12 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
                 "name": bot["name"],
                 "emoji": bot["emoji"],
                 "color": bot["color"],
+                "starting_btc": float(starting_btc),
+                "starting_sats": int((starting_btc * SATOSHIS_PER_BTC).to_integral_value()),
+                "current_equity_btc": float(equity_btc),
+                "current_equity_sats": int((equity_btc * SATOSHIS_PER_BTC).to_integral_value()),
+                "current_pnl_btc": float(equity_btc - starting_btc),
+                "current_pnl_sats": int(((equity_btc - starting_btc) * SATOSHIS_PER_BTC).to_integral_value()),
                 "current_equity_usd": round(float(equity_usd), 2),
                 "current_pnl_usd": round(float(pnl_usd), 2),
                 "roi_pct": round(float(roi_pct), 2),
@@ -354,6 +368,8 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
             {
                 "ts": row["bucket_ts"].astimezone(timezone.utc).isoformat() if row["bucket_ts"] else None,
                 "bot_id": row["bot_id"],
+                "equity_btc": float(equity_btc),
+                "equity_sats": int((equity_btc * SATOSHIS_PER_BTC).to_integral_value()),
                 "equity_usd": round(equity_usd, 2),
             }
         )
@@ -370,11 +386,21 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
     return {
         "summary": {
             "season_id": SEASON_ID,
-            "capital_per_bot_usd": float(CAPITAL_PER_BOT_USD),
             "total_orders": total_orders,
             "total_fills": total_fills,
             "active_bots": len(BOTS),
             "verified_pairs": len(traded_symbols),
+        },
+        "portfolio": {
+            "start_btc": float(total_start_btc),
+            "start_sats": int((total_start_btc * SATOSHIS_PER_BTC).to_integral_value()),
+            "current_btc": float(total_current_btc),
+            "current_sats": int((total_current_btc * SATOSHIS_PER_BTC).to_integral_value()),
+            "pnl_btc": float(total_current_btc - total_start_btc),
+            "pnl_sats": int(((total_current_btc - total_start_btc) * SATOSHIS_PER_BTC).to_integral_value()),
+            "roi_pct": round(float(((total_current_btc / total_start_btc) - Decimal("1")) * Decimal("100")) if total_start_btc > 0 else 0.0, 4),
+            "btc_usd": round(float(latest_btc_usd), 2),
+            "current_usd": round(float(total_current_btc * latest_btc_usd), 2) if latest_btc_usd > 0 else 0.0,
         },
         "bots": bots_payload,
         "recent_orders": recent_orders_payload,
