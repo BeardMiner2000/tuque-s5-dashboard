@@ -9,13 +9,13 @@
   "portfolio": {
     "start_btc": 0.089,
     "start_sats": 8900000,
-    "current_btc": 0.08887745,
-    "current_sats": 8887745,
-    "pnl_btc": -0.00012255,
-    "pnl_sats": -12255,
-    "roi_pct": -0.1377,
+    "current_btc": 0.08886235,
+    "current_sats": 8886235,
+    "pnl_btc": -0.00013764999999998917,
+    "pnl_sats": -13765,
+    "roi_pct": -0.1547,
     "btc_usd": 66773.24,
-    "current_usd": 5934.64
+    "current_usd": 5933.63
   },
   "bots": [
     {
@@ -25,18 +25,18 @@
       "color": "#10b981",
       "starting_btc": 0.02225,
       "starting_sats": 2225000,
-      "current_equity_btc": 0.02216238,
-      "current_equity_sats": 2216238,
-      "current_pnl_btc": -8.762e-05,
-      "current_pnl_sats": -8762,
-      "current_equity_usd": 1479.85,
-      "current_pnl_usd": -5.85,
-      "roi_pct": -0.39,
+      "current_equity_btc": 0.02214728,
+      "current_equity_sats": 2214728,
+      "current_pnl_btc": -0.00010272000000000059,
+      "current_pnl_sats": -10272,
+      "current_equity_usd": 1478.85,
+      "current_pnl_usd": -6.86,
+      "roi_pct": -0.46,
       "orders_count": 4,
       "fills_count": 4,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T19:08:44.754646+00:00"
+      "last_metric_at": "2026-04-03T19:09:29.234903+00:00"
     },
     {
       "id": "chaos_prophet",
@@ -47,7 +47,7 @@
       "starting_sats": 2225000,
       "current_equity_btc": 0.02224077,
       "current_equity_sats": 2224077,
-      "current_pnl_btc": -9.23e-06,
+      "current_pnl_btc": -9.229999999998961e-06,
       "current_pnl_sats": -923,
       "current_equity_usd": 1485.09,
       "current_pnl_usd": -0.62,
@@ -56,7 +56,7 @@
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T19:08:44.754646+00:00"
+      "last_metric_at": "2026-04-03T19:09:29.234903+00:00"
     },
     {
       "id": "pump_surfer",
@@ -67,7 +67,7 @@
       "starting_sats": 2225000,
       "current_equity_btc": 0.02228953,
       "current_equity_sats": 2228953,
-      "current_pnl_btc": 3.953e-05,
+      "current_pnl_btc": 3.952999999999943e-05,
       "current_pnl_sats": 3953,
       "current_equity_usd": 1488.34,
       "current_pnl_usd": 2.64,
@@ -76,7 +76,7 @@
       "fills_count": 7,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T19:08:44.754646+00:00"
+      "last_metric_at": "2026-04-03T19:09:29.234903+00:00"
     },
     {
       "id": "obsidian_flux",
@@ -87,7 +87,7 @@
       "starting_sats": 2225000,
       "current_equity_btc": 0.02218477,
       "current_equity_sats": 2218477,
-      "current_pnl_btc": -6.523e-05,
+      "current_pnl_btc": -6.522999999999946e-05,
       "current_pnl_sats": -6523,
       "current_equity_usd": 1481.35,
       "current_pnl_usd": -4.36,
@@ -96,7 +96,7 @@
       "fills_count": 5,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T19:08:44.754646+00:00"
+      "last_metric_at": "2026-04-03T19:09:29.234903+00:00"
     }
   ],
   "recent_orders": [
@@ -160,9 +160,9 @@
       "symbol": "ETHUSDT",
       "side": "COVER",
       "status": "filled",
-      "price": 3496.5034965,
+      "price": 3496.5034965034965,
       "quantity": 0.14554868,
-      "fee": 3.05346881,
+      "fee": 3.0534688111888113,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": "short_cover",
       "category": "strategy_trade",
@@ -187,9 +187,9 @@
       "symbol": "ETHUSDT",
       "side": "SHORT",
       "status": "filled",
-      "price": 3496.5034965,
+      "price": 3496.5034965034965,
       "quantity": 0.14554868,
-      "fee": 3.05346881,
+      "fee": 3.0534688111888113,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": null,
       "category": "strategy_trade",
@@ -265,9 +265,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.00180225,
-      "fee": 0.72918207,
+      "fee": 0.729182067932068,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -338,9 +338,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0180225,
-      "fee": 7.29182068,
+      "fee": 7.291820679320679,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": "orderflow_reversal",
       "category": "strategy_trade",
@@ -362,9 +362,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -385,9 +385,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -408,9 +408,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -431,9 +431,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -454,9 +454,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -477,9 +477,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -500,9 +500,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -523,9 +523,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -602,9 +602,9 @@
       "symbol": "ETHUSDT",
       "side": "COVER",
       "status": "filled",
-      "price": 3496.5034965,
+      "price": 3496.5034965034965,
       "quantity": 0.14554868,
-      "fee": 3.05346881,
+      "fee": 3.0534688111888113,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": "short_cover",
       "category": "strategy_trade",
@@ -629,9 +629,9 @@
       "symbol": "ETHUSDT",
       "side": "SHORT",
       "status": "filled",
-      "price": 3496.5034965,
+      "price": 3496.5034965034965,
       "quantity": 0.14554868,
-      "fee": 3.05346881,
+      "fee": 3.0534688111888113,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": null,
       "category": "strategy_trade",
@@ -707,9 +707,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.00180225,
-      "fee": 0.72918207,
+      "fee": 0.729182067932068,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -780,9 +780,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0180225,
-      "fee": 7.29182068,
+      "fee": 7.291820679320679,
       "strategy": "obsidian_flux_orderflow_v1",
       "note": "orderflow_reversal",
       "category": "strategy_trade",
@@ -804,9 +804,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -827,9 +827,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -850,9 +850,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -873,9 +873,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.0020025,
-      "fee": 0.8102023,
+      "fee": 0.8102022977022977,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -896,9 +896,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -919,9 +919,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -942,9 +942,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -965,9 +965,9 @@
       "symbol": "BTCUSDT",
       "side": "SELL",
       "status": "filled",
-      "price": 67432.56743257,
+      "price": 67432.56743256743,
       "quantity": 0.002225,
-      "fee": 0.90022478,
+      "fee": 0.9002247752247752,
       "strategy": "btc_reserve_refill_v1",
       "note": "refill_usdt_liquidity",
       "category": "reserve_refill",
@@ -1045,9 +1045,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.0020025,
-        "fee": 0.8102023,
+        "fee": 0.8102022977022977,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1068,9 +1068,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.002225,
-        "fee": 0.90022478,
+        "fee": 0.9002247752247752,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1093,9 +1093,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.0020025,
-        "fee": 0.8102023,
+        "fee": 0.8102022977022977,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1116,9 +1116,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.002225,
-        "fee": 0.90022478,
+        "fee": 0.9002247752247752,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1191,9 +1191,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.00180225,
-        "fee": 0.72918207,
+        "fee": 0.729182067932068,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1264,9 +1264,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.0020025,
-        "fee": 0.8102023,
+        "fee": 0.8102022977022977,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1287,9 +1287,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.002225,
-        "fee": 0.90022478,
+        "fee": 0.9002247752247752,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1312,9 +1312,9 @@
         "symbol": "ETHUSDT",
         "side": "COVER",
         "status": "filled",
-        "price": 3496.5034965,
+        "price": 3496.5034965034965,
         "quantity": 0.14554868,
-        "fee": 3.05346881,
+        "fee": 3.0534688111888113,
         "strategy": "obsidian_flux_orderflow_v1",
         "note": "short_cover",
         "category": "strategy_trade",
@@ -1339,9 +1339,9 @@
         "symbol": "ETHUSDT",
         "side": "SHORT",
         "status": "filled",
-        "price": 3496.5034965,
+        "price": 3496.5034965034965,
         "quantity": 0.14554868,
-        "fee": 3.05346881,
+        "fee": 3.0534688111888113,
         "strategy": "obsidian_flux_orderflow_v1",
         "note": null,
         "category": "strategy_trade",
@@ -1367,9 +1367,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.0180225,
-        "fee": 7.29182068,
+        "fee": 7.291820679320679,
         "strategy": "obsidian_flux_orderflow_v1",
         "note": "orderflow_reversal",
         "category": "strategy_trade",
@@ -1391,9 +1391,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.0020025,
-        "fee": 0.8102023,
+        "fee": 0.8102022977022977,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -1414,9 +1414,9 @@
         "symbol": "BTCUSDT",
         "side": "SELL",
         "status": "filled",
-        "price": 67432.56743257,
+        "price": 67432.56743256743,
         "quantity": 0.002225,
-        "fee": 0.90022478,
+        "fee": 0.9002247752247752,
         "strategy": "btc_reserve_refill_v1",
         "note": "refill_usdt_liquidity",
         "category": "reserve_refill",
@@ -5213,6 +5213,34 @@
       "equity_btc": 0.02228869,
       "equity_sats": 2228869,
       "equity_usd": 1488.29
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_btc": 0.02224077,
+      "equity_sats": 2224077,
+      "equity_usd": 1485.09
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_btc": 0.022152313333333333,
+      "equity_sats": 2215231,
+      "equity_usd": 1479.18
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_btc": 0.02218477,
+      "equity_sats": 2218477,
+      "equity_usd": 1481.35
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_btc": 0.02228953,
+      "equity_sats": 2228953,
+      "equity_usd": 1488.34
     }
   ],
   "market_history": [
@@ -5239,7 +5267,7 @@
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66653.14836679
+      "price": 66653.148366795
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
@@ -5264,7 +5292,7 @@
     {
       "ts": "2026-04-03T02:25:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09050184
+      "price": 0.09050183666666667
     },
     {
       "ts": "2026-04-03T02:25:00+00:00",
@@ -5279,7 +5307,7 @@
     {
       "ts": "2026-04-03T02:26:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66610.76630774
+      "price": 66610.7663077425
     },
     {
       "ts": "2026-04-03T02:26:00+00:00",
@@ -5299,17 +5327,17 @@
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66602.31939261
+      "price": 66602.319392614
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09046227
+      "price": 0.090462274
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.92071607
+      "price": 2053.920716068
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
@@ -5329,7 +5357,7 @@
     {
       "ts": "2026-04-03T02:28:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.75153288
+      "price": 2054.7515328833333
     },
     {
       "ts": "2026-04-03T02:28:00+00:00",
@@ -5344,12 +5372,12 @@
     {
       "ts": "2026-04-03T02:29:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09042356
+      "price": 0.090423565
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.69727054
+      "price": 2053.697270545
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
@@ -5364,12 +5392,12 @@
     {
       "ts": "2026-04-03T02:30:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09041963
+      "price": 0.0904196275
     },
     {
       "ts": "2026-04-03T02:30:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.52947272
+      "price": 2052.529472725
     },
     {
       "ts": "2026-04-03T02:30:00+00:00",
@@ -5399,7 +5427,7 @@
     {
       "ts": "2026-04-03T02:32:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66471.34351021
+      "price": 66471.343510215
     },
     {
       "ts": "2026-04-03T02:32:00+00:00",
@@ -5424,7 +5452,7 @@
     {
       "ts": "2026-04-03T02:33:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09038737
+      "price": 0.090387372
     },
     {
       "ts": "2026-04-03T02:33:00+00:00",
@@ -5439,7 +5467,7 @@
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66402.33618174
+      "price": 66402.336181742
     },
     {
       "ts": "2026-04-03T02:34:00+00:00",
@@ -5454,7 +5482,7 @@
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.0850391
+      "price": 79.085039098
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
@@ -5479,12 +5507,12 @@
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66401.58764933
+      "price": 66401.587649328
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09026031
+      "price": 0.090260308
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
@@ -5494,27 +5522,27 @@
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.06741969
+      "price": 79.067419688
     },
     {
       "ts": "2026-04-03T02:37:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66439.94077575
+      "price": 66439.940775752
     },
     {
       "ts": "2026-04-03T02:37:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09024722
+      "price": 0.090247224
     },
     {
       "ts": "2026-04-03T02:37:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2046.45802194
+      "price": 2046.458021944
     },
     {
       "ts": "2026-04-03T02:37:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.05885144
+      "price": 79.058851438
     },
     {
       "ts": "2026-04-03T02:38:00+00:00",
@@ -5529,17 +5557,17 @@
     {
       "ts": "2026-04-03T02:38:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2047.07220725
+      "price": 2047.072207255
     },
     {
       "ts": "2026-04-03T02:38:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.07194884
+      "price": 79.071948835
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66457.93623436
+      "price": 66457.936234355
     },
     {
       "ts": "2026-04-03T02:39:00+00:00",
@@ -5559,12 +5587,12 @@
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66466.49087454
+      "price": 66466.490874538
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09022417
+      "price": 0.090224174
     },
     {
       "ts": "2026-04-03T02:40:00+00:00",
@@ -5574,32 +5602,32 @@
     {
       "ts": "2026-04-03T02:40:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.08476095
+      "price": 79.084760952
     },
     {
       "ts": "2026-04-03T02:41:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66408.58908648
+      "price": 66408.589086478
     },
     {
       "ts": "2026-04-03T02:41:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09022241
+      "price": 0.090222414
     },
     {
       "ts": "2026-04-03T02:41:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2047.27118089
+      "price": 2047.271180892
     },
     {
       "ts": "2026-04-03T02:41:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.10217954
+      "price": 79.102179538
     },
     {
       "ts": "2026-04-03T02:42:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66346.75510438
+      "price": 66346.755104382
     },
     {
       "ts": "2026-04-03T02:42:00+00:00",
@@ -5609,17 +5637,17 @@
     {
       "ts": "2026-04-03T02:42:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2045.08681875
+      "price": 2045.086818748
     },
     {
       "ts": "2026-04-03T02:42:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.05813181
+      "price": 79.058131814
     },
     {
       "ts": "2026-04-03T02:43:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66318.01239332
+      "price": 66318.012393315
     },
     {
       "ts": "2026-04-03T02:43:00+00:00",
@@ -5679,12 +5707,12 @@
     {
       "ts": "2026-04-03T02:46:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66341.0170332
+      "price": 66341.017033195
     },
     {
       "ts": "2026-04-03T02:46:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09012143
+      "price": 0.090121435
     },
     {
       "ts": "2026-04-03T02:46:00+00:00",
@@ -5694,12 +5722,12 @@
     {
       "ts": "2026-04-03T02:46:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.00181506
+      "price": 79.0018150575
     },
     {
       "ts": "2026-04-03T02:47:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66345.71559513
+      "price": 66345.715595132
     },
     {
       "ts": "2026-04-03T02:47:00+00:00",
@@ -5734,12 +5762,12 @@
     {
       "ts": "2026-04-03T02:48:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 78.99455984
+      "price": 78.994559835
     },
     {
       "ts": "2026-04-03T02:49:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66333.11261265
+      "price": 66333.112612655
     },
     {
       "ts": "2026-04-03T02:49:00+00:00",
@@ -5749,17 +5777,17 @@
     {
       "ts": "2026-04-03T02:49:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2044.16860981
+      "price": 2044.1686098075
     },
     {
       "ts": "2026-04-03T02:49:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 78.99998995
+      "price": 78.9999899475
     },
     {
       "ts": "2026-04-03T02:50:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66334.63954769
+      "price": 66334.6395476875
     },
     {
       "ts": "2026-04-03T02:50:00+00:00",
@@ -5784,7 +5812,7 @@
     {
       "ts": "2026-04-03T02:51:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09006708
+      "price": 0.090067082
     },
     {
       "ts": "2026-04-03T02:51:00+00:00",
@@ -5794,12 +5822,12 @@
     {
       "ts": "2026-04-03T02:51:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.02843232
+      "price": 79.028432324
     },
     {
       "ts": "2026-04-03T02:52:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66352.14573224
+      "price": 66352.145732238
     },
     {
       "ts": "2026-04-03T02:52:00+00:00",
@@ -5809,17 +5837,17 @@
     {
       "ts": "2026-04-03T02:52:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2045.33415062
+      "price": 2045.334150618
     },
     {
       "ts": "2026-04-03T02:52:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.05315955
+      "price": 79.053159554
     },
     {
       "ts": "2026-04-03T02:53:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66361.76965752
+      "price": 66361.7696575225
     },
     {
       "ts": "2026-04-03T02:53:00+00:00",
@@ -5849,27 +5877,27 @@
     {
       "ts": "2026-04-03T02:54:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2045.68282697
+      "price": 2045.682826968
     },
     {
       "ts": "2026-04-03T02:54:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.06723391
+      "price": 79.067233906
     },
     {
       "ts": "2026-04-03T02:55:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66387.69256061
+      "price": 66387.692560608
     },
     {
       "ts": "2026-04-03T02:55:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09007938
+      "price": 0.090079378
     },
     {
       "ts": "2026-04-03T02:55:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2046.02159419
+      "price": 2046.021594192
     },
     {
       "ts": "2026-04-03T02:55:00+00:00",
@@ -5899,17 +5927,17 @@
     {
       "ts": "2026-04-03T02:57:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66490.85472404
+      "price": 66490.854724045
     },
     {
       "ts": "2026-04-03T02:57:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09016673
+      "price": 0.090166735
     },
     {
       "ts": "2026-04-03T02:57:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2050.88832507
+      "price": 2050.888325065
     },
     {
       "ts": "2026-04-03T02:57:00+00:00",
@@ -5919,7 +5947,7 @@
     {
       "ts": "2026-04-03T02:58:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66478.69649594
+      "price": 66478.696495936
     },
     {
       "ts": "2026-04-03T02:58:00+00:00",
@@ -5929,57 +5957,57 @@
     {
       "ts": "2026-04-03T02:58:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.06219045
+      "price": 2051.062190452
     },
     {
       "ts": "2026-04-03T02:58:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.2949968
+      "price": 79.294996804
     },
     {
       "ts": "2026-04-03T02:59:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66477.58701954
+      "price": 66477.587019536
     },
     {
       "ts": "2026-04-03T02:59:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.0902185
+      "price": 0.090218502
     },
     {
       "ts": "2026-04-03T02:59:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2050.80698048
+      "price": 2050.806980484
     },
     {
       "ts": "2026-04-03T02:59:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.28069662
+      "price": 79.280696624
     },
     {
       "ts": "2026-04-03T03:00:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66485.02842783
+      "price": 66485.028427828
     },
     {
       "ts": "2026-04-03T03:00:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09023316
+      "price": 0.090233162
     },
     {
       "ts": "2026-04-03T03:00:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.27678292
+      "price": 2051.276782916
     },
     {
       "ts": "2026-04-03T03:00:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.29084427
+      "price": 79.290844274
     },
     {
       "ts": "2026-04-03T03:01:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66476.58966443
+      "price": 66476.589664434
     },
     {
       "ts": "2026-04-03T03:01:00+00:00",
@@ -5989,7 +6017,7 @@
     {
       "ts": "2026-04-03T03:01:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.06727585
+      "price": 2051.067275854
     },
     {
       "ts": "2026-04-03T03:01:00+00:00",
@@ -5999,12 +6027,12 @@
     {
       "ts": "2026-04-03T03:02:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66485.47458269
+      "price": 66485.47458268667
     },
     {
       "ts": "2026-04-03T03:02:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09027704
+      "price": 0.09027704166666667
     },
     {
       "ts": "2026-04-03T03:02:00+00:00",
@@ -6014,7 +6042,7 @@
     {
       "ts": "2026-04-03T03:02:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.29296396
+      "price": 79.29296396166667
     },
     {
       "ts": "2026-04-03T03:03:00+00:00",
@@ -6029,7 +6057,7 @@
     {
       "ts": "2026-04-03T03:03:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.90403947
+      "price": 2051.904039472
     },
     {
       "ts": "2026-04-03T03:03:00+00:00",
@@ -6039,7 +6067,7 @@
     {
       "ts": "2026-04-03T03:04:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66521.18960052
+      "price": 66521.189600522
     },
     {
       "ts": "2026-04-03T03:04:00+00:00",
@@ -6049,7 +6077,7 @@
     {
       "ts": "2026-04-03T03:04:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.90917271
+      "price": 2051.909172708
     },
     {
       "ts": "2026-04-03T03:04:00+00:00",
@@ -6059,17 +6087,17 @@
     {
       "ts": "2026-04-03T03:05:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66509.8085603
+      "price": 66509.80856029833
     },
     {
       "ts": "2026-04-03T03:05:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.0903277
+      "price": 0.09032769666666667
     },
     {
       "ts": "2026-04-03T03:05:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.28790438
+      "price": 2051.287904385
     },
     {
       "ts": "2026-04-03T03:05:00+00:00",
@@ -6079,7 +6107,7 @@
     {
       "ts": "2026-04-03T03:06:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66489.81065047
+      "price": 66489.810650465
     },
     {
       "ts": "2026-04-03T03:06:00+00:00",
@@ -6114,7 +6142,7 @@
     {
       "ts": "2026-04-03T03:07:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.24530725
+      "price": 79.245307245
     },
     {
       "ts": "2026-04-03T03:08:00+00:00",
@@ -6139,17 +6167,17 @@
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66517.96637599
+      "price": 66517.966375994
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09023904
+      "price": 0.090239036
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2050.98061381
+      "price": 2050.980613814
     },
     {
       "ts": "2026-04-03T03:09:00+00:00",
@@ -6189,27 +6217,27 @@
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.91052382
+      "price": 2053.910523825
     },
     {
       "ts": "2026-04-03T03:11:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.22585582
+      "price": 79.2258558175
     },
     {
       "ts": "2026-04-03T03:12:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66583.34379001
+      "price": 66583.343790006
     },
     {
       "ts": "2026-04-03T03:12:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09025386
+      "price": 0.090253862
     },
     {
       "ts": "2026-04-03T03:12:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.11505195
+      "price": 2054.115051952
     },
     {
       "ts": "2026-04-03T03:12:00+00:00",
@@ -6239,12 +6267,12 @@
     {
       "ts": "2026-04-03T03:14:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66565.88017963
+      "price": 66565.880179625
     },
     {
       "ts": "2026-04-03T03:14:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09027607
+      "price": 0.0902760675
     },
     {
       "ts": "2026-04-03T03:14:00+00:00",
@@ -6259,17 +6287,17 @@
     {
       "ts": "2026-04-03T03:15:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66558.35180791
+      "price": 66558.351807914
     },
     {
       "ts": "2026-04-03T03:15:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09025718
+      "price": 0.090257178
     },
     {
       "ts": "2026-04-03T03:15:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.5941152
+      "price": 2052.594115204
     },
     {
       "ts": "2026-04-03T03:15:00+00:00",
@@ -6289,27 +6317,27 @@
     {
       "ts": "2026-04-03T03:16:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.50371647
+      "price": 2052.503716466
     },
     {
       "ts": "2026-04-03T03:16:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.19985903
+      "price": 79.199859026
     },
     {
       "ts": "2026-04-03T03:17:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66615.3313755
+      "price": 66615.3313754975
     },
     {
       "ts": "2026-04-03T03:17:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.0902288
+      "price": 0.090228805
     },
     {
       "ts": "2026-04-03T03:17:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.69245814
+      "price": 2053.692458145
     },
     {
       "ts": "2026-04-03T03:17:00+00:00",
@@ -6334,7 +6362,7 @@
     {
       "ts": "2026-04-03T03:18:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.24168521
+      "price": 79.241685212
     },
     {
       "ts": "2026-04-03T03:19:00+00:00",
@@ -6369,7 +6397,7 @@
     {
       "ts": "2026-04-03T03:20:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.32073911
+      "price": 2055.320739112
     },
     {
       "ts": "2026-04-03T03:20:00+00:00",
@@ -6389,12 +6417,12 @@
     {
       "ts": "2026-04-03T03:21:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.58616749
+      "price": 2055.5861674875
     },
     {
       "ts": "2026-04-03T03:21:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.28638777
+      "price": 79.286387775
     },
     {
       "ts": "2026-04-03T03:22:00+00:00",
@@ -6429,7 +6457,7 @@
     {
       "ts": "2026-04-03T03:23:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.06560338
+      "price": 2055.065603375
     },
     {
       "ts": "2026-04-03T03:23:00+00:00",
@@ -6439,7 +6467,7 @@
     {
       "ts": "2026-04-03T03:24:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66671.64794991
+      "price": 66671.647949908
     },
     {
       "ts": "2026-04-03T03:24:00+00:00",
@@ -6454,7 +6482,7 @@
     {
       "ts": "2026-04-03T03:24:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.27968339
+      "price": 79.279683392
     },
     {
       "ts": "2026-04-03T03:25:00+00:00",
@@ -6464,7 +6492,7 @@
     {
       "ts": "2026-04-03T03:25:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09033137
+      "price": 0.0903313725
     },
     {
       "ts": "2026-04-03T03:25:00+00:00",
@@ -6474,7 +6502,7 @@
     {
       "ts": "2026-04-03T03:25:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.2730005
+      "price": 79.273000495
     },
     {
       "ts": "2026-04-03T03:26:00+00:00",
@@ -6514,7 +6542,7 @@
     {
       "ts": "2026-04-03T03:27:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.32368159
+      "price": 79.323681592
     },
     {
       "ts": "2026-04-03T03:28:00+00:00",
@@ -6554,22 +6582,22 @@
     {
       "ts": "2026-04-03T03:29:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.34377919
+      "price": 79.343779185
     },
     {
       "ts": "2026-04-03T03:30:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66667.29855961
+      "price": 66667.298559614
     },
     {
       "ts": "2026-04-03T03:30:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09040179
+      "price": 0.090401786
     },
     {
       "ts": "2026-04-03T03:30:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.6921162
+      "price": 2054.692116204
     },
     {
       "ts": "2026-04-03T03:30:00+00:00",
@@ -6579,22 +6607,22 @@
     {
       "ts": "2026-04-03T03:31:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66631.34563489
+      "price": 66631.345634892
     },
     {
       "ts": "2026-04-03T03:31:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09039874
+      "price": 0.090398742
     },
     {
       "ts": "2026-04-03T03:31:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.22644593
+      "price": 2053.226445928
     },
     {
       "ts": "2026-04-03T03:31:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.3027793
+      "price": 79.302779302
     },
     {
       "ts": "2026-04-03T03:32:00+00:00",
@@ -6614,12 +6642,12 @@
     {
       "ts": "2026-04-03T03:32:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.28910841
+      "price": 79.289108412
     },
     {
       "ts": "2026-04-03T03:33:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66607.95663479
+      "price": 66607.956634794
     },
     {
       "ts": "2026-04-03T03:33:00+00:00",
@@ -6629,7 +6657,7 @@
     {
       "ts": "2026-04-03T03:33:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.14209464
+      "price": 2052.142094638
     },
     {
       "ts": "2026-04-03T03:33:00+00:00",
@@ -6644,7 +6672,7 @@
     {
       "ts": "2026-04-03T03:34:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09035453
+      "price": 0.090354534
     },
     {
       "ts": "2026-04-03T03:34:00+00:00",
@@ -6654,12 +6682,12 @@
     {
       "ts": "2026-04-03T03:34:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.22063874
+      "price": 79.220638736
     },
     {
       "ts": "2026-04-03T03:35:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66616.07307128
+      "price": 66616.073071278
     },
     {
       "ts": "2026-04-03T03:35:00+00:00",
@@ -6669,7 +6697,7 @@
     {
       "ts": "2026-04-03T03:35:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.67441547
+      "price": 2052.674415468
     },
     {
       "ts": "2026-04-03T03:35:00+00:00",
@@ -6689,17 +6717,17 @@
     {
       "ts": "2026-04-03T03:36:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.9473052
+      "price": 2053.947305202
     },
     {
       "ts": "2026-04-03T03:36:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.23123652
+      "price": 79.231236522
     },
     {
       "ts": "2026-04-03T03:37:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66682.4477075
+      "price": 66682.447707502
     },
     {
       "ts": "2026-04-03T03:37:00+00:00",
@@ -6714,7 +6742,7 @@
     {
       "ts": "2026-04-03T03:37:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.26990417
+      "price": 79.269904174
     },
     {
       "ts": "2026-04-03T03:38:00+00:00",
@@ -6724,17 +6752,17 @@
     {
       "ts": "2026-04-03T03:38:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09041299
+      "price": 0.0904129875
     },
     {
       "ts": "2026-04-03T03:38:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.83974292
+      "price": 2054.839742925
     },
     {
       "ts": "2026-04-03T03:38:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.26371717
+      "price": 79.263717175
     },
     {
       "ts": "2026-04-03T03:39:00+00:00",
@@ -6744,7 +6772,7 @@
     {
       "ts": "2026-04-03T03:39:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09042017
+      "price": 0.090420172
     },
     {
       "ts": "2026-04-03T03:39:00+00:00",
@@ -6754,22 +6782,22 @@
     {
       "ts": "2026-04-03T03:39:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.24020635
+      "price": 79.240206354
     },
     {
       "ts": "2026-04-03T03:40:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66634.34882479
+      "price": 66634.348824788
     },
     {
       "ts": "2026-04-03T03:40:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09044202
+      "price": 0.090442016
     },
     {
       "ts": "2026-04-03T03:40:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.15422626
+      "price": 2053.154226256
     },
     {
       "ts": "2026-04-03T03:40:00+00:00",
@@ -6784,12 +6812,12 @@
     {
       "ts": "2026-04-03T03:41:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09044268
+      "price": 0.090442675
     },
     {
       "ts": "2026-04-03T03:41:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.63146306
+      "price": 2052.6314630575
     },
     {
       "ts": "2026-04-03T03:41:00+00:00",
@@ -6799,7 +6827,7 @@
     {
       "ts": "2026-04-03T03:42:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66592.47177215
+      "price": 66592.471772152
     },
     {
       "ts": "2026-04-03T03:42:00+00:00",
@@ -6809,17 +6837,17 @@
     {
       "ts": "2026-04-03T03:42:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.35168154
+      "price": 2052.351681536
     },
     {
       "ts": "2026-04-03T03:42:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.17867169
+      "price": 79.178671694
     },
     {
       "ts": "2026-04-03T03:43:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66585.34342996
+      "price": 66585.343429965
     },
     {
       "ts": "2026-04-03T03:43:00+00:00",
@@ -6849,7 +6877,7 @@
     {
       "ts": "2026-04-03T03:44:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.13107905
+      "price": 2051.131079054
     },
     {
       "ts": "2026-04-03T03:44:00+00:00",
@@ -6859,17 +6887,17 @@
     {
       "ts": "2026-04-03T03:45:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66541.33762688
+      "price": 66541.337626878
     },
     {
       "ts": "2026-04-03T03:45:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09043322
+      "price": 0.090433218
     },
     {
       "ts": "2026-04-03T03:45:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.32370183
+      "price": 2051.323701828
     },
     {
       "ts": "2026-04-03T03:45:00+00:00",
@@ -6879,22 +6907,22 @@
     {
       "ts": "2026-04-03T03:46:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66553.36784917
+      "price": 66553.367849174
     },
     {
       "ts": "2026-04-03T03:46:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.0904285
+      "price": 0.090428504
     },
     {
       "ts": "2026-04-03T03:46:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.6636202
+      "price": 2051.663620204
     },
     {
       "ts": "2026-04-03T03:46:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.08925095
+      "price": 79.089250946
     },
     {
       "ts": "2026-04-03T03:47:00+00:00",
@@ -6919,12 +6947,12 @@
     {
       "ts": "2026-04-03T03:48:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66580.14881992
+      "price": 66580.148819922
     },
     {
       "ts": "2026-04-03T03:48:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09043217
+      "price": 0.090432168
     },
     {
       "ts": "2026-04-03T03:48:00+00:00",
@@ -6934,12 +6962,12 @@
     {
       "ts": "2026-04-03T03:48:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.09522887
+      "price": 79.095228874
     },
     {
       "ts": "2026-04-03T03:49:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66601.65564886
+      "price": 66601.6556488625
     },
     {
       "ts": "2026-04-03T03:49:00+00:00",
@@ -6964,12 +6992,12 @@
     {
       "ts": "2026-04-03T03:50:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09047656
+      "price": 0.090476564
     },
     {
       "ts": "2026-04-03T03:50:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.01530866
+      "price": 2052.015308658
     },
     {
       "ts": "2026-04-03T03:50:00+00:00",
@@ -6979,7 +7007,7 @@
     {
       "ts": "2026-04-03T03:51:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66585.11556039
+      "price": 66585.115560394
     },
     {
       "ts": "2026-04-03T03:51:00+00:00",
@@ -6994,7 +7022,7 @@
     {
       "ts": "2026-04-03T03:51:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.11805856
+      "price": 79.118058558
     },
     {
       "ts": "2026-04-03T03:52:00+00:00",
@@ -7004,22 +7032,22 @@
     {
       "ts": "2026-04-03T03:52:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09049735
+      "price": 0.090497346
     },
     {
       "ts": "2026-04-03T03:52:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.3343148
+      "price": 2052.334314796
     },
     {
       "ts": "2026-04-03T03:52:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.12634267
+      "price": 79.126342666
     },
     {
       "ts": "2026-04-03T03:53:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66585.42032394
+      "price": 66585.420323945
     },
     {
       "ts": "2026-04-03T03:53:00+00:00",
@@ -7044,17 +7072,17 @@
     {
       "ts": "2026-04-03T03:54:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09050444
+      "price": 0.090504438
     },
     {
       "ts": "2026-04-03T03:54:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.55013596
+      "price": 2052.550135964
     },
     {
       "ts": "2026-04-03T03:54:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.11803772
+      "price": 79.118037718
     },
     {
       "ts": "2026-04-03T03:55:00+00:00",
@@ -7079,12 +7107,12 @@
     {
       "ts": "2026-04-03T03:56:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66601.71347971
+      "price": 66601.71347970833
     },
     {
       "ts": "2026-04-03T03:56:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09052447
+      "price": 0.090524475
     },
     {
       "ts": "2026-04-03T03:56:00+00:00",
@@ -7104,22 +7132,22 @@
     {
       "ts": "2026-04-03T03:57:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09053635
+      "price": 0.090536354
     },
     {
       "ts": "2026-04-03T03:57:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.4877118
+      "price": 2053.487711798
     },
     {
       "ts": "2026-04-03T03:57:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.11239064
+      "price": 79.112390644
     },
     {
       "ts": "2026-04-03T03:58:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66578.87235914
+      "price": 66578.872359145
     },
     {
       "ts": "2026-04-03T03:58:00+00:00",
@@ -7134,12 +7162,12 @@
     {
       "ts": "2026-04-03T03:58:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.11125854
+      "price": 79.111258545
     },
     {
       "ts": "2026-04-03T03:59:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66572.98948421
+      "price": 66572.989484214
     },
     {
       "ts": "2026-04-03T03:59:00+00:00",
@@ -7149,7 +7177,7 @@
     {
       "ts": "2026-04-03T03:59:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2052.71734656
+      "price": 2052.717346562
     },
     {
       "ts": "2026-04-03T03:59:00+00:00",
@@ -7159,12 +7187,12 @@
     {
       "ts": "2026-04-03T04:00:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66578.13045585
+      "price": 66578.130455845
     },
     {
       "ts": "2026-04-03T04:00:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.0905479
+      "price": 0.090547905
     },
     {
       "ts": "2026-04-03T04:00:00+00:00",
@@ -7184,12 +7212,12 @@
     {
       "ts": "2026-04-03T04:01:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09055049
+      "price": 0.090550492
     },
     {
       "ts": "2026-04-03T04:01:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.98547265
+      "price": 2053.985472648
     },
     {
       "ts": "2026-04-03T04:01:00+00:00",
@@ -7199,7 +7227,7 @@
     {
       "ts": "2026-04-03T04:02:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66586.44362803
+      "price": 66586.443628028
     },
     {
       "ts": "2026-04-03T04:02:00+00:00",
@@ -7209,37 +7237,37 @@
     {
       "ts": "2026-04-03T04:02:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.15117613
+      "price": 2054.151176134
     },
     {
       "ts": "2026-04-03T04:02:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.07009122
+      "price": 79.070091224
     },
     {
       "ts": "2026-04-03T04:03:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66585.94949132
+      "price": 66585.949491322
     },
     {
       "ts": "2026-04-03T04:03:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09055863
+      "price": 0.090558632
     },
     {
       "ts": "2026-04-03T04:03:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.04465743
+      "price": 2054.044657432
     },
     {
       "ts": "2026-04-03T04:03:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.05805507
+      "price": 79.058055068
     },
     {
       "ts": "2026-04-03T04:04:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66582.35889165
+      "price": 66582.358891646
     },
     {
       "ts": "2026-04-03T04:04:00+00:00",
@@ -7254,32 +7282,32 @@
     {
       "ts": "2026-04-03T04:04:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.06458769
+      "price": 79.064587686
     },
     {
       "ts": "2026-04-03T04:05:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66585.21713146
+      "price": 66585.21713146167
     },
     {
       "ts": "2026-04-03T04:05:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09058902
+      "price": 0.09058901833333333
     },
     {
       "ts": "2026-04-03T04:05:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.07592708
+      "price": 2054.0759270783333
     },
     {
       "ts": "2026-04-03T04:05:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.08872383
+      "price": 79.08872383333333
     },
     {
       "ts": "2026-04-03T04:06:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66599.36896018
+      "price": 66599.368960176
     },
     {
       "ts": "2026-04-03T04:06:00+00:00",
@@ -7294,32 +7322,32 @@
     {
       "ts": "2026-04-03T04:06:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.10097541
+      "price": 79.100975414
     },
     {
       "ts": "2026-04-03T04:07:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66608.57808111
+      "price": 66608.5780811075
     },
     {
       "ts": "2026-04-03T04:07:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.090616
+      "price": 0.0906160025
     },
     {
       "ts": "2026-04-03T04:07:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.79935294
+      "price": 2054.799352935
     },
     {
       "ts": "2026-04-03T04:07:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.12033703
+      "price": 79.1203370275
     },
     {
       "ts": "2026-04-03T04:08:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66619.91907167
+      "price": 66619.9190716725
     },
     {
       "ts": "2026-04-03T04:08:00+00:00",
@@ -7329,32 +7357,32 @@
     {
       "ts": "2026-04-03T04:08:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.10908871
+      "price": 2055.109088715
     },
     {
       "ts": "2026-04-03T04:08:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.12754073
+      "price": 79.1275407275
     },
     {
       "ts": "2026-04-03T04:09:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66622.72693357
+      "price": 66622.726933566
     },
     {
       "ts": "2026-04-03T04:09:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09060403
+      "price": 0.090604032
     },
     {
       "ts": "2026-04-03T04:09:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.91911576
+      "price": 2054.919115758
     },
     {
       "ts": "2026-04-03T04:09:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.14125608
+      "price": 79.141256084
     },
     {
       "ts": "2026-04-03T04:10:00+00:00",
@@ -7364,12 +7392,12 @@
     {
       "ts": "2026-04-03T04:10:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09059947
+      "price": 0.090599465
     },
     {
       "ts": "2026-04-03T04:10:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.06301182
+      "price": 2055.0630118175
     },
     {
       "ts": "2026-04-03T04:10:00+00:00",
@@ -7384,12 +7412,12 @@
     {
       "ts": "2026-04-03T04:11:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09059969
+      "price": 0.090599694
     },
     {
       "ts": "2026-04-03T04:11:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.29167975
+      "price": 2055.291679752
     },
     {
       "ts": "2026-04-03T04:11:00+00:00",
@@ -7399,22 +7427,22 @@
     {
       "ts": "2026-04-03T04:12:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66627.04404143
+      "price": 66627.044041428
     },
     {
       "ts": "2026-04-03T04:12:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09059278
+      "price": 0.090592778
     },
     {
       "ts": "2026-04-03T04:12:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.28664115
+      "price": 2055.286641154
     },
     {
       "ts": "2026-04-03T04:12:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.176228
+      "price": 79.176227998
     },
     {
       "ts": "2026-04-03T04:13:00+00:00",
@@ -7424,17 +7452,17 @@
     {
       "ts": "2026-04-03T04:13:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09056586
+      "price": 0.090565855
     },
     {
       "ts": "2026-04-03T04:13:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.05117569
+      "price": 2054.051175695
     },
     {
       "ts": "2026-04-03T04:13:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.21039441
+      "price": 79.210394405
     },
     {
       "ts": "2026-04-03T04:14:00+00:00",
@@ -7469,7 +7497,7 @@
     {
       "ts": "2026-04-03T04:15:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.65888991
+      "price": 2054.658889912
     },
     {
       "ts": "2026-04-03T04:15:00+00:00",
@@ -7479,7 +7507,7 @@
     {
       "ts": "2026-04-03T04:16:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66613.87930334
+      "price": 66613.879303338
     },
     {
       "ts": "2026-04-03T04:16:00+00:00",
@@ -7489,17 +7517,17 @@
     {
       "ts": "2026-04-03T04:16:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.87731737
+      "price": 2054.877317374
     },
     {
       "ts": "2026-04-03T04:16:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.26804507
+      "price": 79.268045068
     },
     {
       "ts": "2026-04-03T04:17:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66611.80726876
+      "price": 66611.807268765
     },
     {
       "ts": "2026-04-03T04:17:00+00:00",
@@ -7514,7 +7542,7 @@
     {
       "ts": "2026-04-03T04:17:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.275225
+      "price": 79.275224995
     },
     {
       "ts": "2026-04-03T04:18:00+00:00",
@@ -7524,7 +7552,7 @@
     {
       "ts": "2026-04-03T04:18:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09059368
+      "price": 0.090593684
     },
     {
       "ts": "2026-04-03T04:18:00+00:00",
@@ -7539,12 +7567,12 @@
     {
       "ts": "2026-04-03T04:19:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66637.82154973
+      "price": 66637.821549734
     },
     {
       "ts": "2026-04-03T04:19:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09059808
+      "price": 0.090598078
     },
     {
       "ts": "2026-04-03T04:19:00+00:00",
@@ -7554,7 +7582,7 @@
     {
       "ts": "2026-04-03T04:19:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.32689639
+      "price": 79.326896386
     },
     {
       "ts": "2026-04-03T04:20:00+00:00",
@@ -7564,12 +7592,12 @@
     {
       "ts": "2026-04-03T04:20:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09060387
+      "price": 0.090603874
     },
     {
       "ts": "2026-04-03T04:20:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2055.72194264
+      "price": 2055.721942636
     },
     {
       "ts": "2026-04-03T04:20:00+00:00",
@@ -7579,22 +7607,22 @@
     {
       "ts": "2026-04-03T04:21:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66660.19311097
+      "price": 66660.193110972
     },
     {
       "ts": "2026-04-03T04:21:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09060935
+      "price": 0.090609346
     },
     {
       "ts": "2026-04-03T04:21:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2056.02095516
+      "price": 2056.020955156
     },
     {
       "ts": "2026-04-03T04:21:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.33408231
+      "price": 79.334082306
     },
     {
       "ts": "2026-04-03T04:22:00+00:00",
@@ -7604,7 +7632,7 @@
     {
       "ts": "2026-04-03T04:22:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09062786
+      "price": 0.090627858
     },
     {
       "ts": "2026-04-03T04:22:00+00:00",
@@ -7634,27 +7662,27 @@
     {
       "ts": "2026-04-03T04:23:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.31436059
+      "price": 79.314360592
     },
     {
       "ts": "2026-04-03T04:24:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66628.03836169
+      "price": 66628.038361688
     },
     {
       "ts": "2026-04-03T04:24:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09060329
+      "price": 0.090603294
     },
     {
       "ts": "2026-04-03T04:24:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2054.33606923
+      "price": 2054.336069234
     },
     {
       "ts": "2026-04-03T04:24:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.29869911
+      "price": 79.298699108
     },
     {
       "ts": "2026-04-03T04:25:00+00:00",
@@ -7664,7 +7692,7 @@
     {
       "ts": "2026-04-03T04:25:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09057749
+      "price": 0.090577488
     },
     {
       "ts": "2026-04-03T04:25:00+00:00",
@@ -7679,7 +7707,7 @@
     {
       "ts": "2026-04-03T04:26:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66617.83006378
+      "price": 66617.830063775
     },
     {
       "ts": "2026-04-03T04:26:00+00:00",
@@ -7689,12 +7717,12 @@
     {
       "ts": "2026-04-03T04:26:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2053.35494354
+      "price": 2053.3549435425
     },
     {
       "ts": "2026-04-03T04:26:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.25450958
+      "price": 79.254509575
     },
     {
       "ts": "2026-04-03T04:27:00+00:00",
@@ -7709,22 +7737,22 @@
     {
       "ts": "2026-04-03T04:27:00+00:00",
       "symbol": "ETHUSDT",
-      "price": 2051.87176008
+      "price": 2051.871760084
     },
     {
       "ts": "2026-04-03T04:27:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.23536751
+      "price": 79.235367512
     },
     {
       "ts": "2026-04-03T04:28:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66561.84324263
+      "price": 66561.843242626
     },
     {
       "ts": "2026-04-03T04:28:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09048868
+      "price": 0.090488678
     },
     {
       "ts": "2026-04-03T04:28:00+00:00",
@@ -7739,12 +7767,12 @@
     {
       "ts": "2026-04-03T04:29:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66557.65162179
+      "price": 66557.651621788
     },
     {
       "ts": "2026-04-03T04:29:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09048483
+      "price": 0.090484826
     },
     {
       "ts": "2026-04-03T04:29:00+00:00",
@@ -7754,12 +7782,12 @@
     {
       "ts": "2026-04-03T04:29:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.1778017
+      "price": 79.177801702
     },
     {
       "ts": "2026-04-03T04:30:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66568.95779537
+      "price": 66568.957795372
     },
     {
       "ts": "2026-04-03T04:30:00+00:00",
@@ -7779,12 +7807,12 @@
     {
       "ts": "2026-04-03T04:31:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66574.82241378
+      "price": 66574.822413776
     },
     {
       "ts": "2026-04-03T04:31:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09046586
+      "price": 0.090465858
     },
     {
       "ts": "2026-04-03T04:31:00+00:00",
@@ -7794,7 +7822,7 @@
     {
       "ts": "2026-04-03T04:31:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.17026982
+      "price": 79.170269816
     },
     {
       "ts": "2026-04-03T04:32:00+00:00",
@@ -7814,7 +7842,7 @@
     {
       "ts": "2026-04-03T04:32:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.16653018
+      "price": 79.166530175
     },
     {
       "ts": "2026-04-03T04:33:00+00:00",
@@ -7834,17 +7862,17 @@
     {
       "ts": "2026-04-03T04:33:00+00:00",
       "symbol": "SOLUSDT",
-      "price": 79.14137108
+      "price": 79.141371078
     },
     {
       "ts": "2026-04-03T04:34:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66516.48901797
+      "price": 66516.489017968
     },
     {
       "ts": "2026-04-03T04:34:00+00:00",
       "symbol": "DOGEUSDT",
-      "price": 0.09040212
+      "price": 0.090402124
     },
     {
       "ts": "2026-04-03T04:34:00+00:00",
@@ -7899,7 +7927,7 @@
     {
       "ts": "2026-04-03T19:08:00+00:00",
       "symbol": "BTCUSDT",
-      "price": 66782.41990708
+      "price": 66782.41990708333
     },
     {
       "ts": "2026-04-03T19:08:00+00:00",
@@ -7915,8 +7943,32 @@
       "ts": "2026-04-03T19:08:00+00:00",
       "symbol": "SOLUSDT",
       "price": 80.11103904
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "symbol": "BTCUSDT",
+      "price": 66773.24202891
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "symbol": "DOGEUSDT",
+      "price": 0.0916758
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "symbol": "ETHUSDT",
+      "price": 2047.21916199
+    },
+    {
+      "ts": "2026-04-03T19:09:00+00:00",
+      "symbol": "SOLUSDT",
+      "price": 80.10117864
     }
   ],
+  "meta": {
+    "last_updated": "2026-04-03T19:09:40.155351+00:00",
+    "data_source": "remote source + coinbase public products (https://penalties-manhattan-released-kelly.trycloudflare.com/dashboard/export_s5?season_id=season-005&orders_limit=20&history_days=7)"
+  },
   "trading_config": {
     "execution_mode": "paper_trading_coinbase_data",
     "maker_fee_bps": 1.875,
@@ -7941,9 +7993,5 @@
       "ALCX-USD"
     ],
     "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
-  },
-  "meta": {
-    "last_updated": "2026-04-03T19:09:07.321902+00:00",
-    "data_source": "timescaledb + coinbase public products"
   }
 }
