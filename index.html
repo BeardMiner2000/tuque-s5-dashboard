@@ -86,6 +86,10 @@
         <button id="closeModal" class="px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300">Close</button>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6" id="modalStats"></div>
+      <div class="rounded-2xl border border-pink-800/60 bg-pink-950/20 p-4 mb-6">
+        <div class="text-xs uppercase tracking-wide text-pink-300 mb-2">Locker Room Talk</div>
+        <div id="modalBanter" class="space-y-2 text-sm text-pink-100"></div>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="md:col-span-1">
           <div class="text-sm font-bold text-pink-500 mb-3">BOT SNAPSHOT</div>
@@ -195,6 +199,32 @@
       if ((bot.orders || 0) === 0) return `${name} is still staring across the ring, waiting for someone else to blink first.`;
       if (bot.topSymbol && bot.topSymbol !== '—') return `${name} keeps pointing at ${bot.topSymbol} like it owes rent money.`;
       return `${name} is circling, grinning, and saying the next candle better keep that same energy.`;
+    }
+
+    function buildBanter(bot, rank, leader) {
+      const rivals = bots
+        .filter((entry) => entry.id !== bot.id)
+        .slice()
+        .sort((a, b) => b.roi - a.roi);
+      const topRival = rivals[0];
+      const nearestRival = rivals
+        .slice()
+        .sort((a, b) => Math.abs(a.roi - bot.roi) - Math.abs(b.roi - bot.roi))[0];
+      const lines = [];
+      if (leader && leader.id === bot.id) {
+        lines.push(`"${topRival ? `Tell ${topRival.name} to quit shadowboxing and touch the leaderboard.` : 'I came alone and still won the press conference.'}"`);
+      } else if (leader) {
+        lines.push(`"${leader.name} can keep the belt warm. I am only borrowing patience right now."`);
+      }
+      if (nearestRival) {
+        lines.push(`"${nearestRival.name} is close enough to talk. Shame they still need binoculars."`);
+      }
+      if (rank >= 3) {
+        lines.push(`"Nobody panic. I like my comebacks loud and expensive."`);
+      } else {
+        lines.push(`"Profits are doing the talking for me tonight, and they are not being diplomatic."`);
+      }
+      return lines.slice(0, 3);
     }
 
     function sortOrdersForDisplay(orders) {
@@ -423,6 +453,8 @@
         borderWidth: 3,
         tension: 0.25,
         pointRadius: 0,
+        pointHitRadius: 20,
+        pointHoverRadius: 6,
         fill: false
       }));
       raceChart.update('none');
@@ -453,6 +485,11 @@
           <div class="text-sm font-semibold text-white mt-1">${value}</div>
         </div>
       `).join('');
+      const rank = bots.slice().sort((a, b) => b.roi - a.roi).findIndex((entry) => entry.id === bot.id) + 1;
+      const leader = bots.slice().sort((a, b) => b.roi - a.roi)[0];
+      document.getElementById('modalBanter').innerHTML = buildBanter(bot, rank, leader)
+        .map((line) => `<div>${line}</div>`)
+        .join('');
 
       document.getElementById('modalHighlights').innerHTML = [
         ['Active range', selectedRange.toUpperCase()],
@@ -541,9 +578,17 @@
       data: { labels: [], datasets: [] },
       options: {
         responsive: true,
+        interaction: {
+          mode: 'nearest',
+          intersect: false,
+          axis: 'x'
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
+            enabled: true,
+            mode: 'nearest',
+            intersect: false,
             callbacks: {
               title(items) {
                 const item = items[0];
