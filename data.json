@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "season_id": "season-005",
+    "capital_per_bot_usd": 1500.0,
+    "total_orders": 9,
+    "total_fills": 9,
+    "active_bots": 4
+  },
+  "bots": [
+    {
+      "id": "loser_reversal_hunter",
+      "name": "Loser Reversal Hunter",
+      "emoji": "\ud83d\udd04",
+      "color": "#10b981",
+      "current_equity_usd": 1481.88,
+      "current_pnl_usd": -18.12,
+      "roi_pct": 0.01,
+      "orders_count": 2,
+      "fills_count": 2,
+      "active_positions": 0,
+      "top_symbol": "BTCUSDT",
+      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+    },
+    {
+      "id": "chaos_prophet",
+      "name": "Chaos Prophet",
+      "emoji": "\ud83d\udd2e",
+      "color": "#eab308",
+      "current_equity_usd": 1481.88,
+      "current_pnl_usd": -18.12,
+      "roi_pct": 0.01,
+      "orders_count": 2,
+      "fills_count": 2,
+      "active_positions": 0,
+      "top_symbol": "BTCUSDT",
+      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+    },
+    {
+      "id": "pump_surfer",
+      "name": "Pump Surfer",
+      "emoji": "\ud83c\udfc4",
+      "color": "#3b82f6",
+      "current_equity_usd": 1481.88,
+      "current_pnl_usd": -18.12,
+      "roi_pct": 0.01,
+      "orders_count": 2,
+      "fills_count": 2,
+      "active_positions": 0,
+      "top_symbol": "BTCUSDT",
+      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+    },
+    {
+      "id": "obsidian_flux",
+      "name": "Obsidian Flux",
+      "emoji": "\u26ab",
+      "color": "#ec4899",
+      "current_equity_usd": 1481.49,
+      "current_pnl_usd": -18.51,
+      "roi_pct": -0.02,
+      "orders_count": 3,
+      "fills_count": 3,
+      "active_positions": 0,
+      "top_symbol": "BTCUSDT",
+      "last_metric_at": "2026-04-03T02:27:35.348790+00:00"
+    }
+  ],
+  "recent_orders": [
+    {
+      "ts": "2026-04-03T02:25:01.879531+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0180225
+    },
+    {
+      "ts": "2026-04-03T02:24:42.144346+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:29.661135+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:25.956659+00:00",
+      "bot_id": "chaos_prophet",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:22.539289+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.0020025
+    },
+    {
+      "ts": "2026-04-03T02:24:11.345226+00:00",
+      "bot_id": "obsidian_flux",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:24:05.682153+00:00",
+      "bot_id": "pump_surfer",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:24:01.265662+00:00",
+      "bot_id": "chaos_prophet",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    },
+    {
+      "ts": "2026-04-03T02:23:56.414817+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "status": "filled",
+      "price": 67432.56743257,
+      "quantity": 0.002225
+    }
+  ],
+  "trading_config": {
+    "execution_mode": "paper_trading_coinbase_data",
+    "maker_fee_bps": 1.875,
+    "taker_fee_bps": 4.875,
+    "coinbase_product_count": 385,
+    "coinbase_products_sample": [
+      "00-USD",
+      "1INCH-USD",
+      "2Z-USD",
+      "A8-USD",
+      "AAVE-USD",
+      "ABT-USD",
+      "ACH-USD",
+      "ACS-USD",
+      "ACX-USD",
+      "ADA-USD",
+      "AERGO-USD",
+      "AERO-USD",
+      "AGLD-USD",
+      "AIOZ-USD",
+      "AKT-USD",
+      "ALCX-USD"
+    ],
+    "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
+  },
+  "meta": {
+    "last_updated": "2026-04-03T02:27:40.325080+00:00",
+    "data_source": "timescaledb + coinbase public products"
+  }
+}

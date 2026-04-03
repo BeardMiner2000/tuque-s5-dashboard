@@ -58,6 +58,7 @@
     let raceChart;
     let bots = [];
     let botsData = {};
+    let equityHistory = [];
 
     async function loadSeasonData() {
       try {
@@ -75,28 +76,34 @@
           roi: bot.roi_pct,
           orders: bot.orders_count,
           fills: bot.fills_count,
-          positions: bot.active_positions
+          positions: bot.active_positions,
+          topSymbol: bot.top_symbol || '—'
         }));
+        document.getElementById('tradeCount').textContent = data.summary.total_orders;
+        equityHistory.push(bots.map(bot => bot.equity));
+        if (equityHistory.length > 50) equityHistory.shift();
         
         // Show config
         const configDiv = document.getElementById('config');
         configDiv.innerHTML = `
           <div><strong>Execution:</strong> ${data.trading_config.execution_mode}</div>
-          <div><strong>Symbols:</strong> ${data.trading_config.symbols.join(', ')}</div>
-          <div><strong>Fees:</strong> Maker ${data.trading_config.maker_fee} | Taker ${data.trading_config.taker_fee}</div>
+          <div><strong>Coinbase Products:</strong> ${data.trading_config.coinbase_product_count}</div>
+          <div><strong>Fees:</strong> Maker ${data.trading_config.maker_fee_bps} bps | Taker ${data.trading_config.taker_fee_bps} bps</div>
+          <div><strong>Product Sample:</strong> ${data.trading_config.coinbase_products_sample.join(', ')}</div>
           <div><strong>Last Updated:</strong> ${new Date(data.meta.last_updated).toLocaleString()}</div>
         `;
         
         updateStandings();
-        updatePitBoard();
+        updatePitBoard(data.recent_orders || []);
+        updateRaceChart();
       } catch(e) {
         console.error("Error loading season data:", e);
         // Fallback to demo data
         bots = [
-          {id:'loser_reversal_hunter', name:'LOSER REVERSAL', emoji:'🚀', color:'#10b981', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'chaos_prophet', name:'CHAOS PROPHET', emoji:'🌪️', color:'#eab308', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'pump_surfer', name:'PUMP SURFER', emoji:'🏄', color:'#3b82f6', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
-          {id:'obsidian_flux', name:'OBSIDIAN FLUX', emoji:'⚫', color:'#ec4899', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0}
+          {id:'loser_reversal_hunter', name:'Loser Reversal Hunter', emoji:'🔄', color:'#10b981', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'chaos_prophet', name:'Chaos Prophet', emoji:'🔮', color:'#eab308', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'pump_surfer', name:'Pump Surfer', emoji:'🏄', color:'#3b82f6', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0},
+          {id:'obsidian_flux', name:'Obsidian Flux', emoji:'⚫', color:'#ec4899', equity:1500, pnl:0, roi:0.0, orders:0, fills:0, positions:0}
         ];
         updateStandings();
       }
@@ -115,35 +122,49 @@
               <div class="text-xs text-slate-500">${bot.orders} orders</div>
             </div>
           </div>
-          <div class="text-right">
-            <div class="font-mono text-emerald-400">$${bot.equity.toFixed(2)}</div>
+            <div class="text-right">
+              <div class="font-mono text-emerald-400">$${bot.equity.toFixed(2)}</div>
             <div class="${bot.roi >= 0 ? 'positive' : 'negative'} text-xs">${bot.roi >= 0 ? '+' : ''}${bot.roi.toFixed(2)}%</div>
+            <div class="text-xs text-slate-500">${bot.topSymbol}</div>
           </div>
         </div>
       `).join('');
     }
 
-    function updatePitBoard() {
+    function updatePitBoard(recentOrders) {
       const div = document.getElementById('pitboard');
-      const topBots = bots.sort((a, b) => b.orders - a.orders).slice(0, 4);
-      
-      if (bots[0].orders === 0) {
+      if (!recentOrders.length) {
         div.innerHTML = `
-          <div class="py-1 text-slate-400 border-b border-yellow-700 pb-2">WAITING FOR ENTRY SIGNALS</div>
-          <div class="py-1 text-slate-300">🚀 LOSER_REVERSAL_HUNTER ready</div>
-          <div class="py-1 text-slate-300">🌪️ CHAOS_PROPHET ready</div>
-          <div class="py-1 text-slate-300">🏄 PUMP_SURFER ready</div>
-          <div class="py-1 text-slate-300">⚫ OBSIDIAN_FLUX ready</div>
+          <div class="py-1 text-slate-400 border-b border-yellow-700 pb-2">WAITING FOR FIRST FILLS</div>
+          <div class="py-1 text-slate-300">🔄 LOSER_REVERSAL_HUNTER</div>
+          <div class="py-1 text-slate-300">🔮 CHAOS_PROPHET</div>
+          <div class="py-1 text-slate-300">🏄 PUMP_SURFER</div>
+          <div class="py-1 text-slate-300">⚫ OBSIDIAN_FLUX</div>
         `;
         return;
       }
       
-      div.innerHTML = topBots.map(b => `
+      div.innerHTML = recentOrders.slice(0, 10).map(order => `
         <div class="py-2 border-b border-yellow-900">
-          <div class="font-bold text-yellow-300">${b.emoji} ${b.name}</div>
-          <div class="text-slate-400 text-xs">Orders: ${b.orders} | Fills: ${b.fills}</div>
+          <div class="font-bold text-yellow-300">${order.bot_id}</div>
+          <div class="text-slate-400 text-xs">${order.side} ${order.symbol}</div>
+          <div class="text-slate-500 text-xs">$${Number(order.price || 0).toFixed(6)} • ${new Date(order.ts).toLocaleTimeString()}</div>
         </div>
       `).join('');
+    }
+
+    function updateRaceChart() {
+      if (!raceChart || bots.length === 0) return;
+      raceChart.data.datasets = bots.map((bot, idx) => ({
+        label: bot.name,
+        data: equityHistory.map(snapshot => snapshot[idx] ?? bot.equity),
+        borderColor: bot.color,
+        borderWidth: 3,
+        tension: 0.35,
+        fill: false
+      }));
+      raceChart.data.labels = Array(equityHistory.length).fill('');
+      raceChart.update('none');
     }
 
     function showBotDetail(id) {
@@ -158,14 +179,7 @@
       type: 'line',
       data: { 
         labels: Array(50).fill(''), 
-        datasets: bots.map(b => ({
-          label: b.name, 
-          data: Array(50).fill(b.equity), 
-          borderColor: b.color, 
-          borderWidth: 3, 
-          tension: 0.4,
-          fill: false
-        })) 
+        datasets: [],
       },
       options: { 
         responsive: true, 
@@ -180,15 +194,6 @@
     // Refresh every 30 seconds
     setInterval(() => {
       loadSeasonData();
-      if (raceChart && bots.length > 0) {
-        raceChart.data.datasets.forEach((ds, idx) => {
-          ds.data.shift();
-          const bot = bots[idx];
-          // Simulate slight drift
-          ds.data.push(bot.equity * (0.999 + Math.random()*0.002));
-        });
-        raceChart.update('none');
-      }
     }, 30000);
   </script>
 </body>
