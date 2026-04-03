@@ -13,56 +13,56 @@
       "name": "Loser Reversal Hunter",
       "emoji": "\ud83d\udd04",
       "color": "#10b981",
-      "current_equity_usd": 1478.93,
-      "current_pnl_usd": -21.07,
-      "roi_pct": 0.06,
+      "current_equity_usd": 1479.63,
+      "current_pnl_usd": -20.37,
+      "roi_pct": 0.04,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
+      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
     },
     {
       "id": "chaos_prophet",
       "name": "Chaos Prophet",
       "emoji": "\ud83d\udd2e",
       "color": "#eab308",
-      "current_equity_usd": 1478.93,
-      "current_pnl_usd": -21.07,
-      "roi_pct": 0.06,
+      "current_equity_usd": 1479.63,
+      "current_pnl_usd": -20.37,
+      "roi_pct": 0.04,
       "orders_count": 2,
       "fills_count": 2,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
+      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
     },
     {
       "id": "pump_surfer",
       "name": "Pump Surfer",
       "emoji": "\ud83c\udfc4",
       "color": "#3b82f6",
-      "current_equity_usd": 1481.74,
-      "current_pnl_usd": -18.26,
-      "roi_pct": 0.25,
+      "current_equity_usd": 1482.37,
+      "current_pnl_usd": -17.63,
+      "roi_pct": 0.23,
       "orders_count": 5,
       "fills_count": 5,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
+      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
     },
     {
       "id": "obsidian_flux",
       "name": "Obsidian Flux",
       "emoji": "\u26ab",
       "color": "#ec4899",
-      "current_equity_usd": 1481.49,
-      "current_pnl_usd": -18.51,
-      "roi_pct": 0.23,
+      "current_equity_usd": 1481.5,
+      "current_pnl_usd": -18.5,
+      "roi_pct": 0.17,
       "orders_count": 3,
       "fills_count": 3,
       "active_positions": 0,
       "top_symbol": "BTCUSDT",
-      "last_metric_at": "2026-04-03T02:36:44.654722+00:00"
+      "last_metric_at": "2026-04-03T02:40:25.869876+00:00"
     }
   ],
   "recent_orders": [
@@ -73,7 +73,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.00180225
+      "quantity": 0.00180225,
+      "fee": 0.72918207,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 19,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66619.18797482
+      }
     },
     {
       "ts": "2026-04-03T02:29:01.341014+00:00",
@@ -82,7 +96,23 @@
       "side": "BUY",
       "status": "filled",
       "price": 0.00027988,
-      "quantity": 188751.61295345
+      "quantity": 188751.61295345,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana INU",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 25522.84,
+        "price_change_24h": 14.08
+      },
+      "metadata": {
+        "tick": 18,
+        "runtime": "season_005_fourbot",
+        "price_override": 0.0002798,
+        "reference_price": 0.0002798
+      }
     },
     {
       "ts": "2026-04-03T02:28:58.864590+00:00",
@@ -91,7 +121,23 @@
       "side": "BUY",
       "status": "filled",
       "price": 6.236e-05,
-      "quantity": 1129562.6415223
+      "quantity": 1129562.6415223,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana Sim",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 2675.64,
+        "price_change_24h": 52.92
+      },
+      "metadata": {
+        "tick": 18,
+        "runtime": "season_005_fourbot",
+        "price_override": 6.234e-05,
+        "reference_price": 6.234e-05
+      }
     },
     {
       "ts": "2026-04-03T02:25:01.879531+00:00",
@@ -100,7 +146,22 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0180225
+      "quantity": 0.0180225,
+      "fee": 7.29182068,
+      "strategy": "obsidian_flux_orderflow_v1",
+      "note": "orderflow_reversal",
+      "category": "strategy_trade",
+      "rationale": {
+        "obi": -0.8053,
+        "vcm": -0.001218,
+        "strategy": "obsidian_flux_orderflow_v1",
+        "exit_reason": "orderflow_reversal"
+      },
+      "metadata": {
+        "tick": 3,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66626.29976289
+      }
     },
     {
       "ts": "2026-04-03T02:24:42.144346+00:00",
@@ -109,7 +170,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:29.661135+00:00",
@@ -118,7 +193,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:25.956659+00:00",
@@ -127,7 +216,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:22.539289+00:00",
@@ -136,7 +239,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:11.345226+00:00",
@@ -145,7 +262,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:05.682153+00:00",
@@ -154,7 +285,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:01.265662+00:00",
@@ -163,7 +308,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:23:56.414817+00:00",
@@ -172,7 +331,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     }
   ],
   "order_history": [
@@ -183,7 +356,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.00180225
+      "quantity": 0.00180225,
+      "fee": 0.72918207,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 19,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66619.18797482
+      }
     },
     {
       "ts": "2026-04-03T02:29:01.341014+00:00",
@@ -192,7 +379,23 @@
       "side": "BUY",
       "status": "filled",
       "price": 0.00027988,
-      "quantity": 188751.61295345
+      "quantity": 188751.61295345,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana INU",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 25522.84,
+        "price_change_24h": 14.08
+      },
+      "metadata": {
+        "tick": 18,
+        "runtime": "season_005_fourbot",
+        "price_override": 0.0002798,
+        "reference_price": 0.0002798
+      }
     },
     {
       "ts": "2026-04-03T02:28:58.864590+00:00",
@@ -201,7 +404,23 @@
       "side": "BUY",
       "status": "filled",
       "price": 6.236e-05,
-      "quantity": 1129562.6415223
+      "quantity": 1129562.6415223,
+      "fee": 0.0,
+      "strategy": "pump_surfer_dex_v1",
+      "note": null,
+      "category": "strategy_trade",
+      "rationale": {
+        "name": "Solana Sim",
+        "strategy": "pump_surfer_dex_v1",
+        "volume_24h": 2675.64,
+        "price_change_24h": 52.92
+      },
+      "metadata": {
+        "tick": 18,
+        "runtime": "season_005_fourbot",
+        "price_override": 6.234e-05,
+        "reference_price": 6.234e-05
+      }
     },
     {
       "ts": "2026-04-03T02:25:01.879531+00:00",
@@ -210,7 +429,22 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0180225
+      "quantity": 0.0180225,
+      "fee": 7.29182068,
+      "strategy": "obsidian_flux_orderflow_v1",
+      "note": "orderflow_reversal",
+      "category": "strategy_trade",
+      "rationale": {
+        "obi": -0.8053,
+        "vcm": -0.001218,
+        "strategy": "obsidian_flux_orderflow_v1",
+        "exit_reason": "orderflow_reversal"
+      },
+      "metadata": {
+        "tick": 3,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66626.29976289
+      }
     },
     {
       "ts": "2026-04-03T02:24:42.144346+00:00",
@@ -219,7 +453,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:29.661135+00:00",
@@ -228,7 +476,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:25.956659+00:00",
@@ -237,7 +499,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:22.539289+00:00",
@@ -246,7 +522,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.0020025
+      "quantity": 0.0020025,
+      "fee": 0.8102023,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 2,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:11.345226+00:00",
@@ -255,7 +545,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:05.682153+00:00",
@@ -264,7 +568,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:24:01.265662+00:00",
@@ -273,7 +591,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     },
     {
       "ts": "2026-04-03T02:23:56.414817+00:00",
@@ -282,7 +614,21 @@
       "side": "SELL",
       "status": "filled",
       "price": 67432.56743257,
-      "quantity": 0.002225
+      "quantity": 0.002225,
+      "fee": 0.90022478,
+      "strategy": "btc_reserve_refill_v1",
+      "note": "refill_usdt_liquidity",
+      "category": "reserve_refill",
+      "rationale": {
+        "note": "refill_usdt_liquidity",
+        "strategy": "btc_reserve_refill_v1",
+        "btc_momentum": 0.0
+      },
+      "metadata": {
+        "tick": 1,
+        "runtime": "season_005_fourbot",
+        "reference_price": 66679.9969707
+      }
     }
   ],
   "orders_by_bot": {
@@ -294,7 +640,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.0020025
+        "quantity": 0.0020025,
+        "fee": 0.8102023,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 2,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       },
       {
         "ts": "2026-04-03T02:23:56.414817+00:00",
@@ -303,7 +663,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.002225
+        "quantity": 0.002225,
+        "fee": 0.90022478,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       }
     ],
     "chaos_prophet": [
@@ -314,7 +688,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.0020025
+        "quantity": 0.0020025,
+        "fee": 0.8102023,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 2,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       },
       {
         "ts": "2026-04-03T02:24:01.265662+00:00",
@@ -323,7 +711,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.002225
+        "quantity": 0.002225,
+        "fee": 0.90022478,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       }
     ],
     "pump_surfer": [
@@ -334,7 +736,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.00180225
+        "quantity": 0.00180225,
+        "fee": 0.72918207,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 19,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66619.18797482
+        }
       },
       {
         "ts": "2026-04-03T02:29:01.341014+00:00",
@@ -343,7 +759,23 @@
         "side": "BUY",
         "status": "filled",
         "price": 0.00027988,
-        "quantity": 188751.61295345
+        "quantity": 188751.61295345,
+        "fee": 0.0,
+        "strategy": "pump_surfer_dex_v1",
+        "note": null,
+        "category": "strategy_trade",
+        "rationale": {
+          "name": "Solana INU",
+          "strategy": "pump_surfer_dex_v1",
+          "volume_24h": 25522.84,
+          "price_change_24h": 14.08
+        },
+        "metadata": {
+          "tick": 18,
+          "runtime": "season_005_fourbot",
+          "price_override": 0.0002798,
+          "reference_price": 0.0002798
+        }
       },
       {
         "ts": "2026-04-03T02:28:58.864590+00:00",
@@ -352,7 +784,23 @@
         "side": "BUY",
         "status": "filled",
         "price": 6.236e-05,
-        "quantity": 1129562.6415223
+        "quantity": 1129562.6415223,
+        "fee": 0.0,
+        "strategy": "pump_surfer_dex_v1",
+        "note": null,
+        "category": "strategy_trade",
+        "rationale": {
+          "name": "Solana Sim",
+          "strategy": "pump_surfer_dex_v1",
+          "volume_24h": 2675.64,
+          "price_change_24h": 52.92
+        },
+        "metadata": {
+          "tick": 18,
+          "runtime": "season_005_fourbot",
+          "price_override": 6.234e-05,
+          "reference_price": 6.234e-05
+        }
       },
       {
         "ts": "2026-04-03T02:24:29.661135+00:00",
@@ -361,7 +809,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.0020025
+        "quantity": 0.0020025,
+        "fee": 0.8102023,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 2,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       },
       {
         "ts": "2026-04-03T02:24:05.682153+00:00",
@@ -370,7 +832,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.002225
+        "quantity": 0.002225,
+        "fee": 0.90022478,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       }
     ],
     "obsidian_flux": [
@@ -381,7 +857,22 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.0180225
+        "quantity": 0.0180225,
+        "fee": 7.29182068,
+        "strategy": "obsidian_flux_orderflow_v1",
+        "note": "orderflow_reversal",
+        "category": "strategy_trade",
+        "rationale": {
+          "obi": -0.8053,
+          "vcm": -0.001218,
+          "strategy": "obsidian_flux_orderflow_v1",
+          "exit_reason": "orderflow_reversal"
+        },
+        "metadata": {
+          "tick": 3,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66626.29976289
+        }
       },
       {
         "ts": "2026-04-03T02:24:42.144346+00:00",
@@ -390,7 +881,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.0020025
+        "quantity": 0.0020025,
+        "fee": 0.8102023,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 2,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       },
       {
         "ts": "2026-04-03T02:24:11.345226+00:00",
@@ -399,7 +904,21 @@
         "side": "SELL",
         "status": "filled",
         "price": 67432.56743257,
-        "quantity": 0.002225
+        "quantity": 0.002225,
+        "fee": 0.90022478,
+        "strategy": "btc_reserve_refill_v1",
+        "note": "refill_usdt_liquidity",
+        "category": "reserve_refill",
+        "rationale": {
+          "note": "refill_usdt_liquidity",
+          "strategy": "btc_reserve_refill_v1",
+          "btc_momentum": 0.0
+        },
+        "metadata": {
+          "tick": 1,
+          "runtime": "season_005_fourbot",
+          "reference_price": 66679.9969707
+        }
       }
     ]
   },
@@ -407,282 +926,362 @@
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.06
+      "equity_usd": 1478.92
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:23:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1477.99
+      "equity_usd": 1478.85
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1477.99
+      "equity_usd": 1478.85
     },
     {
       "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1478.88
+    },
+    {
+      "ts": "2026-04-03T02:24:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1478.85
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1478.97
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1478.97
+    },
+    {
+      "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "obsidian_flux",
       "equity_usd": 1478.02
     },
     {
-      "ts": "2026-04-03T02:24:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1477.99
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.1
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.1
-    },
-    {
-      "ts": "2026-04-03T02:25:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1477.16
-    },
-    {
       "ts": "2026-04-03T02:25:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.97
     },
     {
       "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.17
+      "equity_usd": 1479.03
     },
     {
       "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.17
+      "equity_usd": 1479.03
     },
     {
       "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1477.51
+      "equity_usd": 1478.37
     },
     {
       "ts": "2026-04-03T02:26:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.17
+      "equity_usd": 1479.03
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.22
+      "equity_usd": 1479.08
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.22
+      "equity_usd": 1479.08
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1477.77
+      "equity_usd": 1478.63
     },
     {
       "ts": "2026-04-03T02:27:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.22
+      "equity_usd": 1479.08
     },
     {
       "ts": "2026-04-03T02:28:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:28:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.1
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:28:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1477.12
+      "equity_usd": 1477.98
     },
     {
       "ts": "2026-04-03T02:28:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1478.09
+      "equity_usd": 1478.96
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.13
+      "equity_usd": 1479.0
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.13
+      "equity_usd": 1479.0
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1477.32
+      "equity_usd": 1478.18
     },
     {
       "ts": "2026-04-03T02:29:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1477.96
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.32
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.32
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.27
-    },
-    {
-      "ts": "2026-04-03T02:30:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.2
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.4
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.4
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1478.7
-    },
-    {
-      "ts": "2026-04-03T02:31:00+00:00",
-      "bot_id": "pump_surfer",
-      "equity_usd": 1478.32
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "chaos_prophet",
-      "equity_usd": 1478.76
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.76
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
-      "bot_id": "obsidian_flux",
-      "equity_usd": 1480.61
-    },
-    {
-      "ts": "2026-04-03T02:32:00+00:00",
       "bot_id": "pump_surfer",
       "equity_usd": 1478.83
     },
     {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.18
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.18
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1479.13
+    },
+    {
+      "ts": "2026-04-03T02:30:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.06
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.26
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.26
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1479.56
+    },
+    {
+      "ts": "2026-04-03T02:31:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.18
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.62
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.62
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.47
+    },
+    {
+      "ts": "2026-04-03T02:32:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1479.7
+    },
+    {
       "ts": "2026-04-03T02:33:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1478.99
+      "equity_usd": 1479.86
     },
     {
       "ts": "2026-04-03T02:33:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1478.99
+      "equity_usd": 1479.86
     },
     {
       "ts": "2026-04-03T02:33:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1481.84
+      "equity_usd": 1482.7
     },
     {
       "ts": "2026-04-03T02:33:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1479.17
+      "equity_usd": 1480.03
     },
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.04
+      "equity_usd": 1479.91
     },
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.04
+      "equity_usd": 1479.91
     },
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1482.09
+      "equity_usd": 1482.96
     },
     {
       "ts": "2026-04-03T02:34:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1479.24
+      "equity_usd": 1480.1
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.14
+      "equity_usd": 1480.0
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.14
+      "equity_usd": 1480.0
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1482.6
+      "equity_usd": 1483.47
     },
     {
       "ts": "2026-04-03T02:35:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1479.38
+      "equity_usd": 1480.24
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "bot_id": "chaos_prophet",
-      "equity_usd": 1479.09
+      "equity_usd": 1479.92
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "bot_id": "loser_reversal_hunter",
-      "equity_usd": 1479.09
+      "equity_usd": 1479.92
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "bot_id": "obsidian_flux",
-      "equity_usd": 1482.33
+      "equity_usd": 1483.03
     },
     {
       "ts": "2026-04-03T02:36:00+00:00",
       "bot_id": "pump_surfer",
-      "equity_usd": 1481.97
+      "equity_usd": 1482.79
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.76
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.76
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1482.17
+    },
+    {
+      "ts": "2026-04-03T02:37:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.55
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.61
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.61
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.41
+    },
+    {
+      "ts": "2026-04-03T02:38:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.35
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.68
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.68
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.77
+    },
+    {
+      "ts": "2026-04-03T02:39:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.44
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "chaos_prophet",
+      "equity_usd": 1479.63
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "loser_reversal_hunter",
+      "equity_usd": 1479.63
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "obsidian_flux",
+      "equity_usd": 1481.5
+    },
+    {
+      "ts": "2026-04-03T02:40:00+00:00",
+      "bot_id": "pump_surfer",
+      "equity_usd": 1482.37
     }
   ],
   "trading_config": {
@@ -711,7 +1310,7 @@
     "quote_currency_source": "Coinbase USD products mapped into internal USDT symbols"
   },
   "meta": {
-    "last_updated": "2026-04-03T02:36:50.724508+00:00",
+    "last_updated": "2026-04-03T02:40:30.809652+00:00",
     "data_source": "timescaledb + coinbase public products"
   }
 }

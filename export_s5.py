@@ -25,6 +25,16 @@ BOTS = [
 BOT_IDS = [bot["id"] for bot in BOTS]
 
 
+def normalize_json(value):
+    if isinstance(value, dict):
+        return {str(k): normalize_json(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [normalize_json(v) for v in value]
+    if isinstance(value, Decimal):
+        return float(value)
+    return value
+
+
 def get_connection():
     dsn = os.getenv("DB_DSN")
     if dsn:
@@ -147,7 +157,10 @@ def fetch_recent_orders(conn):
                 side,
                 status,
                 COALESCE(executed_price, request_price) AS price,
-                COALESCE(executed_quantity, requested_quantity) AS quantity
+                COALESCE(executed_quantity, requested_quantity) AS quantity,
+                simulated_fee,
+                rationale,
+                metadata
             FROM bot_orders
             WHERE season_id = %s AND bot_id = ANY(%s)
             ORDER BY ts DESC, id DESC
@@ -169,7 +182,10 @@ def fetch_order_history(conn):
                 side,
                 status,
                 COALESCE(executed_price, request_price) AS price,
-                COALESCE(executed_quantity, requested_quantity) AS quantity
+                COALESCE(executed_quantity, requested_quantity) AS quantity,
+                simulated_fee,
+                rationale,
+                metadata
             FROM bot_orders
             WHERE season_id = %s AND bot_id = ANY(%s)
               AND ts >= NOW() - INTERVAL '7 days'
@@ -267,8 +283,15 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, coinb
             }
         )
 
-    recent_orders_payload = [
-        {
+    def serialize_order(row):
+        rationale = normalize_json(row.get("rationale") or {})
+        metadata = normalize_json(row.get("metadata") or {})
+        strategy = rationale.get("strategy") or metadata.get("strategy")
+        note = rationale.get("note") or rationale.get("exit_reason")
+        category = "strategy_trade"
+        if strategy == "btc_reserve_refill_v1" or note == "refill_usdt_liquidity":
+            category = "reserve_refill"
+        return {
             "ts": row["ts"].astimezone(timezone.utc).isoformat() if row["ts"] else None,
             "bot_id": row["bot_id"],
             "symbol": row["symbol"],
@@ -276,9 +299,15 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, coinb
             "status": row["status"],
             "price": round(float(row["price"] or 0), 8),
             "quantity": round(float(row["quantity"] or 0), 8),
+            "fee": round(float(row.get("simulated_fee") or 0), 8),
+            "strategy": strategy,
+            "note": note,
+            "category": category,
+            "rationale": rationale,
+            "metadata": metadata,
         }
-        for row in recent_orders
-    ]
+
+    recent_orders_payload = [serialize_order(row) for row in recent_orders]
 
     order_history_payload = []
     orders_by_bot = {bot_id: [] for bot_id in BOT_IDS}
@@ -286,15 +315,7 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, coinb
         symbol = row["symbol"]
         if symbol:
             traded_symbols.add(symbol)
-        order_row = {
-            "ts": row["ts"].astimezone(timezone.utc).isoformat() if row["ts"] else None,
-            "bot_id": row["bot_id"],
-            "symbol": symbol,
-            "side": row["side"],
-            "status": row["status"],
-            "price": round(float(row["price"] or 0), 8),
-            "quantity": round(float(row["quantity"] or 0), 8),
-        }
+        order_row = serialize_order(row)
         order_history_payload.append(order_row)
         if row["bot_id"] in orders_by_bot:
             orders_by_bot[row["bot_id"]].append(order_row)

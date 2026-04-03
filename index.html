@@ -17,6 +17,8 @@
     .negative { color: #ef4444; }
     .range-btn.active { background: #e11d48; color: white; border-color: #fb7185; }
     .modal-backdrop { background: rgba(0, 0, 0, 0.7); }
+    .scrollbar-thin::-webkit-scrollbar { width: 8px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 999px; }
   </style>
 </head>
 <body class="p-6 max-w-7xl mx-auto">
@@ -59,7 +61,7 @@
     <div class="col-span-12 md:col-span-3 pit p-6 rounded-xl text-yellow-300 text-sm font-mono">
       <div class="font-bold mb-1 text-yellow-400">LIVE ORDERS</div>
       <div class="text-[11px] text-yellow-200 mb-4" id="pitboardLabel">Most recent trades in selected range</div>
-      <div id="pitboard" class="space-y-3 overflow-auto h-96"></div>
+      <div id="pitboard" class="space-y-3 overflow-auto h-96 pr-1 scrollbar-thin"></div>
     </div>
   </div>
 
@@ -69,7 +71,7 @@
   </div>
 
   <div id="botModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
-    <div class="panel w-full max-w-4xl rounded-2xl p-6 max-h-[90vh] overflow-auto">
+    <div class="panel w-full max-w-5xl rounded-2xl p-6 max-h-[90vh] overflow-auto">
       <div class="flex items-start justify-between gap-4 mb-6">
         <div>
           <div class="text-2xl font-bold text-white" id="modalBotName">Bot</div>
@@ -78,9 +80,18 @@
         <button id="closeModal" class="px-3 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-slate-300">Close</button>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6" id="modalStats"></div>
-      <div>
-        <div class="text-sm font-bold text-pink-500 mb-3">TRADE HISTORY</div>
-        <div id="modalTradeList" class="space-y-3"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-1">
+          <div class="text-sm font-bold text-pink-500 mb-3">BOT SNAPSHOT</div>
+          <div id="modalHighlights" class="space-y-3"></div>
+        </div>
+        <div class="md:col-span-2">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-sm font-bold text-pink-500">TRADE HISTORY</div>
+            <div class="text-xs text-slate-500">Newest first</div>
+          </div>
+          <div id="modalTradeList" class="space-y-3"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -113,6 +124,42 @@
 
     function formatSigned(value, digits = 2) {
       return `${value >= 0 ? '+' : ''}${Number(value).toFixed(digits)}`;
+    }
+
+    function formatRelativeTime(ts) {
+      const ms = Date.now() - parseTs(ts);
+      if (!Number.isFinite(ms)) return '';
+      const minutes = Math.floor(ms / 60000);
+      if (minutes < 1) return 'just now';
+      if (minutes < 60) return `${minutes}m ago`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h ago`;
+      const days = Math.floor(hours / 24);
+      return `${days}d ago`;
+    }
+
+    function prettifyBotName(botId) {
+      return botId.replaceAll('_', ' ');
+    }
+
+    function prettifyNote(order) {
+      if (order.category === 'reserve_refill') return 'Reserve refill';
+      if (order.note) return String(order.note).replaceAll('_', ' ');
+      if (order.strategy) return String(order.strategy).replaceAll('_', ' ');
+      return 'Strategy trade';
+    }
+
+    function botMeta(botId) {
+      return bots.find((bot) => bot.id === botId) || { color: '#888', emoji: '•', name: prettifyBotName(botId) };
+    }
+
+    function sortOrdersForDisplay(orders) {
+      return orders.slice().sort((a, b) => {
+        const categoryRank = (order) => order.category === 'strategy_trade' ? 0 : 1;
+        const categoryDelta = categoryRank(a) - categoryRank(b);
+        if (categoryDelta !== 0) return categoryDelta;
+        return parseTs(b.ts) - parseTs(a.ts);
+      });
     }
 
     function getFilteredOrders() {
@@ -215,18 +262,42 @@
         return;
       }
 
-      div.innerHTML = recentOrders
-        .slice()
-        .sort((a, b) => parseTs(b.ts) - parseTs(a.ts))
+      const displayed = sortOrdersForDisplay(recentOrders)
         .slice(0, 20)
-        .map((order) => `
-          <div class="py-2 border-b border-yellow-900">
-            <div class="font-bold text-yellow-300">${order.bot_id}</div>
-            <div class="text-slate-400 text-xs">${order.side} ${order.symbol} • ${order.status}</div>
-            <div class="text-slate-500 text-xs">$${Number(order.price || 0).toFixed(6)} • Qty ${Number(order.quantity || 0).toFixed(6)}</div>
-            <div class="text-slate-500 text-xs">${new Date(order.ts).toLocaleString()}</div>
+        .map((order) => {
+          const bot = botMeta(order.bot_id);
+          const sideClass = order.side === 'BUY' ? 'text-emerald-300 border-emerald-600/40 bg-emerald-950/30' : 'text-rose-300 border-rose-600/40 bg-rose-950/30';
+          const categoryLabel = order.category === 'reserve_refill' ? 'Reserve' : 'Signal';
+          return `
+            <div class="rounded-xl border border-yellow-900/70 bg-zinc-950/80 p-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="font-bold text-yellow-300">${bot.emoji} ${bot.name}</div>
+                  <div class="mt-1 flex items-center gap-2 flex-wrap">
+                    <span class="px-2 py-1 rounded-full border text-[10px] ${sideClass}">${order.side}</span>
+                    <span class="px-2 py-1 rounded-full border border-yellow-700/60 bg-yellow-950/30 text-[10px] text-yellow-200">${categoryLabel}</span>
+                    <span class="text-xs text-slate-300">${order.symbol}</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="font-mono text-yellow-100">$${Number(order.price || 0).toFixed(6)}</div>
+                  <div class="text-[11px] text-slate-500">${formatRelativeTime(order.ts)}</div>
+                </div>
+              </div>
+              <div class="mt-2 text-xs text-slate-400">${prettifyNote(order)}</div>
+              <div class="mt-1 text-[11px] text-slate-500">Qty ${Number(order.quantity || 0).toFixed(6)} • Fee $${Number(order.fee || 0).toFixed(4)}</div>
+            </div>
+          `;
+        }).join('');
+
+      const strategyCount = displayed.filter((order) => order.category === 'strategy_trade').length;
+      if (strategyCount === 0) {
+        div.innerHTML = `
+          <div class="rounded-xl border border-yellow-800/70 bg-yellow-950/20 p-3 text-xs text-yellow-100">
+            Warmup state: current activity is reserve-refill BTC routing. Strategy entries will surface here as soon as non-plumbing trades land.
           </div>
-        `).join('');
+        ` + div.innerHTML;
+      }
     }
 
     function updateRaceChart() {
@@ -266,9 +337,12 @@
       const trades = getBotTradeHistory(id)
         .slice()
         .sort((a, b) => parseTs(b.ts) - parseTs(a.ts));
+      const strategyTrades = trades.filter((trade) => trade.category === 'strategy_trade');
+      const reserveTrades = trades.filter((trade) => trade.category === 'reserve_refill');
+      const uniqueSymbols = [...new Set(trades.map((trade) => trade.symbol))];
 
       document.getElementById('modalBotName').textContent = `${bot.emoji} ${bot.name}`;
-      document.getElementById('modalBotMeta').textContent = `${trades.length} trades in ${selectedRange.toUpperCase()} range`;
+      document.getElementById('modalBotMeta').textContent = `${trades.length} trades in ${selectedRange.toUpperCase()} range • ${strategyTrades.length} strategy, ${reserveTrades.length} reserve`;
       document.getElementById('modalStats').innerHTML = [
         ['Equity', `$${bot.equity.toFixed(2)}`],
         ['P&L', `$${bot.pnl.toFixed(2)}`],
@@ -282,24 +356,56 @@
         </div>
       `).join('');
 
+      document.getElementById('modalHighlights').innerHTML = [
+        ['Active range', selectedRange.toUpperCase()],
+        ['Unique pairs', String(uniqueSymbols.length)],
+        ['Latest symbol', trades[0]?.symbol || '—'],
+        ['Strategy trades', String(strategyTrades.length)],
+        ['Reserve refills', String(reserveTrades.length)],
+        ['Latest action', prettifyNote(trades[0] || {})]
+      ].map(([label, value]) => `
+        <div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4">
+          <div class="text-[11px] uppercase tracking-wide text-slate-500">${label}</div>
+          <div class="mt-1 text-sm font-semibold text-white">${value}</div>
+        </div>
+      `).join('');
+
       const tradeList = document.getElementById('modalTradeList');
       if (!trades.length) {
         tradeList.innerHTML = `<div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4 text-slate-400">No trades for this bot in the selected range.</div>`;
       } else {
-        tradeList.innerHTML = trades.map((trade) => `
-          <div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="font-semibold text-white">${trade.side} ${trade.symbol}</div>
-                <div class="text-xs text-slate-400">${trade.status} • Qty ${Number(trade.quantity || 0).toFixed(6)}</div>
-              </div>
-              <div class="text-right">
-                <div class="font-mono text-emerald-400">$${Number(trade.price || 0).toFixed(6)}</div>
-                <div class="text-xs text-slate-500">${new Date(trade.ts).toLocaleString()}</div>
+        tradeList.innerHTML = sortOrdersForDisplay(trades).map((trade) => {
+          const sideClass = trade.side === 'BUY' ? 'text-emerald-300 border-emerald-600/40 bg-emerald-950/30' : 'text-rose-300 border-rose-600/40 bg-rose-950/30';
+          const categoryClass = trade.category === 'reserve_refill'
+            ? 'text-amber-200 border-amber-700/40 bg-amber-950/30'
+            : 'text-sky-200 border-sky-700/40 bg-sky-950/30';
+          const rationaleParts = [];
+          if (trade.rationale?.name) rationaleParts.push(trade.rationale.name);
+          if (trade.rationale?.price_change_24h !== undefined) rationaleParts.push(`24h ${Number(trade.rationale.price_change_24h).toFixed(2)}%`);
+          if (trade.rationale?.volume_24h !== undefined) rationaleParts.push(`Vol $${Number(trade.rationale.volume_24h).toLocaleString()}`);
+          if (trade.rationale?.exit_reason) rationaleParts.push(String(trade.rationale.exit_reason).replaceAll('_', ' '));
+          return `
+            <div class="rounded-xl border border-zinc-700 bg-zinc-950 p-4">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="px-2 py-1 rounded-full border text-[10px] ${sideClass}">${trade.side}</span>
+                    <span class="px-2 py-1 rounded-full border text-[10px] ${categoryClass}">${trade.category === 'reserve_refill' ? 'Reserve refill' : 'Strategy trade'}</span>
+                    <span class="font-semibold text-white">${trade.symbol}</span>
+                  </div>
+                  <div class="mt-2 text-xs text-slate-300">${prettifyNote(trade)}</div>
+                  <div class="mt-1 text-[11px] text-slate-500">${rationaleParts.length ? rationaleParts.join(' • ') : 'No extra rationale captured'}</div>
+                </div>
+                <div class="text-right">
+                  <div class="font-mono text-emerald-400">$${Number(trade.price || 0).toFixed(6)}</div>
+                  <div class="text-xs text-slate-400">Qty ${Number(trade.quantity || 0).toFixed(6)}</div>
+                  <div class="text-[11px] text-slate-500">Fee $${Number(trade.fee || 0).toFixed(4)}</div>
+                  <div class="text-[11px] text-slate-500">${new Date(trade.ts).toLocaleString()} • ${formatRelativeTime(trade.ts)}</div>
+                </div>
               </div>
             </div>
-          </div>
-        `).join('');
+          `;
+        }).join('');
       }
 
       const modal = document.getElementById('botModal');
