@@ -23,6 +23,7 @@ BOTS = [
 ]
 
 BOT_IDS = [bot["id"] for bot in BOTS]
+MARKET_SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "DOGEUSDT"]
 
 
 def normalize_json(value):
@@ -233,7 +234,31 @@ def fetch_equity_history(conn):
         return cursor.fetchall()
 
 
-def build_payload(rows, recent_orders, order_history, equity_history_rows, coinbase_products):
+def fetch_market_history(conn):
+    with conn.cursor() as cursor:
+        cursor.execute(
+            """
+            WITH sampled AS (
+                SELECT
+                    symbol,
+                    date_trunc('minute', ts) AS bucket_ts,
+                    AVG(mark_price) AS mark_price
+                FROM market_marks
+                WHERE season_id = %s
+                  AND symbol = ANY(%s)
+                  AND ts >= NOW() - INTERVAL '7 days'
+                GROUP BY symbol, date_trunc('minute', ts)
+            )
+            SELECT symbol, bucket_ts, mark_price
+            FROM sampled
+            ORDER BY bucket_ts ASC, symbol ASC
+            """,
+            (SEASON_ID, MARKET_SYMBOLS),
+        )
+        return cursor.fetchall()
+
+
+def build_payload(rows, recent_orders, order_history, equity_history_rows, market_history_rows, coinbase_products):
     rows_by_bot = {row["bot_id"]: row for row in rows}
     bots_payload = []
     total_orders = 0
@@ -333,6 +358,15 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, coinb
             }
         )
 
+    market_points = [
+        {
+            "ts": row["bucket_ts"].astimezone(timezone.utc).isoformat() if row["bucket_ts"] else None,
+            "symbol": row["symbol"],
+            "price": round(float(row["mark_price"] or 0), 8),
+        }
+        for row in market_history_rows
+    ]
+
     return {
         "summary": {
             "season_id": SEASON_ID,
@@ -347,6 +381,7 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, coinb
         "order_history": order_history_payload,
         "orders_by_bot": orders_by_bot,
         "equity_history": equity_points,
+        "market_history": market_points,
         "trading_config": {
             "execution_mode": "paper_trading_coinbase_data",
             "maker_fee_bps": float(MAKER_FEE_BPS),
@@ -369,8 +404,9 @@ def main():
         recent_orders = fetch_recent_orders(conn)
         order_history = fetch_order_history(conn)
         equity_history_rows = fetch_equity_history(conn)
+        market_history_rows = fetch_market_history(conn)
 
-    payload = build_payload(rows, recent_orders, order_history, equity_history_rows, coinbase_products)
+    payload = build_payload(rows, recent_orders, order_history, equity_history_rows, market_history_rows, coinbase_products)
     output_path = Path(__file__).with_name("data.json")
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     print(f"Wrote {output_path}")
