@@ -262,8 +262,8 @@
         return;
       }
 
-      const displayed = sortOrdersForDisplay(recentOrders)
-        .slice(0, 20)
+      const displayed = sortOrdersForDisplay(recentOrders).slice(0, 20);
+      div.innerHTML = displayed
         .map((order) => {
           const bot = botMeta(order.bot_id);
           const sideClass = order.side === 'BUY' ? 'text-emerald-300 border-emerald-600/40 bg-emerald-950/30' : 'text-rose-300 border-rose-600/40 bg-rose-950/30';
