@@ -25,6 +25,10 @@ BOTS = [
 
 BOT_IDS = [bot["id"] for bot in BOTS]
 MARKET_SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "DOGEUSDT"]
+HIDDEN_ORDER_KEYS = {
+    ("chaos_prophet", "IOTXUSDT", "2026-04-03T21:54:28.346336+00:00"),
+    ("chaos_prophet", "IOTXUSDT", "2026-04-03T22:15:59.362667+00:00"),
+}
 
 
 def normalize_json(value):
@@ -272,10 +276,29 @@ def fetch_market_history(conn):
 
 def build_payload(rows, recent_orders, order_history, equity_history_rows, market_history_rows, coinbase_products):
     rows_by_bot = {row["bot_id"]: row for row in rows}
+    filtered_recent_orders = [
+        row for row in recent_orders
+        if (row["bot_id"], row["symbol"], row["ts"].astimezone(timezone.utc).isoformat()) not in HIDDEN_ORDER_KEYS
+    ]
+    filtered_order_history = [
+        row for row in order_history
+        if (row["bot_id"], row["symbol"], row["ts"].astimezone(timezone.utc).isoformat()) not in HIDDEN_ORDER_KEYS
+    ]
+    filtered_counts_by_bot = {bot_id: {"orders": 0, "fills": 0, "symbols": {}} for bot_id in BOT_IDS}
+    traded_symbols = set()
+    for row in filtered_order_history:
+        bot_bucket = filtered_counts_by_bot.setdefault(row["bot_id"], {"orders": 0, "fills": 0, "symbols": {}})
+        bot_bucket["orders"] += 1
+        if row["status"] == "filled":
+            bot_bucket["fills"] += 1
+        symbol = row.get("symbol")
+        if symbol:
+            traded_symbols.add(symbol)
+            bot_bucket["symbols"][symbol] = bot_bucket["symbols"].get(symbol, 0) + 1
+
     bots_payload = []
     total_orders = 0
     total_fills = 0
-    traded_symbols = set()
     latest_btc_usd = Decimal("0")
     total_current_btc = Decimal("0")
     total_start_btc = Decimal("0")
@@ -301,10 +324,13 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
                 pnl_usd = (equity_btc - starting_btc) * btc_usd
             if starting_btc > 0:
                 roi_pct = ((equity_btc / starting_btc) - Decimal("1")) * Decimal("100")
-            orders_count = int(row["orders_count"] or 0)
-            fills_count = int(row["fills_count"] or 0)
+            orders_count = filtered_counts_by_bot.get(bot["id"], {}).get("orders", 0)
+            fills_count = filtered_counts_by_bot.get(bot["id"], {}).get("fills", 0)
             open_orders = int(row["open_orders"] or 0)
-            top_symbol = row["top_symbol"]
+            symbol_counts = filtered_counts_by_bot.get(bot["id"], {}).get("symbols", {})
+            top_symbol = None
+            if symbol_counts:
+                top_symbol = sorted(symbol_counts.items(), key=lambda item: (-item[1], item[0]))[0][0]
             last_metric_at = row["ts"].astimezone(timezone.utc).isoformat() if row["ts"] else None
         total_current_btc += equity_btc
         total_start_btc += starting_btc
@@ -358,14 +384,11 @@ def build_payload(rows, recent_orders, order_history, equity_history_rows, marke
             "metadata": metadata,
         }
 
-    recent_orders_payload = [serialize_order(row) for row in recent_orders]
+    recent_orders_payload = [serialize_order(row) for row in filtered_recent_orders]
 
     order_history_payload = []
     orders_by_bot = {bot_id: [] for bot_id in BOT_IDS}
-    for row in order_history:
-        symbol = row["symbol"]
-        if symbol:
-            traded_symbols.add(symbol)
+    for row in filtered_order_history:
         order_row = serialize_order(row)
         order_history_payload.append(order_row)
         if row["bot_id"] in orders_by_bot:
