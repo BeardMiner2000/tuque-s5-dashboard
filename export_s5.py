@@ -471,6 +471,23 @@ def build_remote_payload(source_payload, coinbase_products):
     payload.setdefault("trading_config", {})
     payload.setdefault("meta", {})
 
+    def visible(entry):
+        return (entry.get("bot_id"), entry.get("symbol"), entry.get("ts")) not in HIDDEN_ORDER_KEYS
+
+    payload["recent_orders"] = [entry for entry in payload["recent_orders"] if visible(entry)]
+    payload["order_history"] = [entry for entry in payload["order_history"] if visible(entry)]
+    for bot in payload["bots"]:
+        bot_orders = [entry for entry in payload["order_history"] if entry.get("bot_id") == bot.get("id")]
+        bot["orders_count"] = len(bot_orders)
+        bot["fills_count"] = sum(1 for entry in bot_orders if entry.get("status") == "filled")
+    payload["orders_by_bot"] = {
+        bot_id: [entry for entry in entries if visible(entry)]
+        for bot_id, entries in payload["orders_by_bot"].items()
+    }
+    payload["summary"]["total_orders"] = len(payload["order_history"])
+    payload["summary"]["total_fills"] = sum(1 for entry in payload["order_history"] if entry.get("status") == "filled")
+    payload["summary"]["verified_pairs"] = len({entry.get("symbol") for entry in payload["order_history"] if entry.get("symbol")})
+
     payload["summary"]["season_id"] = payload["summary"].get("season_id") or SEASON_ID
     payload["summary"]["active_bots"] = payload["summary"].get("active_bots") or len(BOTS)
     payload["summary"]["verified_pairs"] = int(payload["summary"].get("verified_pairs") or 0)
